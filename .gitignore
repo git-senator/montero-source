@@ -1,0 +1,8 @@
+# Собранный сайт: у него свой репозиторий (git-senator/la-concierge),
+# он выкладывается скриптами deploy.py и deploy_v3.py.
+_publish/
+
+# Мусор системы
+Thumbs.db
+desktop.ini
+.DS_Store

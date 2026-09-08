@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">Дом тихих договорённостей</title>
+<meta name="description" data-i18n-content="meta.desc" content="Частный консьерж по Бразилии и Латинской Америке. Одна просьба — всё устроено: транспорт, авиация, яхты, резиденции, охрана.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Barlow:wght@300;400;500;600&family=Commissioner:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;600;700&family=Figtree:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/rossa.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ════════ NAV ════════ -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#home" data-scroll aria-label="На главную" data-i18n-aria="aria.home">
+      <img class="brand-mark" src="assets/img/mark-128.png"
+           srcset="assets/img/mark-72.png 72w, assets/img/mark-88.png 88w, assets/img/mark-108.png 108w, assets/img/mark-128.png 128w, assets/img/mark-144.png 144w, assets/img/mark-160.png 160w, assets/img/mark-200.png 200w, assets/img/mark-260.png 260w, assets/img/mark-360.png 360w"
+           sizes="(max-width:540px) 60px, 72px"
+           alt="Montero Private Concierge" width="512" height="512" decoding="async">
+    </a>
+
+    <nav class="nav-links" aria-label="Разделы" data-i18n-aria="aria.sections">
+      <a href="#home" data-scroll data-i18n="nav.home">Главная</a>
+      <a href="#services" data-scroll data-i18n="nav.services">Услуги</a>
+      <a href="#destinations" data-scroll data-i18n="nav.destinations">Направления</a>
+      <a href="#concierge" data-scroll data-i18n="nav.concierge">Консьерж</a>
+      <a href="#request" data-scroll data-i18n="nav.request">Заявка</a>
+    </nav>
+
+    <div class="nav-right">
+      <button class="lang-btn" id="langBtn" type="button" aria-haspopup="dialog">
+        <span id="langCode">RU</span>
+        <svg viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+      </button>
+      <a class="btn btn-ghost btn-sm" href="#request" data-scroll><span data-i18n="nav.cta">Связь 24/7</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Меню" data-i18n-aria="aria.menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <button class="btn btn-ghost btn-sm drawer-lang" id="langBtnMob" type="button"
+          data-i18n="lang.btn">Язык</button>
+  <nav class="drawer-links" aria-label="Меню" data-i18n-aria="aria.menu">
+    <a href="#home" data-scroll><span data-i18n="nav.home">Главная</span></a>
+    <a href="#services" data-scroll><span data-i18n="nav.services">Услуги</span></a>
+    <a href="#destinations" data-scroll><span data-i18n="nav.destinations">Направления</span></a>
+    <a href="#concierge" data-scroll><span data-i18n="nav.concierge">Консьерж</span></a>
+    <a href="#request" data-scroll><span data-i18n="nav.request">Заявка</span></a>
+  </nav>
+</div>
+
+<main>
+
+<!-- ════════ I · HERO ════════ -->
+<!-- Первый экран и витрина под ним — одно полотно в высоту окна.
+     Обёртка ниже держит их вместе: остаток высоты уходит первому
+     экрану, а нижняя строка витрины садится ровно на край окна. -->
+<div class="home-canvas">
+
+<section class="hero" id="home">
+  <div class="hero-bg" data-parallax="0.14">
+    <!-- Первый экран стоит на собственном цвете: чёрный с красным
+         смещением, золотое сияние сверху, алый отсвет справа внизу —
+         всё это заложено в фон .hero-bg. Снимок снят по просьбе
+         владельца. Чтобы вернуть его, раскройте блок ниже.
+    <picture>
+      <source media="(max-width:720px)" srcset="assets/img/hero-m.jpg">
+      <img class="media" src="assets/img/hero.jpg" alt="" fetchpriority="high">
+    </picture> -->
+    <!-- Видеофон ложится поверх снимка сам, когда сможет играть.
+         Раскройте блок, когда вернём ролик.
+    <video class="media vid" autoplay muted loop playsinline preload="auto"
+           poster="assets/img/hero.jpg">
+      <source src="assets/img/hero.mp4" type="video/mp4">
+    </video> -->
+  </div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="strings" aria-hidden="true">
+    <span style="--x:9%;--h:44vh;--o:.10;--d:0s"></span>
+    <span style="--x:21%;--h:31vh;--o:.07;--d:-2.4s"></span>
+    <span style="--x:37%;--h:52vh;--o:.12;--d:-5.1s"></span>
+    <span style="--x:63%;--h:38vh;--o:.09;--d:-1.3s"></span>
+    <span style="--x:79%;--h:47vh;--o:.11;--d:-3.7s"></span>
+    <span style="--x:92%;--h:28vh;--o:.06;--d:-6.2s"></span>
+  </div>
+  <div class="hero-vig" aria-hidden="true"></div>
+
+  <div class="shell hero-in">
+    <h1 class="lockup reveal d1">
+      <span class="lk-name">Montero</span>
+      <span class="lk-sub"><i></i><em>Concierge Service</em><i></i></span>
+      <span class="lk-claim">
+        <span class="lk-dot" aria-hidden="true"></span>
+        <b data-i18n="final.claim1">Всё, что вам нужно в Бразилии, Аргентине и Парагвае</b>
+        <b class="hard" data-i18n="final.claim2">на одном номере телефона.</b>
+      </span>
+    </h1>
+    <div class="hero-act reveal d4">
+      <a class="btn-gold" href="https://wa.me/5521977770800" target="_blank" rel="noopener"><span data-i18n="hero.wa">Связаться с нами</span></a>
+      <a class="btn-wire" href="#services" data-scroll><span data-i18n="nav.services">Услуги</span></a>
+    </div>
+  </div>
+
+  <div class="hero-rail reveal d4">
+    <span><b data-count="24">0</b><b>/7</b> <em data-i18n="rail.attendance">на связи</em></span>
+    <span><b data-count="20">0</b><b>+</b> <em data-i18n="rail.services">услуг</em></span>
+    <span><b data-count="4">0</b> <em data-i18n="rail.destinations">направления</em></span>
+    <span><b>1</b> <em data-i18n="rail.number">номер</em></span>
+  </div>
+</section>
+
+<!-- ════════ I-B · ВИТРИНА ════════
+     Панель между первым экраном и разделом услуг: слоган, философия,
+     шесть направлений работы и знак с прямой связью. Собрана по
+     макету владельца; логика остальных разделов не затронута.   -->
+<section class="lp" id="showcase">
+
+  <div class="lp-band">
+    <div class="lp-band-in">
+      <p class="lp-slogan reveal">
+        <span data-i18n="lp.slogan1">Ваше время.</span><br>
+        <span data-i18n="lp.slogan2">Наша ответственность.</span>
+      </p>
+      <p class="lp-clock reveal d1" id="lpClock"><b id="lpH">--</b><i>:</i><b id="lpM">--</b></p>
+    </div>
+  </div>
+
+  <div class="lp-grid">
+
+    <!-- ── Философия ────────────────────────────────────────────── -->
+    <article class="lp-col lp-philosophy reveal">
+      <p class="lp-label" data-i18n="lp.phil.label">Философия Montero</p>
+      <h2 class="lp-h">
+        <span data-i18n="lp.phil.h1">Ваше время.</span><br>
+        <span data-i18n="lp.phil.h2">Ваша роскошь.</span>
+      </h2>
+      <p class="lp-txt" data-i18n-html="lp.phil.txt">Мы берём на себя всё, что требует времени,<br>ресурсов и связей. Вы получаете результат<br>— без лишних усилий и лишних людей.</p>
+      <p class="lp-sign" data-i18n="lp.phil.sign">Частный консьерж — MONTERO</p>
+    </article>
+
+    <!-- ── Шесть направлений работы ─────────────────────────────── -->
+    <article class="lp-col lp-services reveal d1">
+      <p class="lp-label" data-i18n="lp.svc.label">Услуги</p>
+      <ul class="lp-list">
+        <li><a href="#services" data-scroll>
+          <span class="lp-num">01</span>
+          <span class="lp-body">
+            <span class="lp-name" data-i18n="lp.svc0">Бронированные авто</span>
+            <span class="lp-tag" data-i18n="svc.0.tag">Броня · С водителем · Незаметно</span>
+          </span>
+          <span class="lp-arrow" aria-hidden="true"></span>
+        </a></li>
+        <li><a href="#services" data-scroll>
+          <span class="lp-num">02</span>
+          <span class="lp-body">
+            <span class="lp-name" data-i18n="svc.1.name">Яхты и катера</span>
+            <span class="lp-tag" data-i18n="lp.tag1">С экипажем · С провизией</span>
+          </span>
+          <span class="lp-arrow" aria-hidden="true"></span>
+        </a></li>
+        <li><a href="#services" data-scroll>
+          <span class="lp-num">03</span>
+          <span class="lp-body">
+            <span class="lp-name" data-i18n="svc.2.name">Аренда вертолёта</span>
+            <span class="lp-tag" data-i18n="lp.tag2">Винт · Вертолётная площадка</span>
+          </span>
+          <span class="lp-arrow" aria-hidden="true"></span>
+        </a></li>
+        <li><a href="#services" data-scroll>
+          <span class="lp-num">04</span>
+          <span class="lp-body">
+            <span class="lp-name" data-i18n="svc.3.name">VIP-мероприятия</span>
+            <span class="lp-tag" data-i18n="svc.3.tag">Под ключ · Приватно · Ваше</span>
+          </span>
+          <span class="lp-arrow" aria-hidden="true"></span>
+        </a></li>
+        <li><a href="#services" data-scroll>
+          <span class="lp-num">05</span>
+          <span class="lp-body">
+            <span class="lp-name" data-i18n="svc.4.name">Переводчики</span>
+            <span class="lp-tag" data-i18n="lp.tag4">Португальский · Английский</span>
+          </span>
+          <span class="lp-arrow" aria-hidden="true"></span>
+        </a></li>
+        <li><a href="#services" data-scroll>
+          <span class="lp-num">06</span>
+          <span class="lp-body">
+            <span class="lp-name" data-i18n="svc.5.name">ВНЖ и гражданство</span>
+            <span class="lp-tag" data-i18n="svc.5.tag">Визы · RNM · Натурализация</span>
+          </span>
+          <span class="lp-arrow" aria-hidden="true"></span>
+        </a></li>
+      </ul>
+    </article>
+
+    <!-- ── Направления и прямая связь ───────────────────────────── -->
+    <article class="lp-col lp-dest reveal d2">
+      <p class="lp-label" data-i18n="lp.dest.label">Направления</p>
+
+      <div class="lp-dest-in">
+        <p class="lp-big">
+          <b>04</b>
+          <span data-i18n="lp.dest.word">направления</span>
+        </p>
+        <ul class="lp-icons">
+          <li>
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5.5 9.6V20h13V9.6"/><path d="M10 20v-5h4v5"/></svg>
+            <span data-i18n="lp.dest.i0">Недвижимость</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 15h18"/><path d="M5 15v2.5M19 15v2.5"/><path d="M4.5 15l1.8-5.2A2 2 0 0 1 8.2 8.4h7.6a2 2 0 0 1 1.9 1.4L19.5 15"/><circle cx="7.5" cy="15" r="1.6"/><circle cx="16.5" cy="15" r="1.6"/></svg>
+            <span data-i18n="lp.dest.i1">Образ жизни</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M12 3c.8 0 1.3.8 1.3 1.8v4.4l7.2 3.9v1.7l-7.2-2.2v4l2.3 1.6v1.4L12 19l-3.6.6v-1.4l2.3-1.6v-4L3.5 14.8v-1.7l7.2-3.9V4.8C10.7 3.8 11.2 3 12 3Z"/></svg>
+            <span data-i18n="lp.dest.i2">Перелёты</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><rect x="3" y="7.5" width="18" height="12" rx="1.4"/><path d="M9 7.5V6a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 6v1.5"/><path d="M3 12.5h18"/></svg>
+            <span data-i18n="lp.dest.i3">Бизнес</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="lp-one">
+        <p class="lp-one-h">
+          <span data-i18n="lp.one.h1">Один номер.</span><br>
+          <span data-i18n="lp.one.h3">Один консьерж.</span>
+        </p>
+        <p class="lp-one-txt" data-i18n-html="lp.one.txt">Один номер для решений,<br>которые требуют десятков контактов.<br>Вы формулируете желание.</p>
+        <p class="lp-sign lp-one-sign" data-i18n="lp.one.sign">Мы превращаем его в реальность.</p>
+        <a class="btn btn-ghost btn-sm lp-one-btn" href="https://wa.me/5521977770800" target="_blank" rel="noopener"><span data-i18n="lp.one.cta">Связаться 24/7</span></a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="lp-foot">
+    <a class="lp-foot-brand" href="#home" data-scroll>
+      <b>MONTERO</b>
+      <em data-i18n="lp.foot.sub">Частный консьерж</em>
+    </a>
+    <p class="lp-foot-claim">
+      <b data-i18n="lp.foot.claim">Ваше время — ваша роскошь.</b>
+      <em data-i18n="lp.foot.geo">Бразилия · Южная Америка</em>
+    </p>
+    <a class="lp-foot-cta" href="#request" data-scroll data-i18n-html="lp.foot.cta">Запросить<br>консьержа</a>
+  </div>
+
+</section>
+
+</div><!-- /.home-canvas -->
+
+<!-- ════════ II · SERVICES ════════ -->
+<section class="sec services" id="services">
+  <div class="shell">
+    <header class="sec-head reveal">
+      <p class="label"><i>I</i><span data-i18n="sec.svc.label">Услуги</span></p>
+      <h2 data-i18n-html="sec.svc.h">Что мы <span class="h-cap">реализуем</span></h2>
+      <p class="sec-lede" data-i18n="sec.svc.lede">Наши услуги — безграничны, и в 99% случаев на вопрос «А что можете?» ответ — МОЖЕМ ПРАКТИЧЕСКИ ВСЁ!</p>
+    </header>
+
+    <div class="svc-grid">
+      <div class="svc-list">
+
+        <article class="svc-row reveal" data-svc data-first>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">1</span>
+            <span class="svc-name" data-i18n="svc.0.name">Бронированные автомобили</span>
+            <span class="svc-tag" data-i18n="svc.0.tag">Броня · С водителем · Незаметно</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-night"><img class="media" src="assets/img/mobility.jpg" alt="Mobility"></div>
+            <p class="svc-text" data-i18n="svc.0.text">Бронированный внедорожник у входа в отель в четыре утра: двигатель прогрет, водитель уже проинструктирован. Машина на бразильских номерах, документы в порядке, класс защиты — под вашу задачу.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.0.i0">Бронированные внедорожники, седаны и микроавтобусы</li>
+              <li data-i18n="svc.0.i1">Классы защиты от B4 до B7</li>
+              <li data-i18n="svc.0.i2">Водители с подготовкой по безопасности</li>
+              <li data-i18n="svc.0.i3">На день, на неделю или на месяц</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Armored Vehicle Rental" data-i18n="svc.0.cta">Запросить бронированный автомобиль</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">2</span>
+            <span class="svc-name" data-i18n="svc.1.name">Яхты и катера</span>
+            <span class="svc-tag" data-i18n="svc.1.tag">С экипажем · С провизией · Приватно</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-sea"><img class="media" src="assets/img/yachts.jpg" alt="Yachts"></div>
+            <p class="svc-text" data-i18n="svc.1.text">Яхта с экипажем в Ангра-дус-Рейс, камбуз укомплектован по вашему списку. Или быстрый катер на полдня. Триста шестьдесят пять островов и капитан, который знает их все.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.1.i0">Моторные и парусные яхты с экипажем</li>
+              <li data-i18n="svc.1.i1">Катера и тендеры на день</li>
+              <li data-i18n="svc.1.i2">Ангра, Бузиос, Парати, Ильябела</li>
+              <li data-i18n="svc.1.i3">Шеф-повар, провизия и дайв-поддержка</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Yacht &amp; Boat Charter" data-i18n="svc.1.cta">Запросить яхту</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">3</span>
+            <span class="svc-name" data-i18n="svc.2.name">Аренда вертолёта</span>
+            <span class="svc-tag" data-i18n="svc.2.tag">Винт · Вертолётная площадка · Двадцать минут</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-sky"><img class="media" src="assets/img/helicopter.jpg" alt="Helicopter"></div>
+            <p class="svc-text" data-i18n="svc.2.text">Сан-Паулу — Ангра за двадцать минут вместо пяти часов по BR-101. Перелёты между городскими площадками, трансферы на побережье, разрешения оформлены до вашего приезда.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.2.i0">Перелёты между городскими площадками</li>
+              <li data-i18n="svc.2.i1">Побережье и острова</li>
+              <li data-i18n="svc.2.i2">Обзорные полёты над Рио и Ангрой</li>
+              <li data-i18n="svc.2.i3">Разрешения на посадку и наземное обслуживание</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Helicopter Charter" data-i18n="svc.2.cta">Запросить вертолёт</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">4</span>
+            <span class="svc-name" data-i18n="svc.3.name">VIP-мероприятия</span>
+            <span class="svc-tag" data-i18n="svc.3.tag">Под ключ · Приватно · Ваше</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-blood"><img class="media" src="assets/img/vipevents.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.3.text">Вечер, собранный с нуля, на сорок человек, в зале, который никому публично не сдают. Или карнавал из частной ложи над Самбадромом. Организация от идеи до разъезда.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.3.i0">Частные ужины, приёмы и торжества</li>
+              <li data-i18n="svc.3.i1">Подбор площадки и полная организация</li>
+              <li data-i18n="svc.3.i2">Карнавал, Rock in Rio, Гран-при в Интерлагосе</li>
+              <li data-i18n="svc.3.i3">Повара, музыканты, охрана, фотографы</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="VIP Event Production" data-i18n="svc.3.cta">Запросить мероприятие</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">5</span>
+            <span class="svc-name" data-i18n="svc.4.name">Переводчики</span>
+            <span class="svc-tag" data-i18n="svc.4.tag">Португальский · Английский · Испанский · Русский</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-ivory"><img class="media mid" src="assets/img/interpreters.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.4.text">Переводчик, который сидит на переговорах до конца, а не зачитывает разговорник. Деловые встречи, нотариальные конторы, клиники и суды.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.4.i0">Последовательный и синхронный перевод</li>
+              <li data-i18n="svc.4.i1">Переговоры и деловые встречи</li>
+              <li data-i18n="svc.4.i2">Нотариус, банк, приём у врача</li>
+              <li data-i18n="svc.4.i3">Присяжный перевод документов</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Interpreters" data-i18n="svc.4.cta">Запросить переводчика</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">6</span>
+            <span class="svc-name" data-i18n="svc.5.name">ВНЖ и гражданство</span>
+            <span class="svc-tag" data-i18n="svc.5.tag">Визы · RNM · Натурализация</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-dark"><img class="media mid" src="assets/img/residency.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.5.text">Временный вид на жительство, постоянный, гражданство. Мы держим дело, следим за сроками и говорим, что происходит на самом деле — на вашем языке, а не на португальском юридическом.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.5.i0">ВНЖ по инвестициям, работе и семье</li>
+              <li data-i18n="svc.5.i1">ПМЖ и карта RNM</li>
+              <li data-i18n="svc.5.i2">Натурализация и паспорт</li>
+              <li data-i18n="svc.5.i3">Воссоединение семьи и иждивенцы</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Residency &amp; Citizenship" data-i18n="svc.5.cta">Запросить помощь с ВНЖ</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">7</span>
+            <span class="svc-name" data-i18n="svc.6.name">Юридические услуги</span>
+            <span class="svc-tag" data-i18n="svc.6.tag">Адвокаты · Договоры · Суды</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-stone"><img class="media mid" src="assets/img/legal.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.6.text">Адвокаты, которые берут трубку и объясняют риск до подписи, а не после. Корпоративное, имущественное, семейное и миграционное право — и суд, если до него дошло.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.6.i0">Корпоративное и договорное право</li>
+              <li data-i18n="svc.6.i1">Недвижимость и споры о праве собственности</li>
+              <li data-i18n="svc.6.i2">Семейное, наследственное, миграционное</li>
+              <li data-i18n="svc.6.i3">Представительство в суде и арбитраж</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Legal Services" data-i18n="svc.6.cta">Запросить юридическую помощь</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">8</span>
+            <span class="svc-name" data-i18n="svc.7.name">Бухгалтерия и открытие компаний</span>
+            <span class="svc-tag" data-i18n="svc.7.tag">CNPJ · Учёт · Отчётность</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-amber"><img class="media mid" src="assets/img/accounting.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.7.text">Бразильская компания, зарегистрированная правильно с первого раза, и бухгалтер, который сдаёт отчётность вовремя каждый месяц. Помнить об этом вам не придётся.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.7.i0">Регистрация компании, CPF и CNPJ</li>
+              <li data-i18n="svc.7.i1">Учёт, зарплата и налоговая отчётность</li>
+              <li data-i18n="svc.7.i2">Simples, Lucro Presumido или Lucro Real</li>
+              <li data-i18n="svc.7.i3">Лицензии, разрешения, годовая отчётность</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Accounting &amp; Company Formation" data-i18n="svc.7.cta">Запросить открытие компании</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">9</span>
+            <span class="svc-name" data-i18n="svc.8.name">Внедрение бизнеса в Бразилию</span>
+            <span class="svc-tag" data-i18n="svc.8.tag">Переносим то, что у вас уже есть</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-stone"><img class="media mid" src="assets/img/businessentry.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.8.text">У вас уже есть бизнес. Мы вводим его в Бразилию: юридическая структура, местное юрлицо, партнёры, дистрибуция и люди, которые будут вести это изо дня в день.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.8.i0">Филиал, дочерняя компания или СП</li>
+              <li data-i18n="svc.8.i1">Импорт, таможня и сертификация</li>
+              <li data-i18n="svc.8.i2">Дистрибуция и местные партнёры</li>
+              <li data-i18n="svc.8.i3">Найм и трудовое законодательство</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Market Entry" data-i18n="svc.8.cta">Запросить внедрение бизнеса</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">10</span>
+            <span class="svc-name" data-i18n="svc.9.name">Бизнес-аналитика</span>
+            <span class="svc-tag" data-i18n="svc.9.tag">Цифры до решения</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-dark"><img class="media mid" src="assets/img/analytics.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.9.text">Трезвая оценка, стоит ли вообще входить на этот рынок — до того, как вы потратите, а не после. Спрос, конкуренты, маржа и во что реально обходится работа здесь.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.9.i0">Исследование рынка и спроса</li>
+              <li data-i18n="svc.9.i1">Анализ конкурентов и цен</li>
+              <li data-i18n="svc.9.i2">Юнит-экономика и операционные расходы</li>
+              <li data-i18n="svc.9.i3">Выбор региона и площадки</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Business Analytics" data-i18n="svc.9.cta">Запросить аналитику</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">11</span>
+            <span class="svc-name" data-i18n="svc.10.name">Запуск бизнеса</span>
+            <span class="svc-tag" data-i18n="svc.10.tag">С нуля до открытия</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-amber"><img class="media mid" src="assets/img/business.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.10.text">Новое дело в Бразилии с чистого листа. Концепция, регистрация, помещение, персонал, поставщики и первые девяносто дней — с одним ответственным на всём пути.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.10.i0">Концепция и бизнес-план</li>
+              <li data-i18n="svc.10.i1">Регистрация и лицензии</li>
+              <li data-i18n="svc.10.i2">Помещение, ремонт и поставщики</li>
+              <li data-i18n="svc.10.i3">Персонал и первые девяносто дней</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Business Launch Support" data-i18n="svc.10.cta">Запросить помощь с запуском</a>
+          </div></div>
+        </article>
+
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">12</span>
+            <span class="svc-name" data-i18n="svc.12.name">Покупка, аренда жилья</span>
+            <span class="svc-tag" data-i18n="svc.12.tag">Приобретаем, чтобы жить</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-night"><img class="media mid" src="assets/img/buyproperty.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.12.text">Купить жильё в Бразилии иностранцу законно и несложно — при условии, что титул чистый, продавец тот, за кого себя выдаёт, и кто-то читает каждую строчку.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.12.i0">Поиск и доступ к закрытым объектам</li>
+              <li data-i18n="svc.12.i1">Проверка титула, долгов и обременений</li>
+              <li data-i18n="svc.12.i2">Переговоры и escritura</li>
+              <li data-i18n="svc.12.i3">Регистрация, налоги и коммунальные</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Residential Property Purchase" data-i18n="svc.12.cta">Запросить покупку</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">13</span>
+            <span class="svc-name" data-i18n="svc.13.name">Инвестобъекты и сопровождение сделок</span>
+            <span class="svc-tag" data-i18n="svc.13.tag">Анализ · Проверка · Закрытие</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-amber"><img class="media" src="assets/img/dealsupport.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.13.text">Реальна ли доходность, цел ли дом, оправдана ли цена. И дальше вся бумажная часть — от первого оферта до зарегистрированного права.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.13.i0">Расчёт доходности и стратегии выхода</li>
+              <li data-i18n="svc.13.i1">Техническая и юридическая проверка</li>
+              <li data-i18n="svc.13.i2">Переговоры и структурирование сделки</li>
+              <li data-i18n="svc.13.i3">Закрытие, регистрация и передача</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Investment Property &amp; Deal Support" data-i18n="svc.13.cta">Запросить сопровождение сделки</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">14</span>
+            <span class="svc-name" data-i18n="svc.14.name">Инвестиционные счета</span>
+            <span class="svc-tag" data-i18n="svc.14.tag">Заводим деньги в страну легально</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-stone"><img class="media" src="assets/img/banking.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.14.text">Инвестиционный счёт, открытый так, чтобы деньги дошли до Бразилии законно и без трёхнедельного молчания. Капитал зарегистрирован в центробанке — значит, его можно и вывести.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.14.i0">Инвестиционные и брокерские счета</li>
+              <li data-i18n="svc.14.i1">Международные переводы в Бразилию</li>
+              <li data-i18n="svc.14.i2">Регистрация капитала в центробанке</li>
+              <li data-i18n="svc.14.i3">Комплаенс и подтверждение происхождения средств</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Investment Accounts" data-i18n="svc.14.cta">Запросить открытие счёта</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">15</span>
+            <span class="svc-name" data-i18n="svc.15.name">Обмен валюты</span>
+            <span class="svc-tag" data-i18n="svc.15.tag">Онлайн и за стойкой</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-dark"><img class="media" src="assets/img/fx.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.15.text">Валюта по курсу, который вы видите до того, как согласились. Онлайн — для обычных сумм, лично и по записи — для тех, что имеют значение.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.15.i0">Онлайн-обмен по фиксированному курсу</li>
+              <li data-i18n="svc.15.i1">Обмен лично, по предварительной записи</li>
+              <li data-i18n="svc.15.i2">Крупные суммы с уведомлением заранее</li>
+              <li data-i18n="svc.15.i3">Чеки и полный комплект документов</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Currency Exchange" data-i18n="svc.15.cta">Запросить обмен валюты</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">16</span>
+            <span class="svc-name" data-i18n="svc.17.name">Трансферы по всей Бразилии</span>
+            <span class="svc-tag" data-i18n="svc.17.tag">Из Сан-Паулу — куда угодно</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-night"><img class="media" src="assets/img/transferbr.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.17.text">Из Сан-Паулу в любую точку страны: Рио, Ангра, Бузиос, Кампус-ду-Жордан, глубинка. Одна машина, один водитель, одна цена, согласованная до выезда.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.17.i0">Любое направление из Сан-Паулу</li>
+              <li data-i18n="svc.17.i1">Аэропорты, порты и частные терминалы</li>
+              <li data-i18n="svc.17.i2">Многодневные и многогородние маршруты</li>
+              <li data-i18n="svc.17.i3">Фиксированная цена до выезда</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Transfers Across Brazil" data-i18n="svc.17.cta">Запросить трансфер</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">17</span>
+            <span class="svc-name" data-i18n="svc.18.name">Гид по Бразилии</span>
+            <span class="svc-tag" data-i18n="svc.18.tag">Страна с тем, кто её знает</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-sky"><img class="media" src="assets/img/guide.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.18.text">Гид, который знает, в какую дверь заходить, ради какого ресторана стоит ехать и с какого пляжа все уходят после четырёх. По всей стране, а не по одному городу.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.18.i0">Частный гид в любом штате Бразилии</li>
+              <li data-i18n="svc.18.i1">Исторические центры, природа и побережье</li>
+              <li data-i18n="svc.18.i2">Рестораны, рынки и районы</li>
+              <li data-i18n="svc.18.i3">Фото- и дрон-съёмка</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Travel Guide" data-i18n="svc.18.cta">Запросить гида</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">18</span>
+            <span class="svc-name" data-i18n="svc.19.name">Туристические услуги</span>
+            <span class="svc-tag" data-i18n="svc.19.tag">Забронировано и устроено</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-ivory"><img class="media" src="assets/img/tourism.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.19.text">Перелёты, отели, маршруты, билеты, страховка и разрешения. Всё, на что обычно уходит неделя открытых вкладок, делает кто-то другой, пока вы заняты делом.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.19.i0">Перелёты, отели и поузады</li>
+              <li data-i18n="svc.19.i1">Планирование маршрута по штатам</li>
+              <li data-i18n="svc.19.i2">Билеты, пропуска и доступ в парки</li>
+              <li data-i18n="svc.19.i3">Страховка и документы для поездки</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Full Travel Services" data-i18n="svc.19.cta">Запросить организацию поездки</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">19</span>
+            <span class="svc-name" data-i18n="svc.20.name">Универсальный сопровождающий</span>
+            <span class="svc-tag" data-i18n="svc.20.tag">Один человек на всю поездку</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-stone"><img class="media" src="assets/img/companion.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.20.text">Один человек рядом с вами от прилёта до вылета. Он переводит, он ведёт машину, он бронирует, он спорит с отелем — и он знает, когда нужно молчать.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.20.i0">Один сопровождающий на всю поездку</li>
+              <li data-i18n="svc.20.i1">Перевод, вождение и бронирования</li>
+              <li data-i18n="svc.20.i2">Доступен круглосуточно</li>
+              <li data-i18n="svc.20.i3">Неразглашение как условие работы</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Personal Companion" data-i18n="svc.20.cta">Запросить сопровождающего</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">20</span>
+            <span class="svc-name" data-i18n="svc.21.name">Личная охрана</span>
+            <span class="svc-tag" data-i18n="svc.21.tag">Лицензия · Разведка маршрута · Незаметно</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-dark"><img class="media" src="assets/img/protection.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.21.text">Лицензированные офицеры личной охраны, маршруты, проверенные накануне, резиденции под наблюдением ночью. То присутствие, которое замечают только в тот день, когда его нет.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.21.i0">Группы личной охраны</li>
+              <li data-i18n="svc.21.i1">Предварительная проверка маршрутов и площадок</li>
+              <li data-i18n="svc.21.i2">Охрана резиденций и мероприятий</li>
+              <li data-i18n="svc.21.i3">Оценка рисков и брифинги перед поездкой</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Executive Protection" data-i18n="svc.21.cta">Запросить охрану</a>
+          </div></div>
+        </article>
+
+        <article class="svc-row reveal" data-svc>
+          <button class="svc-head" type="button" aria-expanded="false">
+            <span class="svc-num">21</span>
+            <span class="svc-name" data-i18n="svc.22.name">Семья и материнство</span>
+            <span class="svc-tag" data-i18n="svc.22.tag">Уход · Школы · Документы</span>
+            <span class="svc-mark" aria-hidden="true"></span>
+          </button>
+          <div class="svc-body"><div class="svc-detail">
+            <div class="svc-media sc-sky"><img class="media" src="assets/img/family.jpg" alt=""></div>
+            <p class="svc-text" data-i18n="svc.22.text">Акушеры и частные родильные отделения в Сан-Паулу, двуязычные няни, которые годами остаются в одних и тех же семьях, устройство в международные школы и все документы, которые следуют за рождением в Бразилии.</p>
+            <ul class="svc-items">
+              <li data-i18n="svc.22.i0">Ведение беременности и роды</li>
+              <li data-i18n="svc.22.i1">Проверенные няни и домашний персонал</li>
+              <li data-i18n="svc.22.i2">Устройство в международные школы</li>
+              <li data-i18n="svc.22.i3">Загс, документы и гражданство</li>
+            </ul>
+            <a class="svc-cta" href="#request" data-scroll data-prefill="Family &amp; Maternity" data-i18n="svc.22.cta">Запросить помощь семье</a>
+          </div></div>
+        </article>
+
+      </div>
+
+      <aside class="svc-stage" id="svcStage" aria-live="polite"></aside>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ III · DESTINATIONS ════════ -->
+<section class="sec dest" id="destinations">
+  <div class="shell">
+    <header class="sec-head reveal">
+      <p class="label"><i>II</i><span data-i18n="sec.dest.label">Направления</span></p>
+      <h2 data-i18n-html="sec.dest.h">География нашей <span class="h-cap">деятельности</span></h2>
+      <p class="sec-lede" data-i18n="sec.dest.lede">Мы также оказываем удалённую поддержку и решаем многие вопросы по всему континенту Южной Америки.</p>
+    </header>
+  </div>
+
+  <div class="bands">
+    <article class="band reveal">
+      <div class="band-bg sc-sea" data-parallax="0.09"></div>
+      <div class="shell band-in">
+        <div class="band-col">
+          <span class="band-num" data-i18n="dest.country.br">Бразилия</span>
+          <h3 data-i18n="dest.0.name">Флорианополис</h3>
+          <p class="band-txt" data-i18n="dest.0.txt">Журере-Интернасионал, сорок два пляжа и летний адрес денег Сан-Паулу. Виллы, пляжные клубы и сезон с декабря по март.</p>
+        </div>
+        <div class="band-plate sc-sea"><img class="media" src="assets/img/floripa.jpg" alt=""></div>
+      </div>
+    </article>
+
+    <article class="band reveal">
+      <div class="band-bg sc-blood" data-parallax="0.09"></div>
+      <div class="shell band-in">
+        <div class="band-col">
+          <span class="band-num" data-i18n="dest.country.br">Бразилия</span>
+          <h3 data-i18n="dest.1.name">Рио-де-Жанейро</h3>
+          <p class="band-txt" data-i18n="dest.1.txt">Леблон и Ипанема, вертолётные трансферы через залив и город, который ни разу не торговался о собственной красоте. Карнавал бронируют за год.</p>
+        </div>
+        <div class="band-plate sc-blood"><img class="media" src="assets/img/rio.jpg" alt=""></div>
+      </div>
+    </article>
+
+    <article class="band reveal">
+      <div class="band-bg sc-stone" data-parallax="0.09"></div>
+      <div class="shell band-in">
+        <div class="band-col">
+          <span class="band-num" data-i18n="dest.country.br">Бразилия</span>
+          <h3 data-i18n="dest.2.name">Сан-Паулу</h3>
+          <p class="band-txt" data-i18n="dest.2.txt">Там, где дела действительно делаются. Итаим и Жардинс, крупнейший в полушарии парк гражданских вертолётов и клиники, ради которых сюда летят.</p>
+        </div>
+        <div class="band-plate sc-stone"><img class="media" src="assets/img/saopaulo.jpg" alt=""></div>
+      </div>
+    </article>
+
+    <article class="band reveal">
+      <div class="band-bg sc-sky" data-parallax="0.09"></div>
+      <div class="shell band-in">
+        <div class="band-col band-col-two">
+          <span class="band-num" data-i18n="dest.country.ar">Аргентина</span>
+          <h3 data-i18n="dest.ar.city">Буэнос-Айрес</h3>
+          <span class="band-num band-num-2" data-i18n="dest.country.py">Парагвай</span>
+          <h3 data-i18n="dest.py.city">Асунсьон</h3>
+        </div>
+        <div class="band-plate sc-sky band-plate-arpy"><img class="media" src="assets/img/arpy.jpg" alt=""></div>
+      </div>
+    </article>
+
+
+  </div>
+</section>
+
+<!-- ════════ IV · CONCIERGE ════════ -->
+<section class="sec conc" id="concierge">
+  <div class="shell">
+    <header class="sec-head reveal">
+      <p class="label"><i>III</i><span data-i18n="sec.conc.label">Консьерж</span></p>
+      <h2 data-i18n-html="sec.conc.h"><span class="ln">Одна ваша просьба</span> <span class="ln"><span class="h-cap">Остальное наше дело</span></span></h2>
+    </header>
+
+    <div class="conc-grid">
+      <div class="conc-say reveal">
+        <p class="pull" data-i18n="conc.pull">Один контакт для любых задач в Бразилии.</p>
+        <p data-i18n="conc.p1">От простой бытовой просьбы до сложного вопроса, требующего участия юристов, брокеров, водителей или других специалистов, — вам не нужно искать исполнителей и координировать их самостоятельно.</p>
+        <p data-i18n="conc.p2">Вы просто ставите задачу своему консьержу. Мы организуем всё остальное и доведём вопрос до результата.</p>
+        <p data-i18n="conc.p3">Конфиденциально. Персонально. Без лишних звонков, переписок и потери времени.</p>
+        <p class="conc-start" data-i18n-html="conc.p4"><b>Всё начинается с одного сообщения.</b><br>Расскажите, что вам нужно. Даже если вы пока не знаете, кто именно может решить ваш вопрос, — это уже наша задача.</p>
+        <div class="conc-sig">
+          <img class="seal-lg" src="assets/img/seal-160.png"
+           srcset="assets/img/seal-88.png 88w, assets/img/seal-120.png 120w, assets/img/seal-160.png 160w, assets/img/seal-200.png 200w, assets/img/seal-260.png 260w, assets/img/seal-360.png 360w, assets/img/seal-512.png 512w"
+           sizes="84px"
+           alt="" width="512" height="512" decoding="async">
+          <span class="conc-sig-t"><b data-i18n-html="conc.signName"><span class="sl">Консьерж-сервис по</span> <span class="sl">всему континенту Южной</span> <span class="sl">Америки</span></b></span>
+        </div>
+      </div>
+
+      <ol class="steps reveal">
+        <li>
+          <span class="st-n">1</span>
+          <h4 data-i18n="step.0.h">Вы пишете</h4>
+          <p data-i18n="step.0.p">Одно сообщение, в любой час, на вашем языке. WhatsApp, Telegram или форма ниже.</p>
+        </li>
+        <li>
+          <span class="st-n">2</span>
+          <h4 data-i18n="step.1.h">Мы отвечаем</h4>
+          <p data-i18n="step.1.p">Конкретный консьерж отвечает, задаёт два вопроса, о которых вы забыли, и называет точную сумму.</p>
+        </li>
+        <li>
+          <span class="st-n">3</span>
+          <h4 data-i18n="step.2.h">Мы устраиваем</h4>
+          <p data-i18n="step.2.p">Подрядчики проверены, договоры подписаны, депозиты внесены, водители и экипаж проинструктированы о ваших привычках.</p>
+        </li>
+        <li>
+          <span class="st-n">4</span>
+          <h4 data-i18n="step.3.h">Всё готово</h4>
+          <p data-i18n="step.3.p">Вы приезжаете. Всё уже там, где должно быть, и никому не нужно повторять дважды.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ V · REQUEST ════════ -->
+<section class="sec req" id="request">
+  <div class="shell">
+    <!-- Шапка вынесена из левой колонки: метка и заголовок стоят над
+         формой по центру, как в разделе «Консьерж». -->
+    <header class="sec-head req-head reveal">
+      <p class="label"><i>IV</i><span data-i18n="sec.req.label">Заявка</span></p>
+      <h2 data-i18n-html="sec.req.h">Позвольте нам позаботиться <span class="h-cap">обо всём</span></h2>
+    </header>
+
+    <div class="req-grid">
+      <div class="req-say reveal">
+        <p class="sec-lede" data-i18n="sec.req.lede">Оставьте заявку, и мы с вами свяжемся.</p>
+
+        <div class="direct">
+          <a class="direct-btn" href="https://wa.me/5521977770800" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29Z"></path></svg>
+          </a>
+          <a class="direct-btn" href="https://t.me/ROSSA_CO" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M21.6 4.3 2.9 11.4c-.8.3-.8 1.4 0 1.7l4.6 1.5 1.8 5.4c.2.7 1.1.9 1.6.3l2.5-2.7 4.7 3.5c.6.4 1.4.1 1.6-.6l3.1-15c.2-.8-.6-1.5-1.2-1.2ZM9.4 14.3l9.1-6.2-7.5 7.9-.3 3.3-1.3-5Z"></path></svg>
+          </a>
+          <a class="direct-btn" href="tel:+5521977770800" aria-label="Телефон">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M6.6 3h-.9C4.2 3 3 4.3 3 5.8c0 8.4 6.8 15.2 15.2 15.2 1.5 0 2.8-1.2 2.8-2.7v-.9c0-.5-.3-1-.8-1.2l-3.4-1.4c-.5-.2-1.1 0-1.4.4l-1 1.4c-2.4-1.1-4.3-3-5.4-5.4l1.4-1c.4-.3.6-.9.4-1.4L8.4 3.8C8.2 3.3 7.7 3 7.2 3h-.6Z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="req-form reveal" id="request-form-mount"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ VI · FINAL ════════ -->
+<section class="final">
+  <div class="final-bg sc-night" data-parallax="0.12"><span class="slot">assets/img/final.jpg</span></div>
+  <div class="final-vig" aria-hidden="true"></div>
+  <div class="shell final-in reveal">
+    <div class="lockup">
+      <span class="lk-name">Montero</span>
+      <span class="lk-sub"><i></i><em>Concierge Service</em><i></i></span>
+      <span class="lk-claim">
+        <span class="lk-dot" aria-hidden="true"></span>
+        <b data-i18n="final.care">Позвольте нам позаботиться обо всём</b>
+      </span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="foot">
+  <div class="shell foot-in">
+    <div class="foot-brand">
+      <img class="seal" src="assets/img/seal-160.png"
+           srcset="assets/img/seal-88.png 88w, assets/img/seal-120.png 120w, assets/img/seal-160.png 160w, assets/img/seal-200.png 200w, assets/img/seal-260.png 260w, assets/img/seal-360.png 360w, assets/img/seal-512.png 512w"
+           sizes="44px"
+           alt="" width="512" height="512" decoding="async">
+      <span data-i18n-html="foot.brand">Время <em>—</em> высшая форма роскоши, о которой мы позаботимся</span>
+    </div>
+    <nav class="foot-legal" aria-label="Правовая информация" data-i18n-aria="aria.legal">
+      <a href="#" data-legal="privacy" data-i18n="foot.privacy">Конфиденциальность</a>
+      <a href="#" data-legal="terms" data-i18n="foot.terms">Условия</a>
+      <span class="foot-c">© <span id="yr">2026</span></span>
+    </nav>
+  </div>
+</footer>
+
+
+<!-- ════════ ВЫБОР ЯЗЫКА ════════ -->
+<div class="lang-gate" id="langGate" role="dialog" aria-modal="true" aria-labelledby="langTitle" hidden>
+  <div class="lang-in">
+    <img class="lang-seal" src="assets/img/seal-160.png"
+           srcset="assets/img/seal-88.png 88w, assets/img/seal-120.png 120w, assets/img/seal-160.png 160w, assets/img/seal-200.png 200w, assets/img/seal-260.png 260w, assets/img/seal-360.png 360w, assets/img/seal-512.png 512w"
+           sizes="62px"
+           alt="" width="512" height="512" decoding="async">
+    <h2 id="langTitle" data-i18n="lang.title">Выберите язык</h2>
+    <p class="lang-sub" data-i18n="lang.sub">Изменить можно в любой момент — переключатель в шапке.</p>
+    <ul class="lang-list" id="langList"></ul>
+  </div>
+</div>
+
+<a class="float-wa" id="floatWa" href="https://wa.me/5521977770800" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29Z"></path>
+  </svg>
+</a>
+
+<script src="assets/js/legal.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/request-form.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Private Concierge — Brazil &amp; LATAM</title>
+<meta name="description" content="Private concierge for Brazil and Latin America. Mobility, aviation, yachts, real estate, protection. One request — everything arranged.">
+<meta name="theme-color" content="#08090A">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your life in Brazil, handled privately.">
+<meta property="og:description" content="Private access. Local expertise. One request. Everything arranged.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════════════
+   LATIN AMERICA PRIVATE CONCIERGE
+   Charcoal · deep emerald · ivory / champagne
+   Bodoni Moda говорит, Jost молчит.
+   ══════════════════════════════════════════════════════════════════════ */
+
+:root{
+  /* ground */
+  --black:      #08090A;
+  --charcoal:   #0E1012;
+  --charcoal-2: #14171A;
+  --stone:      #1B1F22;
+
+  /* emerald */
+  --em-deep:    #06231E;
+  --em:         #0C4034;
+  --em-lit:     #1F7A65;
+  --em-line:    rgba(31,122,101,.34);
+
+  /* ivory & champagne */
+  --ivory:      #F1ECE3;
+  --ivory-dim:  #A9A49A;
+  --ivory-far:  #6E6A63;
+  --champ:      #C9B48C;
+  --champ-lit:  #E4D5B4;
+
+  --line:       rgba(241,236,227,.13);
+  --line-soft:  rgba(241,236,227,.055);
+
+  --display:"Bodoni Moda","Didot","Times New Roman",serif;
+  --sans:"Jost",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-soft:cubic-bezier(.33,1,.68,1);
+  --gut:clamp(20px,5vw,80px);
+  --shell:1360px;
+  --navh:78px;
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:var(--navh);
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--black); color:var(--ivory);
+  font-family:var(--sans); font-weight:300; font-size:16.5px; line-height:1.7;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+
+/* зерно поверх всей страницы */
+body::after{
+  content:''; position:fixed; inset:0; z-index:400; pointer-events:none;
+  opacity:.28; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+a{ color:inherit; text-decoration:none; }
+img,video{ display:block; max-width:100%; }
+button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+::selection{ background:var(--champ); color:var(--black); }
+:focus-visible{ outline:1px solid var(--champ); outline-offset:4px; }
+
+.skip{
+  position:fixed; top:-100px; left:20px; z-index:500;
+  background:var(--champ); color:var(--black); padding:12px 20px; font-size:12px;
+  letter-spacing:.14em; text-transform:uppercase; transition:top .3s var(--ease);
+}
+.skip:focus{ top:16px; }
+
+.shell{ max-width:var(--shell); margin:0 auto; padding-inline:var(--gut); }
+
+/* ── ТИПОГРАФИКА ──────────────────────────────────────────────────── */
+.display{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(2.5rem,7.4vw,7rem); line-height:.96;
+  letter-spacing:-.028em; text-wrap:balance;
+}
+.display em{ font-style:italic; color:var(--champ); }
+
+.statement{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(2.1rem,5.8vw,5.2rem); line-height:1;
+  letter-spacing:-.026em; text-wrap:balance;
+}
+.statement em{ font-style:italic; color:var(--champ); }
+
+.h2{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(1.85rem,4vw,3.5rem); line-height:1.06;
+  letter-spacing:-.022em; text-wrap:balance;
+}
+.h2 em{ font-style:italic; color:var(--champ); }
+
+.eyebrow{
+  display:inline-block; font-size:10px; font-weight:400;
+  letter-spacing:.34em; text-transform:uppercase; color:var(--champ);
+}
+.lede{
+  font-size:clamp(1rem,1.15vw,1.09rem); line-height:1.8;
+  color:var(--ivory-dim); max-width:58ch; font-weight:200;
+}
+
+/* ── СЕКЦИИ ───────────────────────────────────────────────────────── */
+.band{ padding-block:clamp(84px,12vw,168px); position:relative; }
+.band-deep{ background:var(--charcoal); border-block:1px solid var(--line-soft); }
+.band-head{ margin-bottom:clamp(48px,6.5vw,88px); max-width:74ch; }
+.band-head .eyebrow{ margin-bottom:24px; }
+.band-head .lede{ margin-top:26px; }
+
+/* ── КНОПКИ ───────────────────────────────────────────────────────── */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:17px 36px; font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  font-weight:400; position:relative; overflow:hidden; white-space:nowrap;
+  border:1px solid var(--champ); color:var(--champ);
+  transition:color .45s var(--ease), border-color .45s var(--ease);
+}
+.btn::before{
+  content:''; position:absolute; inset:0; background:var(--champ);
+  transform:scaleX(0); transform-origin:right; transition:transform .6s var(--ease);
+}
+.btn > *{ position:relative; z-index:1; }
+.btn:hover{ color:var(--black); }
+.btn:hover::before{ transform:scaleX(1); transform-origin:left; }
+.btn-fill{ background:var(--champ); color:var(--black); }
+.btn-fill::before{ background:var(--ivory); }
+.btn-line{ border-color:var(--line); color:var(--ivory); }
+.btn-line::before{ background:var(--ivory); }
+.btn-line:hover{ color:var(--black); border-color:var(--ivory); }
+.btn-lg{ padding:21px 48px; font-size:11.5px; }
+
+/* ── КИНЕМАТОГРАФИЧНЫЕ ПОДЛОЖКИ ───────────────────────────────────
+   Пока нет фото — место держат многослойные градиенты, настроенные
+   под цвет каждого места. Реальный снимок кладётся сверху и просто
+   перекрывает подложку.                                             */
+.scrim{ position:absolute; inset:0; }
+.scrim::after{
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(120% 80% at 30% 12%, rgba(241,236,227,.07) 0%, transparent 58%);
+}
+.scrim-rio{ background:
+  radial-gradient(88% 70% at 74% 16%, rgba(201,180,140,.24) 0%, transparent 58%),
+  radial-gradient(76% 84% at 18% 92%, rgba(12,64,52,.62) 0%, transparent 64%),
+  linear-gradient(168deg,#12161B 0%,#0B1216 46%,#070A0C 100%); }
+.scrim-night{ background:
+  radial-gradient(70% 58% at 62% 76%, rgba(201,180,140,.2) 0%, transparent 60%),
+  radial-gradient(90% 70% at 22% 10%, rgba(27,31,34,.9) 0%, transparent 60%),
+  linear-gradient(200deg,#15181C 0%,#0A0C0E 62%,#060708 100%); }
+.scrim-sea{ background:
+  radial-gradient(84% 68% at 26% 20%, rgba(31,122,101,.42) 0%, transparent 62%),
+  radial-gradient(70% 60% at 84% 88%, rgba(201,180,140,.16) 0%, transparent 58%),
+  linear-gradient(174deg,#0A2A26 0%,#08181A 54%,#060B0D 100%); }
+.scrim-sky{ background:
+  radial-gradient(90% 66% at 70% 8%, rgba(228,213,180,.22) 0%, transparent 58%),
+  radial-gradient(66% 62% at 16% 84%, rgba(12,64,52,.5) 0%, transparent 62%),
+  linear-gradient(186deg,#151A1E 0%,#0C1114 58%,#070809 100%); }
+.scrim-emerald{ background:
+  radial-gradient(86% 72% at 32% 16%, rgba(31,122,101,.5) 0%, transparent 60%),
+  radial-gradient(64% 58% at 88% 90%, rgba(201,180,140,.14) 0%, transparent 56%),
+  linear-gradient(170deg,#06231E 0%,#071A18 52%,#050908 100%); }
+.scrim-stone{ background:
+  radial-gradient(82% 64% at 24% 18%, rgba(201,180,140,.2) 0%, transparent 60%),
+  linear-gradient(190deg,#1B1F22 0%,#101314 58%,#08090A 100%); }
+.scrim-dark{ background:
+  radial-gradient(70% 56% at 78% 20%, rgba(31,122,101,.24) 0%, transparent 58%),
+  linear-gradient(196deg,#0F1214 0%,#090B0C 60%,#050607 100%); }
+.scrim-amber{ background:
+  radial-gradient(84% 66% at 66% 22%, rgba(228,213,180,.3) 0%, transparent 58%),
+  radial-gradient(60% 54% at 14% 88%, rgba(140,96,46,.34) 0%, transparent 60%),
+  linear-gradient(178deg,#191410 0%,#0D0B0A 58%,#070606 100%); }
+.scrim-ivory{ background:
+  radial-gradient(88% 70% at 34% 14%, rgba(241,236,227,.16) 0%, transparent 60%),
+  radial-gradient(60% 56% at 86% 88%, rgba(201,180,140,.18) 0%, transparent 58%),
+  linear-gradient(184deg,#1A1B1C 0%,#111213 58%,#08090A 100%); }
+
+.slot{
+  position:relative; z-index:2;
+  font-size:8.5px; letter-spacing:.26em; text-transform:uppercase;
+  color:rgba(241,236,227,.3); border:1px dashed rgba(241,236,227,.14);
+  padding:9px 14px; pointer-events:none;
+}
+.media{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+
+/* ── НАВИГАЦИЯ ────────────────────────────────────────────────────── */
+.nav{
+  position:fixed; inset:0 0 auto 0; z-index:200;
+  border-bottom:1px solid transparent;
+  transition:background .55s var(--ease), backdrop-filter .55s var(--ease),
+             border-color .55s var(--ease), transform .55s var(--ease);
+}
+.nav.solid{
+  background:rgba(8,9,10,.82); backdrop-filter:blur(22px) saturate(1.5);
+  border-bottom-color:var(--line-soft);
+}
+.nav.hide{ transform:translateY(-100%); }
+.nav-in{
+  max-width:var(--shell); margin:0 auto; padding:18px var(--gut);
+  display:flex; align-items:center; gap:34px; transition:padding .55s var(--ease);
+}
+.nav.solid .nav-in{ padding-block:13px; }
+
+.brand{ display:flex; align-items:center; gap:13px; flex-shrink:0; }
+.brand-mark{ color:var(--champ); display:block; transition:transform .8s var(--ease); }
+.brand:hover .brand-mark{ transform:rotate(-14deg); }
+.brand-txt{
+  font-family:var(--display); font-size:12px; line-height:1.35;
+  letter-spacing:.2em; text-transform:uppercase; white-space:nowrap; color:var(--ivory);
+}
+.brand-txt em{
+  display:block; font-style:normal; font-size:9px;
+  letter-spacing:.38em; color:var(--champ); margin-top:2px;
+}
+
+.nav-links{ display:flex; gap:30px; margin-left:auto; }
+.nav-links a{
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ivory-dim); position:relative; padding-block:6px;
+  transition:color .35s var(--ease);
+}
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:0; height:1px; width:100%;
+  background:var(--champ); transform:scaleX(0); transform-origin:right;
+  transition:transform .5s var(--ease);
+}
+.nav-links a:hover,.nav-links a.active{ color:var(--ivory); }
+.nav-links a.active::after,.nav-links a:hover::after{ transform:scaleX(1); transform-origin:left; }
+
+.nav-side{ display:flex; align-items:center; gap:18px; flex-shrink:0; }
+.nav-wa{
+  display:flex; align-items:center; gap:8px; font-size:11.5px;
+  letter-spacing:.06em; color:var(--ivory-dim); transition:color .35s var(--ease);
+}
+.nav-wa:hover{ color:var(--champ); }
+.nav .btn{ padding:12px 26px; font-size:10px; }
+
+.burger{ display:none; padding:10px 4px; }
+.burger span{ display:block; width:24px; height:1px; background:var(--ivory); transition:.4s var(--ease); }
+.burger span+span{ margin-top:7px; }
+.burger[aria-expanded="true"] span:first-child{ transform:translateY(4px) rotate(45deg); }
+.burger[aria-expanded="true"] span:last-child{ transform:translateY(-4px) rotate(-45deg); }
+
+/* [hidden] ставит display:none только в UA-стилях — любое авторское
+   display его перебивает, и скрытая шторка молча перекрывает страницу */
+.drawer[hidden]{ display:none; }
+.drawer{
+  position:fixed; inset:0; z-index:190; background:rgba(8,9,10,.98);
+  backdrop-filter:blur(26px); display:flex; flex-direction:column;
+  justify-content:center; padding:var(--navh) var(--gut) 40px;
+  opacity:0; transition:opacity .45s var(--ease);
+}
+.drawer.open{ opacity:1; }
+.drawer nav{ display:grid; gap:6px; }
+.drawer nav a{
+  font-family:var(--display); font-size:clamp(2rem,10vw,3.2rem); line-height:1.18;
+  letter-spacing:-.02em; color:var(--ivory); padding-block:6px;
+}
+.drawer nav a:active{ color:var(--champ); }
+.drawer-foot{ display:flex; gap:26px; margin-top:44px; padding-top:26px; border-top:1px solid var(--line-soft); }
+.drawer-foot a{ font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--champ); }
+
+/* ── HERO ─────────────────────────────────────────────────────────── */
+.hero{
+  position:relative; min-height:100svh; display:flex; align-items:center;
+  overflow:hidden; padding-block:calc(var(--navh) + 40px) 120px;
+}
+.hero-bg{ position:absolute; inset:-12% 0 -12% 0; z-index:0; will-change:transform; }
+.hero-veil{
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(8,9,10,.72) 0%, transparent 26%, transparent 52%, var(--black) 100%),
+    linear-gradient(96deg, rgba(8,9,10,.66) 0%, rgba(8,9,10,.2) 46%, transparent 74%);
+}
+.hero-in{ position:relative; z-index:2; width:100%; }
+.hero .eyebrow{ margin-bottom:30px; }
+.hero .display{ margin-bottom:34px; max-width:15ch; }
+.hero-sub{
+  font-size:clamp(1.02rem,1.5vw,1.32rem); line-height:1.6; font-weight:200;
+  color:var(--ivory-dim); margin-bottom:46px; max-width:44ch;
+}
+.hero-cta{ display:flex; flex-wrap:wrap; gap:14px; }
+
+.hero-meta{
+  position:absolute; left:0; right:0; bottom:0; z-index:2;
+  border-top:1px solid var(--line-soft); padding-block:22px;
+}
+.hero-meta-in{ display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.hero-meta span{
+  font-size:9.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--ivory-far);
+}
+.hero-scroll{ display:flex; align-items:center; gap:12px; }
+.hero-scroll i{ width:44px; height:1px; background:var(--ivory-far); position:relative; overflow:hidden; }
+.hero-scroll i::after{
+  content:''; position:absolute; inset:0; background:var(--champ);
+  animation:sweep 2.8s var(--ease) infinite;
+}
+@keyframes sweep{ 0%{transform:translateX(-100%)} 55%,100%{transform:translateX(100%)} }
+
+/* ── ПАНЕЛИ УСЛУГ ─────────────────────────────────────────────────── */
+.panels{ border-top:1px solid var(--line); }
+.panel{ border-bottom:1px solid var(--line); }
+.panel-head{
+  width:100%; display:grid; align-items:center; gap:clamp(16px,3vw,44px);
+  grid-template-columns:auto minmax(0,1fr) auto auto;
+  padding:clamp(26px,3.2vw,40px) 0; text-align:left; position:relative;
+  transition:padding-inline .55s var(--ease);
+}
+.panel-head::before{
+  content:''; position:absolute; inset:0 -24px; background:var(--charcoal-2);
+  opacity:0; transition:opacity .5s var(--ease); z-index:-1;
+}
+.panel-head:hover::before{ opacity:1; }
+.panel-head:hover{ padding-inline:20px; }
+.panel-idx{
+  font-family:var(--display); font-size:12px; letter-spacing:.14em; color:var(--champ);
+}
+.panel-title{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(1.4rem,3.3vw,2.85rem); line-height:1.06; letter-spacing:-.02em;
+  transition:color .45s var(--ease);
+}
+.panel-head:hover .panel-title{ color:var(--champ-lit); }
+.panel-note{
+  font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ivory-far); white-space:nowrap;
+}
+.panel-sign{ width:15px; height:15px; position:relative; flex-shrink:0; }
+.panel-sign::before,.panel-sign::after{
+  content:''; position:absolute; left:0; top:7px; width:15px; height:1px;
+  background:var(--champ); transition:transform .55s var(--ease);
+}
+.panel-sign::after{ transform:rotate(90deg); }
+.panel[data-open] .panel-sign::after{ transform:rotate(0deg); }
+
+.panel-body{
+  display:grid; grid-template-rows:0fr;
+  transition:grid-template-rows .68s var(--ease);
+}
+.panel[data-open] .panel-body{ grid-template-rows:1fr; }
+.panel-inner{
+  overflow:hidden;
+  display:grid; grid-template-columns:.88fr 1.12fr; gap:clamp(28px,4vw,60px);
+}
+.panel[data-open] .panel-inner{ padding-bottom:clamp(34px,4.4vw,60px); }
+.panel-media{
+  position:relative; aspect-ratio:4/3; overflow:hidden;
+  display:grid; place-content:center; border:1px solid var(--line-soft);
+}
+.panel-text p{ color:var(--ivory-dim); font-weight:200; line-height:1.82; max-width:62ch; }
+.ticks{ list-style:none; margin-top:26px; display:grid; gap:1px; background:var(--line-soft); }
+.ticks li{
+  background:var(--black); padding:15px 0 15px 26px; position:relative;
+  font-size:14.5px; color:var(--ivory-dim); font-weight:200;
+}
+.band-deep .ticks li{ background:var(--charcoal); }
+.ticks li::before{
+  content:''; position:absolute; left:0; top:calc(50% - 2.5px);
+  width:5px; height:5px; background:var(--champ); transform:rotate(45deg);
+}
+.inline-cta{
+  display:inline-flex; align-items:center; gap:12px; margin-top:28px;
+  font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; color:var(--champ);
+}
+.inline-cta i{
+  width:34px; height:1px; background:var(--champ); display:block;
+  transition:width .5s var(--ease);
+}
+.inline-cta:hover i{ width:56px; }
+
+/* ── НАПРАВЛЕНИЯ ──────────────────────────────────────────────────── */
+.dests{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2.4vw,34px); }
+.dest:nth-child(4),.dest:nth-child(5){ grid-column:span 1; }
+.dest{ position:relative; overflow:hidden; }
+.dest-media{
+  position:relative; aspect-ratio:3/4; overflow:hidden;
+  display:grid; place-content:center; border:1px solid var(--line-soft);
+  transition:transform 1.1s var(--ease);
+}
+.dest:hover .dest-media{ transform:scale(1.04); }
+.dest-media::before{
+  content:''; position:absolute; inset:0; z-index:3;
+  background:linear-gradient(180deg,transparent 34%,rgba(6,7,8,.94) 100%);
+}
+.dest-body{ position:absolute; left:0; right:0; bottom:0; z-index:4; padding:clamp(22px,2.4vw,32px); }
+.dest-idx{ font-family:var(--display); font-size:11px; letter-spacing:.16em; color:var(--champ); display:block; margin-bottom:10px; }
+.dest-body h3{
+  font-family:var(--display); font-weight:400; font-size:clamp(1.32rem,2.1vw,1.85rem);
+  line-height:1.1; letter-spacing:-.018em; margin-bottom:10px;
+}
+.dest-body p{
+  font-size:13.5px; line-height:1.68; color:var(--ivory-dim); font-weight:200;
+  max-height:0; opacity:0; overflow:hidden;
+  transition:max-height .7s var(--ease), opacity .55s var(--ease);
+}
+.dest:hover .dest-body p{ max-height:150px; opacity:1; }
+
+/* ── КОНСЬЕРЖ ─────────────────────────────────────────────────────── */
+.conc-lead{ margin-bottom:clamp(48px,6vw,84px); }
+.conc-lead .eyebrow{ margin-bottom:26px; }
+.conc-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(40px,6vw,96px); align-items:start; }
+.conc-note .lede{ font-size:clamp(1.06rem,1.35vw,1.24rem); line-height:1.76; color:var(--ivory); }
+.conc-points{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,3.6vw,52px); }
+.point{ padding-top:26px; border-top:1px solid var(--line); position:relative; }
+.point::after{
+  content:''; position:absolute; left:0; top:-3.5px; width:7px; height:7px;
+  background:var(--champ); transform:rotate(45deg);
+}
+.point-no{ font-family:var(--display); font-size:11px; letter-spacing:.16em; color:var(--champ); display:block; margin-bottom:14px; }
+.point h4{
+  font-family:var(--display); font-weight:400; font-size:1.24rem;
+  line-height:1.22; letter-spacing:-.012em; margin-bottom:12px;
+}
+.point p{ font-size:14.5px; line-height:1.76; color:var(--ivory-dim); font-weight:200; }
+
+.figures{
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:1px; background:var(--line-soft); border:1px solid var(--line-soft);
+  margin-top:clamp(56px,7vw,100px);
+}
+.fig{ background:var(--black); padding:clamp(30px,3.6vw,50px) clamp(18px,2vw,28px); text-align:center; }
+.fig b{
+  display:block; font-family:var(--display); font-weight:400;
+  font-size:clamp(2rem,3.4vw,3.1rem); line-height:1; color:var(--champ);
+  margin-bottom:14px; font-variant-numeric:tabular-nums;
+}
+.fig span{ font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ivory-far); }
+
+/* ── ЗАПРОС ───────────────────────────────────────────────────────── */
+.req-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(40px,6vw,96px); align-items:start; }
+.req-aside .eyebrow{ margin-bottom:24px; }
+.req-aside .h2{ margin-bottom:24px; }
+.req-direct{ display:grid; gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); margin-top:38px; }
+.direct{
+  background:var(--charcoal); display:flex; align-items:center; gap:16px;
+  padding:20px 22px; color:var(--ivory-dim); transition:background .4s var(--ease), color .4s var(--ease);
+}
+.direct:hover{ background:var(--stone); color:var(--ivory); }
+.direct svg{ color:var(--champ); flex-shrink:0; }
+.direct span{ display:grid; font-size:14.5px; line-height:1.45; }
+.direct b{
+  font-weight:400; font-size:9.5px; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--ivory-far); margin-bottom:3px;
+}
+.req-priv{ margin-top:26px; font-size:12px; line-height:1.72; color:var(--ivory-far); max-width:44ch; }
+
+/* ФОРМА (разметку строит assets/js/request-form.js) */
+.rf{ display:grid; gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); }
+.rf-row{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line-soft); }
+.rf-field{ background:var(--black); position:relative; }
+.rf-field label{
+  position:absolute; left:24px; top:17px; font-size:9px; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--ivory-far); pointer-events:none;
+  transition:color .35s var(--ease);
+}
+.rf-field label .req{ color:var(--champ); }
+.rf-field input,.rf-field select,.rf-field textarea{
+  width:100%; background:transparent; border:0; outline:0; font:inherit;
+  color:var(--ivory); padding:40px 24px 19px; font-size:15px; font-weight:300;
+  transition:background .35s var(--ease);
+}
+.rf-field textarea{ resize:vertical; min-height:148px; line-height:1.7; }
+.rf-field select{ appearance:none; cursor:pointer; }
+.rf-field select option{ background:var(--charcoal-2); color:var(--ivory); }
+.rf-field.is-select::after{
+  content:''; position:absolute; right:24px; top:calc(50% + 7px); width:6px; height:6px;
+  border-right:1px solid var(--ivory-dim); border-bottom:1px solid var(--ivory-dim);
+  transform:rotate(45deg) translateY(-50%); pointer-events:none;
+}
+.rf-field:focus-within label{ color:var(--champ); }
+.rf-field:focus-within input,.rf-field:focus-within select,.rf-field:focus-within textarea{ background:var(--charcoal-2); }
+.rf-field.has-error{ box-shadow:inset 2px 0 0 #B4553F; }
+.rf-field.has-error label{ color:#C46A52; }
+.rf-error{ display:block; padding:0 24px 14px; font-size:11.5px; color:#C46A52; letter-spacing:.02em; }
+.rf-field input::placeholder,.rf-field textarea::placeholder{ color:rgba(241,236,227,.22); }
+.rf-foot{
+  background:var(--black); padding:28px 24px; display:flex; flex-wrap:wrap;
+  align-items:center; justify-content:space-between; gap:20px;
+}
+.rf-consent{ font-size:11.5px; line-height:1.65; color:var(--ivory-far); max-width:40ch; }
+.rf-submit[disabled]{ opacity:.5; pointer-events:none; }
+
+.rf-done{
+  background:var(--black); border:1px solid var(--line-soft);
+  padding:clamp(52px,7vw,92px) 32px; text-align:center;
+}
+.rf-done-mark{
+  width:58px; height:58px; margin:0 auto 28px; border:1px solid var(--champ);
+  border-radius:50%; display:grid; place-content:center; color:var(--champ);
+}
+.rf-done h3{
+  font-family:var(--display); font-weight:400; font-size:clamp(1.5rem,2.6vw,2.1rem);
+  letter-spacing:-.018em; margin-bottom:14px;
+}
+.rf-done p{ font-size:14.5px; line-height:1.76; color:var(--ivory-dim); max-width:44ch; margin:0 auto 30px; font-weight:200; }
+
+/* ── ФИНАЛЬНЫЙ CTA ────────────────────────────────────────────────── */
+.final{ position:relative; overflow:hidden; padding-block:clamp(110px,15vw,220px); }
+.final-bg{ position:absolute; inset:-14% 0 -14% 0; z-index:0; will-change:transform; }
+.final-veil{
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(180deg,var(--black) 0%,rgba(8,9,10,.55) 34%,rgba(8,9,10,.55) 66%,var(--black) 100%);
+}
+.final-in{ position:relative; z-index:2; text-align:center; }
+.final .statement{ margin-bottom:44px; }
+
+/* ── ФУТЕР ────────────────────────────────────────────────────────── */
+.foot{ border-top:1px solid var(--line-soft); padding-block:38px; }
+.foot-in{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 34px; }
+.foot-geo{
+  font-family:var(--display); font-size:12px; letter-spacing:.3em;
+  text-transform:uppercase; display:flex; align-items:center; gap:14px;
+}
+.foot-geo i{ width:5px; height:5px; background:var(--champ); transform:rotate(45deg); display:block; }
+.foot-links,.foot-legal{ display:flex; gap:26px; }
+.foot-links a,.foot-legal a{
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ivory-far); transition:color .35s var(--ease);
+}
+.foot-links a:hover,.foot-legal a:hover{ color:var(--champ); }
+
+/* ── ПЛАВАЮЩИЙ WHATSAPP ───────────────────────────────────────────── */
+.float-wa{
+  position:fixed; right:24px; bottom:24px; z-index:180;
+  width:54px; height:54px; border-radius:50%; display:grid; place-content:center;
+  background:var(--charcoal-2); border:1px solid var(--line); color:var(--ivory);
+  opacity:0; transform:translateY(16px); pointer-events:none;
+  transition:opacity .5s var(--ease), transform .5s var(--ease), background .35s var(--ease), color .35s var(--ease);
+}
+.float-wa.on{ opacity:1; transform:none; pointer-events:auto; }
+.float-wa:hover{ background:var(--champ); border-color:var(--champ); color:var(--black); }
+
+/* ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ────────────────────────────────────────── */
+.reveal{ opacity:0; transform:translateY(30px); transition:opacity .95s var(--ease), transform .95s var(--ease); }
+.reveal.in{ opacity:1; transform:none; }
+.reveal[data-d="1"]{ transition-delay:.1s }
+.reveal[data-d="2"]{ transition-delay:.2s }
+.reveal[data-d="3"]{ transition-delay:.3s }
+.reveal[data-d="4"]{ transition-delay:.4s }
+
+/* Элементы грида по умолчанию не сжимаются уже своего min-content,
+   и длинная неразрывная строка распирает всю колонку. */
+.req-grid > *, .conc-grid > *, .panel-inner > *, .rf-row > *, .direct span{ min-width:0; }
+.direct span{ overflow-wrap:anywhere; }
+
+/* ── АДАПТИВ ──────────────────────────────────────────────────────── */
+@media (max-width:1180px){
+  .dests{ grid-template-columns:repeat(2,1fr); }
+  .conc-grid{ grid-template-columns:1fr; }
+  .req-grid{ grid-template-columns:1fr; }
+}
+@media (max-width:980px){
+  .nav-links,.nav-wa{ display:none; }
+  .burger{ display:block; }
+  .nav .btn{ display:none; }
+  .panel-inner{ grid-template-columns:1fr; }
+  .panel-media{ aspect-ratio:16/9; }
+  /* подсветка панели вылезала за края экрана; на тач-устройствах
+     ховера нет, поэтому просто убираем вылет */
+  .panel-head::before{ inset:0; }
+  .panel-head:hover{ padding-inline:0; }
+  .figures{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:720px){
+  .panel-head{ grid-template-columns:auto minmax(0,1fr) auto; gap:14px; }
+  .panel-note{ display:none; }
+  .conc-points{ grid-template-columns:1fr; }
+  .rf-row{ grid-template-columns:1fr; }
+  .dests{ grid-template-columns:1fr; }
+  .dest-media{ aspect-ratio:4/3; }
+  .dest-body p{ max-height:150px; opacity:1; }
+  .hero-meta-in span:first-child,.hero-meta-in span:last-child{ display:none; }
+  .hero-meta-in{ justify-content:center; }
+  .hero-cta .btn{ width:100%; }
+  .btn-lg{ width:100%; padding-inline:18px; letter-spacing:.16em; }
+  /* длинная надпись на кнопке распирала форму на узком экране */
+  .rf-foot{ flex-direction:column; align-items:stretch; }
+  .rf-submit{ width:100%; padding-inline:14px; letter-spacing:.14em; }
+  .rf-consent{ max-width:none; }
+  .foot-in{ flex-direction:column; align-items:flex-start; gap:22px; }
+  .float-wa{ right:16px; bottom:16px; }
+}
+@media (max-width:400px){
+  .brand-txt{ font-size:10.5px; letter-spacing:.14em; }
+  .brand-txt em{ font-size:8px; letter-spacing:.28em; }
+}
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+  .reveal{ opacity:1; transform:none; }
+  .hero-bg,.final-bg{ transform:none !important; }
+}
+
+</style>
+</head>
+<body>
+
+<a class="skip" href="#services">Skip to content</a>
+
+<!-- ══════════════════════ NAVIGATION ══════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#home" data-scroll>
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34">
+          <circle cx="20" cy="20" r="18.4" fill="none" stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="20" cy="20" r="15.2" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.55"/>
+          <path d="M14.4 13.6v12.8h4.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          <path d="M21.2 26.4l4.4-12.8 4.4 12.8M22.9 22.4h5.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </span>
+      <span class="brand-txt">Latin America<em>Private Concierge</em></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home"         data-scroll>Home</a>
+      <a href="#services"     data-scroll>Services</a>
+      <a href="#destinations" data-scroll>Destinations</a>
+      <a href="#concierge"    data-scroll>Concierge</a>
+      <a href="#request"      data-scroll>Request</a>
+    </nav>
+
+    <div class="nav-side">
+      <a class="nav-wa" href="https://wa.me/5511968422222" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        <span>+55 11 96842 2222</span>
+      </a>
+      <a class="btn btn-line" href="#request" data-scroll>Request</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- мобильное меню -->
+<div class="drawer" id="drawer" hidden>
+  <nav aria-label="Mobile">
+    <a href="#home"         data-scroll>Home</a>
+    <a href="#services"     data-scroll>Services</a>
+    <a href="#destinations" data-scroll>Destinations</a>
+    <a href="#concierge"    data-scroll>Concierge</a>
+    <a href="#request"      data-scroll>Request</a>
+  </nav>
+  <div class="drawer-foot">
+    <a href="https://wa.me/5511968422222" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://t.me/ROSSA_CO" target="_blank" rel="noopener">Telegram</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg" data-parallax="0.22">
+    <div class="scrim scrim-rio"></div>
+    <!-- ФОТО/ВИДЕО СЛОТ · hero. Смотрите assets/img/README.txt
+         <video class="media" autoplay muted loop playsinline poster="assets/img/hero.jpg">
+           <source src="assets/img/hero.mp4" type="video/mp4"></video> -->
+  </div>
+  <div class="hero-veil"></div>
+
+  <div class="shell hero-in">
+    <span class="eyebrow reveal">Brazil &middot; Latin America</span>
+    <h1 class="display reveal" data-d="1">Your life in Brazil,<br><em>handled privately.</em></h1>
+    <p class="hero-sub reveal" data-d="2">
+      Private access. Local expertise.<br>One request &mdash; everything arranged.
+    </p>
+    <div class="hero-cta reveal" data-d="3">
+      <a class="btn btn-fill" href="#request" data-scroll>Request a concierge</a>
+      <a class="btn btn-line" href="https://wa.me/5511968422222" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="shell hero-meta-in">
+      <span>São Paulo &middot; Rio &middot; Florianópolis</span>
+      <span class="hero-scroll"><i></i>Scroll</span>
+      <span>Response within 15 minutes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ SERVICES ══════════════════════ -->
+<section class="band" id="services">
+  <div class="shell">
+    <header class="band-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2 class="h2">Eight disciplines.<br><em>One point of contact.</em></h2>
+      <p class="lede">
+        Select any discipline to open it. Everything stays on this page &mdash;
+        nothing loads, nothing navigates away.
+      </p>
+    </header>
+
+    <div class="panels" id="panels">
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">01</span>
+          <span class="panel-title">Private Mobility</span>
+          <span class="panel-note">Bentley &middot; armored &middot; chauffeur</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-night"></div><span class="slot">Photo &middot; mobility</span></div>
+            <div class="panel-text">
+              <p>Movement in São Paulo and Rio is a security decision before it is a comfort one. We operate vetted chauffeurs, level III&ndash;IIIA armored vehicles and marque cars &mdash; Bentley, Range Rover, Mercedes S &mdash; with the route assessed before you step outside.</p>
+              <ul class="ticks">
+                <li>Armored SUVs and sedans with trained drivers</li>
+                <li>Airport meet-and-greet, VIP terminal handling</li>
+                <li>Route and district risk assessment before departure</li>
+                <li>Standing car and driver for the length of your stay</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Private Mobility">Request mobility <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">02</span>
+          <span class="panel-title">Private Aviation</span>
+          <span class="panel-note">Helicopters &middot; private flights</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-sky"></div><span class="slot">Photo &middot; aviation</span></div>
+            <div class="panel-text">
+              <p>São Paulo holds one of the largest civil helicopter fleets on earth, and for good reason: a rooftop transfer turns a three-hour crossing into twelve minutes. For longer legs we charter jets between capitals and into places scheduled carriers do not serve.</p>
+              <ul class="ticks">
+                <li>Rooftop helipad transfers across São Paulo and Rio</li>
+                <li>Jet charter &mdash; light to heavy, continent-wide</li>
+                <li>Fernando de Noronha, the Amazon, Patagonia</li>
+                <li>Catering, ground handling, customs coordination</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Private Aviation">Request aviation <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">03</span>
+          <span class="panel-title">Yacht Charter</span>
+          <span class="panel-note">Angra &middot; Búzios &middot; Noronha</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-sea"></div><span class="slot">Photo &middot; yachts</span></div>
+            <div class="panel-text">
+              <p>Angra dos Reis holds three hundred and sixty-five islands within three hours of Rio &mdash; the finest cruising water in the South Atlantic, and almost none of it is on public charter platforms. We work the owners directly.</p>
+              <ul class="ticks">
+                <li>Day and week charter with crew and chef</li>
+                <li>Angra dos Reis, Ilhabela, Búzios, Paraty</li>
+                <li>Berths in private marina clubs</li>
+                <li>Tender, jet skis, diving and fishing arranged aboard</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Yacht Charter">Request a charter <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">04</span>
+          <span class="panel-title">Private Real Estate</span>
+          <span class="panel-note">Off-market residences</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-stone"></div><span class="slot">Photo &middot; residences</span></div>
+            <div class="panel-text">
+              <p>Rental and acquisition, both off-market. Penthouses in Jardins, beachfront in Balneário Camboriú and Florianópolis, houses in Trancoso, fazendas in Minas Gerais. Staff, security and chef are in place before you land.</p>
+              <ul class="ticks">
+                <li>Seasonal and long-term private residences</li>
+                <li>Acquisition advisory, due diligence, notary coordination</li>
+                <li>Household staffing and estate management</li>
+                <li>Discreet viewings without listing exposure</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Private Real Estate">Request residences <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">05</span>
+          <span class="panel-title">Executive Protection</span>
+          <span class="panel-note">Close protection &middot; risk</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-dark"></div><span class="slot">Photo &middot; protection</span></div>
+            <div class="panel-text">
+              <p>In this region protection is not theatre for the anxious &mdash; it is ordinary preparation, and it works best when you never notice it. Teams are licensed, local, and briefed on your itinerary before you arrive.</p>
+              <ul class="ticks">
+                <li>Close protection officers, single or team</li>
+                <li>Advance route and venue assessment</li>
+                <li>Residential and event security</li>
+                <li>Liaison with local services and private medical</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Executive Protection">Request protection <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">06</span>
+          <span class="panel-title">Private Experiences</span>
+          <span class="panel-note">Carnival &middot; F1 &middot; closed doors</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-amber"></div><span class="slot">Photo &middot; experiences</span></div>
+            <div class="panel-text">
+              <p>In Brazil almost nothing is settled by money alone. It is settled by who you know, and that network is the actual product. Front-line camarotes at the Sambadrome, the Paddock Club at Interlagos, tables that are not bookable.</p>
+              <ul class="ticks">
+                <li>Carnival &mdash; camarotes, samba school access, after-parties</li>
+                <li>Brazilian Grand Prix &mdash; Paddock Club, team garages</li>
+                <li>Réveillon on Copacabana &mdash; terraces, yachts, penthouses</li>
+                <li>Restaurants, private chefs, closed cultural events</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Private Experiences">Request access <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">07</span>
+          <span class="panel-title">Family &amp; Maternity</span>
+          <span class="panel-note">Doula &middot; private support</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-ivory"></div><span class="slot">Photo &middot; family</span></div>
+            <div class="panel-text">
+              <p>Families arriving for a birth need a different kind of coordination: quiet, continuous, and in your language. We assemble the team around you and hold it together for the whole stay.</p>
+              <ul class="ticks">
+                <li>Obstetric care in private hospitals &mdash; São Paulo, Florianópolis</li>
+                <li>Doula, postpartum support, night nurse</li>
+                <li>Documentation and registration guidance</li>
+                <li>Nannies, tutors, paediatric access, school placement</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Family &amp; Maternity">Request family support <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel reveal" data-panel>
+        <button class="panel-head" type="button" aria-expanded="false">
+          <span class="panel-idx">08</span>
+          <span class="panel-title">Brazil Investment</span>
+          <span class="panel-note">Entry &middot; structure &middot; assets</span>
+          <span class="panel-sign" aria-hidden="true"></span>
+        </button>
+        <div class="panel-body">
+          <div class="panel-inner">
+            <div class="panel-media"><div class="scrim scrim-emerald"></div><span class="slot">Photo &middot; investment</span></div>
+            <div class="panel-text">
+              <p>Most foreign capital stalls in Brazil on the same three things: the tax number, the banking relationship and the local counterparty. We open those doors and introduce advisers who answer to you, not to a commission.</p>
+              <ul class="ticks">
+                <li>CPF, company formation, banking introductions</li>
+                <li>Residency and visa routes, including by investment</li>
+                <li>Property and development opportunities, off-market</li>
+                <li>Vetted legal, tax and accounting counsel</li>
+              </ul>
+              <a class="inline-cta" href="#request" data-scroll data-prefill="Brazil Investment">Request an introduction <i></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ DESTINATIONS ══════════════════════ -->
+<section class="band band-deep" id="destinations">
+  <div class="shell">
+    <header class="band-head reveal">
+      <span class="eyebrow">Destinations</span>
+      <h2 class="h2">Where we are<br><em>already standing.</em></h2>
+      <p class="lede">
+        Five places we hold people in permanently &mdash; drivers, security, house
+        managers, doctors. Everywhere else on the continent we reach through partners
+        we have vetted ourselves.
+      </p>
+    </header>
+
+    <div class="dests">
+      <article class="dest reveal" data-parallax-child>
+        <div class="dest-media"><div class="scrim scrim-sea"></div><span class="slot">Photo · Florianópolis</span></div>
+        <div class="dest-body">
+          <span class="dest-idx">01</span>
+          <h3>Florianópolis</h3>
+          <p>Forty-two beaches on one island, and the quietest wealth in the country. Where families come to stay rather than to be seen.</p>
+        </div>
+      </article>
+
+      <article class="dest reveal" data-d="1" data-parallax-child>
+        <div class="dest-media"><div class="scrim scrim-rio"></div><span class="slot">Photo · Rio de Janeiro</span></div>
+        <div class="dest-body">
+          <span class="dest-idx">02</span>
+          <h3>Rio de Janeiro</h3>
+          <p>Leblon and Ipanema at street level, Angra by helicopter in forty minutes. The city rewards those who move through it correctly.</p>
+        </div>
+      </article>
+
+      <article class="dest reveal" data-d="2" data-parallax-child>
+        <div class="dest-media"><div class="scrim scrim-night"></div><span class="slot">Photo · São Paulo</span></div>
+        <div class="dest-body">
+          <span class="dest-idx">03</span>
+          <h3>São Paulo</h3>
+          <p>The financial capital of the continent. Business, private medicine and the best table in Latin America, all within Jardins.</p>
+        </div>
+      </article>
+
+      <article class="dest reveal" data-parallax-child>
+        <div class="dest-media"><div class="scrim scrim-emerald"></div><span class="slot">Photo · Angra dos Reis</span></div>
+        <div class="dest-body">
+          <span class="dest-idx">04</span>
+          <h3>Angra dos Reis</h3>
+          <p>Three hundred and sixty-five islands, private marinas and water that stays flat. Three hours from Rio by road, forty minutes by air.</p>
+        </div>
+      </article>
+
+      <article class="dest reveal" data-d="1" data-parallax-child>
+        <div class="dest-media"><div class="scrim scrim-sky"></div><span class="slot">Photo · Fernando de Noronha</span></div>
+        <div class="dest-body">
+          <span class="dest-idx">05</span>
+          <h3>Fernando de Noronha</h3>
+          <p>An archipelago under a daily visitor quota. Permits, environmental fees and the few good pousadas are arranged months ahead.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ CONCIERGE ══════════════════════ -->
+<section class="band concierge" id="concierge">
+  <div class="shell">
+    <div class="conc-lead reveal">
+      <span class="eyebrow">The private concierge</span>
+      <h2 class="statement">One request.<br><em>We handle the rest.</em></h2>
+    </div>
+
+    <div class="conc-grid">
+      <div class="conc-note reveal">
+        <p class="lede">
+          You send one message. What follows &mdash; the calls, the vetting, the
+          negotiation, the standing by at four in the morning &mdash; happens out of
+          your sight. That is the entire proposition.
+        </p>
+      </div>
+
+      <div class="conc-points">
+        <div class="point reveal">
+          <span class="point-no">01</span>
+          <h4>A local network, not a platform</h4>
+          <p>Drivers, security officers, house managers, doctors, lawyers &mdash; people we have met in person and used ourselves. Nobody enters the network on a review score.</p>
+        </div>
+        <div class="point reveal" data-d="1">
+          <span class="point-no">02</span>
+          <h4>One manager, permanently</h4>
+          <p>The same person every time, in your language. They hold your history and your preferences, so you never explain the same thing twice.</p>
+        </div>
+        <div class="point reveal" data-d="2">
+          <span class="point-no">03</span>
+          <h4>No commissions, no conflicts</h4>
+          <p>We are paid by you and not by suppliers. So the recommendation is the better option, never the one paying the larger cut.</p>
+        </div>
+        <div class="point reveal" data-d="3">
+          <span class="point-no">04</span>
+          <h4>Discretion as a default</h4>
+          <p>Confidentiality without being asked for it. Nothing is shared, sold or referenced &mdash; not even anonymously.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="figures reveal">
+      <div class="fig"><b data-count="15">0</b><span>minutes to reply</span></div>
+      <div class="fig"><b>24/7</b><span>including holidays</span></div>
+      <div class="fig"><b data-count="12">0</b><span>countries in LATAM</span></div>
+      <div class="fig"><b data-count="5">0</b><span>languages spoken</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ REQUEST ══════════════════════ -->
+<section class="band band-deep request" id="request">
+  <div class="shell req-grid">
+
+    <aside class="req-aside reveal">
+      <span class="eyebrow">Request</span>
+      <h2 class="h2">Tell us what<br>you need.</h2>
+      <p class="lede">
+        A short line is enough. A manager replies within fifteen minutes on
+        WhatsApp and asks only what genuinely matters.
+      </p>
+
+      <div class="req-direct">
+        <a class="direct" href="https://wa.me/5511968422222" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span><b>WhatsApp</b>+55 11 96842 2222</span>
+        </a>
+        <a class="direct" href="https://t.me/ROSSA_CO" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3L18.8 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.7 13.2l-4.6-1.4c-1-.3-1-1 .2-1.5L20.6 3c.8-.3 1.6.2 1.3 1.3z"/></svg>
+          <span><b>Telegram</b>@ROSSA_CO</span>
+        </a>
+      </div>
+
+      <p class="req-priv">
+        Your details are never shared with third parties or used for marketing.
+        An NDA is signed before work begins on request.
+      </p>
+    </aside>
+
+    <div class="req-form-wrap reveal" data-d="1">
+      <!-- Форму рисует переиспользуемый компонент из assets/js/request-form.js -->
+      <div id="request-form-mount"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════ FINAL CTA ══════════════════════ -->
+<section class="final" id="final">
+  <div class="final-bg" data-parallax="0.16"><div class="scrim scrim-emerald"></div></div>
+  <div class="final-veil"></div>
+  <div class="shell final-in">
+    <h2 class="statement reveal">Brazil,<br><em>without the friction.</em></h2>
+    <a class="btn btn-fill btn-lg reveal" data-d="1" href="#request" data-scroll>Request your private concierge</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="foot">
+  <div class="shell foot-in">
+    <span class="foot-geo">Brazil <i></i> LATAM</span>
+    <nav class="foot-links" aria-label="Contact">
+      <a href="https://wa.me/5511968422222" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:concierge@example.com">Email</a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <nav class="foot-legal" aria-label="Legal">
+      <a href="#" data-legal="privacy">Privacy</a>
+      <a href="#" data-legal="terms">Terms</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- плавающий WhatsApp -->
+<a class="float-wa" id="floatWa" href="https://wa.me/5511968422222" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   RequestForm — переиспользуемый компонент формы заявки
+   ──────────────────────────────────────────────────────────────────────
+   Компонент сам строит разметку, валидирует, собирает данные в понятную
+   структуру и отдаёт её транспорту. Транспорт подменяется одной строкой,
+   когда появится бэкенд, — трогать остальной код не придётся.
+
+   Подключение бэкенда:
+
+     RequestForm.mount('#request-form-mount', {
+       transport: RequestForm.transports.http('https://api.example.com/requests')
+     });
+
+   Свои варианты:
+     RequestForm.transports.console()               — по умолчанию, пишет в консоль
+     RequestForm.transports.http(url, headers)      — POST JSON
+     RequestForm.transports.telegramBot(token, chat) — прямо в чат Telegram
+     RequestForm.transports.whatsapp(phone)         — открывает WhatsApp с текстом
+     любая своя функция async (payload) => void
+
+   Структура payload, которая уходит в транспорт:
+   {
+     meta: { formId, submittedAt, locale, timezone, source, userAgent, referrer },
+     lead: {
+       fullName, whatsapp, email, country,
+       service, location, date, message
+     }
+   }
+   ══════════════════════════════════════════════════════════════════════ */
+
+(function (global) {
+  'use strict';
+
+  /* ── Схема полей ────────────────────────────────────────────────────
+     Один источник правды: и разметка, и валидация, и payload строятся
+     отсюда. Чтобы добавить поле — допишите объект, больше ничего.      */
+  var SCHEMA = [
+    { name:'fullName', label:'Full name',        type:'text',     required:true,  row:1,
+      autocomplete:'name',        placeholder:'' },
+    { name:'whatsapp', label:'WhatsApp number',  type:'tel',      required:true,  row:1,
+      autocomplete:'tel',         placeholder:'+55 11 90000 0000',
+      pattern:/^[+]?[\d\s().-]{7,20}$/, patternMessage:'Enter a valid phone number with country code.' },
+
+    { name:'email',    label:'Email',            type:'email',    required:true,  row:2,
+      autocomplete:'email',       placeholder:'name@company.com',
+      pattern:/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/, patternMessage:'Enter a valid email address.' },
+    { name:'country',  label:'Country',          type:'text',     required:true,  row:2,
+      autocomplete:'country-name', placeholder:'' },
+
+    { name:'service',  label:'Service',          type:'select',   required:true,  row:3,
+      options:['Private Mobility','Private Aviation','Yacht Charter','Private Real Estate',
+               'Executive Protection','Private Experiences','Family & Maternity',
+               'Brazil Investment','Something else'] },
+    { name:'location', label:'Preferred location', type:'select', required:false, row:3,
+      options:['São Paulo','Rio de Janeiro','Florianópolis','Angra dos Reis',
+               'Fernando de Noronha','Balneário Camboriú','Elsewhere in Brazil',
+               'Elsewhere in LATAM','Not decided yet'] },
+
+    { name:'date',     label:'Preferred date',   type:'date',     required:false, row:4 },
+    { name:'message',  label:'What do you need?', type:'textarea', required:true, row:5,
+      placeholder:'An armoured SUV at 4:00 a.m. at my hotel in São Paulo, English-speaking driver.' }
+  ];
+
+  var COPY = {
+    consent:'By submitting you agree to be contacted about this request. Your details are never shared or used for marketing.',
+    submit:'Request private assistance',
+    sending:'Sending…',
+    doneTitle:'Request received',
+    doneText:'We will contact you via WhatsApp shortly.',
+    doneAction:'Open WhatsApp now',
+    failTitle:'Could not send',
+    failText:'Something went wrong on our side. Message us on WhatsApp and we will pick it up immediately.',
+    required:'This field is required.'
+  };
+
+  /* ── Транспорты ─────────────────────────────────────────────────── */
+  var transports = {
+    console: function () {
+      return function (payload) {
+        console.info('[RequestForm] payload ready for backend:', payload);
+        return Promise.resolve({ ok:true, mode:'console' });
+      };
+    },
+
+    http: function (url, headers) {
+      return function (payload) {
+        return fetch(url, {
+          method:'POST',
+          headers: Object.assign({ 'Content-Type':'application/json' }, headers || {}),
+          body: JSON.stringify(payload)
+        }).then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json().catch(function () { return { ok:true }; });
+        });
+      };
+    },
+
+    telegramBot: function (botToken, chatId) {
+      return function (payload) {
+        var l = payload.lead;
+        var text = [
+          '*New concierge request*',
+          '',
+          '*Name:* ' + l.fullName,
+          '*WhatsApp:* ' + l.whatsapp,
+          '*Email:* ' + l.email,
+          '*Country:* ' + l.country,
+          '*Service:* ' + l.service,
+          '*Location:* ' + (l.location || '—'),
+          '*Date:* ' + (l.date || '—'),
+          '',
+          l.message
+        ].join('\n');
+        return fetch('https://api.telegram.org/bot' + botToken + '/sendMessage', {
+          method:'POST',
+          headers:{ 'Content-Type':'application/json' },
+          body: JSON.stringify({ chat_id:chatId, text:text, parse_mode:'Markdown' })
+        }).then(function (r) {
+          if (!r.ok) throw new Error('Telegram ' + r.status);
+          return r.json();
+        });
+      };
+    },
+
+    whatsapp: function (phone) {
+      return function (payload) {
+        var l = payload.lead;
+        var text = [
+          'New concierge request',
+          'Name: ' + l.fullName,
+          'Email: ' + l.email,
+          'Country: ' + l.country,
+          'Service: ' + l.service,
+          'Location: ' + (l.location || '—'),
+          'Date: ' + (l.date || '—'),
+          '',
+          l.message
+        ].join('\n');
+        global.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        return Promise.resolve({ ok:true, mode:'whatsapp' });
+      };
+    }
+  };
+
+  /* ── Утилиты ────────────────────────────────────────────────────── */
+  function el(tag, attrs, children) {
+    var node = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) {
+      if (k === 'class') node.className = attrs[k];
+      else if (k === 'html') node.innerHTML = attrs[k];
+      else if (k === 'text') node.textContent = attrs[k];
+      else if (attrs[k] !== null && attrs[k] !== undefined && attrs[k] !== false) {
+        node.setAttribute(k, attrs[k]);
+      }
+    });
+    (children || []).forEach(function (c) { if (c) node.appendChild(c); });
+    return node;
+  }
+
+  function groupByRow(schema) {
+    var rows = [], seen = {};
+    schema.forEach(function (f) {
+      if (!seen[f.row]) { seen[f.row] = []; rows.push(seen[f.row]); }
+      seen[f.row].push(f);
+    });
+    return rows;
+  }
+
+  /* ── Компонент ──────────────────────────────────────────────────── */
+  function RequestForm(mount, options) {
+    this.mount = typeof mount === 'string' ? document.querySelector(mount) : mount;
+    if (!this.mount) throw new Error('RequestForm: mount point not found');
+
+    this.opts = Object.assign({
+      formId:'concierge-request',
+      transport: transports.console(),
+      whatsappPhone:'5511968422222',
+      onSuccess:null,
+      onError:null
+    }, options || {});
+
+    this.fields = {};
+    this.render();
+  }
+
+  RequestForm.prototype.render = function () {
+    var self = this;
+    var form = el('form', { class:'rf', id:this.opts.formId, novalidate:'' });
+
+    groupByRow(SCHEMA).forEach(function (row) {
+      var target = form;
+      if (row.length > 1) {
+        target = el('div', { class:'rf-row' });
+        form.appendChild(target);
+      }
+      row.forEach(function (f) { target.appendChild(self.buildField(f)); });
+    });
+
+    var submit = el('button', { class:'btn btn-fill rf-submit', type:'submit' },
+      [el('span', { text:COPY.submit })]);
+
+    form.appendChild(el('div', { class:'rf-foot' }, [
+      el('p', { class:'rf-consent', text:COPY.consent }),
+      submit
+    ]));
+
+    form.addEventListener('submit', function (e) { self.onSubmit(e); });
+    this.form = form;
+    this.submitBtn = submit;
+    this.mount.appendChild(form);
+  };
+
+  RequestForm.prototype.buildField = function (f) {
+    var self = this;
+    var id = this.opts.formId + '-' + f.name;
+    var wrap = el('div', { class:'rf-field' + (f.type === 'select' ? ' is-select' : '') });
+
+    var label = el('label', { for:id, html: f.label + (f.required ? ' <span class="req">*</span>' : '') });
+
+    var input;
+    if (f.type === 'textarea') {
+      input = el('textarea', { id:id, name:f.name, rows:'5', placeholder:f.placeholder || '' });
+    } else if (f.type === 'select') {
+      input = el('select', { id:id, name:f.name });
+      input.appendChild(el('option', { value:'', text: f.required ? 'Select…' : 'No preference' }));
+      f.options.forEach(function (o) { input.appendChild(el('option', { value:o, text:o })); });
+    } else {
+      input = el('input', {
+        id:id, name:f.name, type:f.type,
+        placeholder:f.placeholder || '',
+        autocomplete:f.autocomplete || 'off'
+      });
+    }
+    if (f.required) input.setAttribute('aria-required', 'true');
+
+    var error = el('span', { class:'rf-error', id:id + '-error', hidden:'' });
+
+    input.addEventListener('input', function () { self.clearError(f.name); });
+    input.addEventListener('change', function () { self.clearError(f.name); });
+
+    wrap.appendChild(label);
+    wrap.appendChild(input);
+    wrap.appendChild(error);
+
+    this.fields[f.name] = { def:f, wrap:wrap, input:input, error:error };
+    return wrap;
+  };
+
+  RequestForm.prototype.clearError = function (name) {
+    var f = this.fields[name];
+    if (!f) return;
+    f.wrap.classList.remove('has-error');
+    f.error.hidden = true;
+    f.error.textContent = '';
+    f.input.removeAttribute('aria-invalid');
+  };
+
+  RequestForm.prototype.setError = function (name, message) {
+    var f = this.fields[name];
+    if (!f) return;
+    f.wrap.classList.add('has-error');
+    f.error.textContent = message;
+    f.error.hidden = false;
+    f.input.setAttribute('aria-invalid', 'true');
+    f.input.setAttribute('aria-describedby', f.error.id);
+  };
+
+  RequestForm.prototype.validate = function () {
+    var self = this, firstBad = null;
+    SCHEMA.forEach(function (f) {
+      var value = String(self.fields[f.name].input.value || '').trim();
+      var problem = null;
+      if (f.required && !value) problem = COPY.required;
+      else if (value && f.pattern && !f.pattern.test(value)) problem = f.patternMessage;
+      if (problem) {
+        self.setError(f.name, problem);
+        if (!firstBad) firstBad = self.fields[f.name].input;
+      } else {
+        self.clearError(f.name);
+      }
+    });
+    if (firstBad) { firstBad.focus(); return false; }
+    return true;
+  };
+
+  RequestForm.prototype.collect = function () {
+    var self = this, lead = {};
+    SCHEMA.forEach(function (f) {
+      lead[f.name] = String(self.fields[f.name].input.value || '').trim();
+    });
+    var tz = '';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+    return {
+      meta: {
+        formId:this.opts.formId,
+        submittedAt:new Date().toISOString(),
+        locale:document.documentElement.lang || 'en',
+        timezone:tz,
+        source:location.href,
+        referrer:document.referrer || '',
+        userAgent:navigator.userAgent
+      },
+      lead: lead
+    };
+  };
+
+  RequestForm.prototype.onSubmit = function (e) {
+    e.preventDefault();
+    if (!this.validate()) return;
+
+    var self = this;
+    var payload = this.collect();
+
+    this.submitBtn.disabled = true;
+    this.submitBtn.firstChild.textContent = COPY.sending;
+
+    Promise.resolve()
+      .then(function () { return self.opts.transport(payload); })
+      .then(function (res) {
+        self.showDone(payload);
+        if (typeof self.opts.onSuccess === 'function') self.opts.onSuccess(payload, res);
+      })
+      .catch(function (err) {
+        self.submitBtn.disabled = false;
+        self.submitBtn.firstChild.textContent = COPY.submit;
+        self.showFailure();
+        if (typeof self.opts.onError === 'function') self.opts.onError(err, payload);
+        else console.error('[RequestForm]', err);
+      });
+  };
+
+  RequestForm.prototype.showDone = function (payload) {
+    var wa = 'https://wa.me/' + this.opts.whatsappPhone +
+      '?text=' + encodeURIComponent('Hello, I have just sent a request as ' + payload.lead.fullName + '.');
+
+    var done = el('div', { class:'rf-done', role:'status', 'aria-live':'polite' }, [
+      el('div', { class:'rf-done-mark',
+        html:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 12l5.5 5.5L20 7"/></svg>' }),
+      el('h3', { text:COPY.doneTitle }),
+      el('p', { text:COPY.doneText }),
+      el('a', { class:'btn btn-line', href:wa, target:'_blank', rel:'noopener' },
+        [el('span', { text:COPY.doneAction })])
+    ]);
+
+    this.form.replaceWith(done);
+    this.doneNode = done;
+    done.scrollIntoView({ behavior:'smooth', block:'center' });
+  };
+
+  RequestForm.prototype.showFailure = function () {
+    var existing = this.form.querySelector('.rf-failure');
+    if (existing) return;
+    var wa = 'https://wa.me/' + this.opts.whatsappPhone;
+    var note = el('div', { class:'rf-error rf-failure', role:'alert',
+      html: COPY.failText + ' <a href="' + wa + '" target="_blank" rel="noopener" style="text-decoration:underline">WhatsApp</a>' });
+    note.hidden = false;
+    note.style.padding = '0 24px 18px';
+    this.form.querySelector('.rf-foot').before(note);
+  };
+
+  /* ── Публичный интерфейс ────────────────────────────────────────── */
+  RequestForm.mount = function (target, options) { return new RequestForm(target, options); };
+  RequestForm.schema = SCHEMA;
+  RequestForm.transports = transports;
+
+  global.RequestForm = RequestForm;
+})(window);
+
+</script>
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   Поведение страницы: навигация, плавный скролл, параллакс,
+   появление блоков, раскрытие панелей, счётчики, монтаж формы.
+   Всё на нативном API — без библиотек, чтобы страница открывалась
+   офлайн и не тянула ничего со стороны.
+   ══════════════════════════════════════════════════════════════════════ */
+
+(function () {
+  'use strict';
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── 1. Плавный скролл по якорям, БЕЗ изменения URL ──────────────
+     history не трогаем намеренно: сайт одностраничный, адрес должен
+     оставаться прежним, а кнопка «назад» — не листать секции.        */
+  function scrollToId(id) {
+    var target = document.getElementById(id);
+    if (!target) return;
+    var navH = document.getElementById('nav').offsetHeight;
+    var top = target.getBoundingClientRect().top + window.pageYOffset - navH + 1;
+    window.scrollTo({ top: Math.max(top, 0), behavior: reduced ? 'auto' : 'smooth' });
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[data-scroll]');
+    if (!link) return;
+    var id = (link.getAttribute('href') || '').replace('#', '');
+    if (!id) return;
+    e.preventDefault();
+    closeDrawer();
+
+    // клик по «Request …» внутри услуги — подставляем услугу в форму
+    var prefill = link.getAttribute('data-prefill');
+    if (prefill) {
+      var sel = document.getElementById('concierge-request-service');
+      if (sel) {
+        var wanted = link.textContent.trim();
+        Array.prototype.forEach.call(sel.options, function (o) {
+          if (o.value === prefill) sel.value = o.value;
+        });
+        sel.dispatchEvent(new Event('change'));
+      }
+    }
+    scrollToId(id);
+  });
+
+  // заглушки для юридических ссылок — чтобы никуда не уводило
+  document.addEventListener('click', function (e) {
+    var l = e.target.closest('a[data-legal]');
+    if (!l) return;
+    e.preventDefault();
+    alert('The ' + l.getAttribute('data-legal') + ' document is not published yet.');
+  });
+
+  /* ── 2. Навигация: заливка, скрытие при скролле вниз ─────────────── */
+  var nav = document.getElementById('nav');
+  var floatWa = document.getElementById('floatWa');
+  var lastY = window.pageYOffset;
+
+  function onScroll() {
+    var y = window.pageYOffset;
+    nav.classList.toggle('solid', y > 40);
+    nav.classList.toggle('hide', y > 620 && y > lastY && !document.body.classList.contains('drawer-open'));
+    floatWa.classList.toggle('on', y > 700);
+    lastY = y;
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── 3. Активный пункт меню ──────────────────────────────────────── */
+  var sections = ['home', 'services', 'destinations', 'concierge', 'request']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+
+  if (sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ── 4. Мобильное меню ───────────────────────────────────────────── */
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+
+  function openDrawer() {
+    drawer.hidden = false;
+    requestAnimationFrame(function () { drawer.classList.add('open'); });
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('drawer-open');
+  }
+  function closeDrawer() {
+    if (drawer.hidden) return;
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    document.body.classList.remove('drawer-open');
+    setTimeout(function () { drawer.hidden = true; }, 420);
+  }
+  burger.addEventListener('click', function () {
+    drawer.hidden ? openDrawer() : closeDrawer();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeDrawer();
+  });
+
+  /* ── 5. Появление блоков ─────────────────────────────────────────── */
+  var revealIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('in');
+      revealIO.unobserve(en.target);   // иначе блок переигрывает анимацию при каждом проходе
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+  document.querySelectorAll('.reveal').forEach(function (el) { revealIO.observe(el); });
+
+  /* ── 6. Параллакс ────────────────────────────────────────────────── */
+  var parallaxNodes = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+  if (parallaxNodes.length && !reduced) {
+    var ticking = false;
+    var move = function () {
+      var vh = window.innerHeight;
+      parallaxNodes.forEach(function (node) {
+        var host = node.parentElement.getBoundingClientRect();
+        if (host.bottom < -200 || host.top > vh + 200) return;
+        var depth = parseFloat(node.getAttribute('data-parallax')) || 0.2;
+        var progress = (host.top + host.height / 2 - vh / 2) / vh;
+        node.style.transform = 'translate3d(0,' + (progress * depth * 100).toFixed(2) + 'px,0)';
+      });
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(move);
+    }, { passive: true });
+    window.addEventListener('resize', move);
+    move();
+  }
+
+  /* ── 7. Раскрытие панелей услуг ──────────────────────────────────── */
+  document.querySelectorAll('[data-panel]').forEach(function (panel) {
+    var head = panel.querySelector('.panel-head');
+    head.addEventListener('click', function () {
+      var open = panel.hasAttribute('data-open');
+
+      // аккордеон: одновременно раскрыта одна панель
+      document.querySelectorAll('[data-panel][data-open]').forEach(function (p) {
+        if (p !== panel) {
+          p.removeAttribute('data-open');
+          p.querySelector('.panel-head').setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (open) {
+        panel.removeAttribute('data-open');
+        head.setAttribute('aria-expanded', 'false');
+      } else {
+        panel.setAttribute('data-open', '');
+        head.setAttribute('aria-expanded', 'true');
+        // если раскрытая панель ушла под шапку — подтягиваем её обратно
+        setTimeout(function () {
+          var navH = nav.offsetHeight;
+          var box = panel.getBoundingClientRect();
+          if (box.top < navH) {
+            window.scrollTo({
+              top: box.top + window.pageYOffset - navH - 20,
+              behavior: reduced ? 'auto' : 'smooth'
+            });
+          }
+        }, 90);
+      }
+    });
+  });
+
+  /* ── 8. Счётчики ─────────────────────────────────────────────────── */
+  var countIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      var node = en.target;
+      var to = parseInt(node.getAttribute('data-count'), 10) || 0;
+      var t0 = performance.now(), dur = 1500;
+      (function step(now) {
+        var p = Math.min((now - t0) / dur, 1);
+        node.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      })(t0);
+      countIO.unobserve(node);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(function (n) { countIO.observe(n); });
+
+  /* ── 9. Монтаж формы ─────────────────────────────────────────────
+     Транспорт по умолчанию — консоль: форма работает, данные видно,
+     ничего никуда не улетает. Чтобы подключить бэкенд, замените
+     transport на один из RequestForm.transports.*                    */
+  if (window.RequestForm) {
+    window.conciergeForm = RequestForm.mount('#request-form-mount', {
+      formId: 'concierge-request',
+      whatsappPhone: '5511968422222',
+      transport: RequestForm.transports.console()
+      // transport: RequestForm.transports.http('https://api.yourdomain.com/requests')
+      // transport: RequestForm.transports.telegramBot('BOT_TOKEN', 'CHAT_ID')
+    });
+  }
+})();
+
+</script>
+</body>
+</html>
