@@ -15,7 +15,7 @@
 - Разделы: HERO · SERVICES · DESTINATIONS (5) · CONCIERGE · REQUEST · FINAL · FOOTER.
 - Компонент формы `assets/js/request-form.js` одинаковый: одна схема полей строит
   разметку, валидацию и payload. Бэкенд подключается заменой транспорта в `app.js`.
-- Контакты: +55 11 96842 2222 · https://t.me/ROSSA_CO · wa.me/5511968422222
+- Контакты: +55 48 99986 9084 · https://t.me/yurii_baitler · wa.me/5548999869084
 - Ни одной внешней зависимости, кроме Google Fonts. Ни GSAP, ни React, ни CDN.
 - Фото нет — вместо них световые подложки. Слоты описаны в `assets/img/README.txt`.
 

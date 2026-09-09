@@ -22,7 +22,7 @@
 
   var CO = 'Montero Private Concierge';
   var WA = '+55 48 99986 9084';
-  var TG = 't.me/ROSSA_CO';
+  var TG = 't.me/yurii_baitler';
 
   window.LEGAL = {
 

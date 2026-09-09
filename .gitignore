@@ -6,3 +6,6 @@ _publish/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Архив для ручной заливки на хостинг — собирается заново, в истории не нужен
+montero-*.zip

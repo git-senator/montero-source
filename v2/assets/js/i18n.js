@@ -39,7 +39,7 @@
 
   /* ══════════ ENGLISH ══════════ */
   DICT.en = {
-    'meta.title': 'The House of Quiet Arrangements',
+    'meta.title': 'MONTERO — Concierge Service',
     'meta.desc': 'Private concierge for Brazil and Latin America. One request, everything arranged — mobility, aviation, yachts, residences, protection.',
 
     'brand.name': 'Latin America',
@@ -277,7 +277,7 @@
 
   /* ══════════ PORTUGUÊS ══════════ */
   DICT.pt = {
-    'meta.title': 'A Casa dos Arranjos Discretos',
+    'meta.title': 'MONTERO — Concierge Service',
     'meta.desc': 'Concierge privado para o Brasil e a América Latina. Um pedido e tudo é organizado — transporte, aviação, iates, residências, proteção.',
 
     'brand.name': 'América Latina',
@@ -515,7 +515,7 @@
 
   /* ══════════ ESPAÑOL ══════════ */
   DICT.es = {
-    'meta.title': 'La Casa de los Arreglos Discretos',
+    'meta.title': 'MONTERO — Concierge Service',
     'meta.desc': 'Conserjería privada para Brasil y América Latina. Una petición y todo queda organizado — transporte, aviación, yates, residencias, protección.',
 
     'brand.name': 'América Latina',
@@ -753,7 +753,7 @@
 
   /* ══════════ ITALIANO ══════════ */
   DICT.it = {
-    'meta.title': 'La Casa degli Accordi Silenziosi',
+    'meta.title': 'MONTERO — Concierge Service',
     'meta.desc': 'Concierge privato per il Brasile e l’America Latina. Una richiesta e tutto è organizzato — trasporti, aviazione, yacht, residenze, protezione.',
 
     'brand.name': 'America Latina',
