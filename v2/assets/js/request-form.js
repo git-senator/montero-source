@@ -77,7 +77,6 @@
                { v:'Full Travel Services', k:'svc.19.name' },
                { v:'Personal Companion', k:'svc.20.name' },
                { v:'Executive Protection', k:'svc.21.name' },
-               { v:'Family & Maternity', k:'svc.22.name' },
                { v:'Something else', k:'form.other', ru:'Другое' }] },
     { name:'location', label:'Предпочтительное место', i18n:'form.location', type:'select', required:false, row:3,
       options:[{ v:'Custom request', k:'form.loc.custom', ru:'Индивидуальный запрос' },
