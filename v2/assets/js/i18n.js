@@ -78,6 +78,7 @@
     'lp.phil.sign': 'Private concierge — MONTERO',
     'lp.svc.label': 'Services',
     'lp.svc0': 'Armoured cars',
+    'lp.tag0': 'Driven · Comfortable',
     'lp.tag1': 'Crewed · Provisioned',
     'lp.tag2': 'Rotor · Helipad',
     'lp.tag4': 'Portuguese · English',
@@ -169,7 +170,7 @@
     'form.loc.undecided': 'Not decided yet',
 
     svc: [
-['Armored Vehicle Rental','Armored · Driven · Discreet',
+['Armored Vehicle Rental','Driven · Comfortable · Safe',
  'An armored SUV at the hotel entrance at four in the morning, engine warm, driver already briefed. On domestic plates, papers in order, protection level to your requirement.',
  'Armored SUVs, sedans and vans','Protection levels B4 to B7',
  'Security-trained drivers','By the day, the week or the month','Request an armored vehicle'],
@@ -319,6 +320,7 @@
     'lp.phil.sign': 'Concierge privado — MONTERO',
     'lp.svc.label': 'Serviços',
     'lp.svc0': 'Carros blindados',
+    'lp.tag0': 'Com motorista · Confortável',
     'lp.tag1': 'Com tripulação · Abastecido',
     'lp.tag2': 'Rotor · Helponto',
     'lp.tag4': 'Português · Inglês',
@@ -407,7 +409,7 @@
     'form.loc.undecided': 'Ainda não decidi',
 
     svc: [
-['Aluguel de blindados','Blindado · Com motorista · Discreto',
+['Aluguel de blindados','Com motorista · Confortável · Seguro',
  'Um SUV blindado na porta do hotel às quatro da manhã, motor quente, motorista já orientado. Com placas nacionais, documentação em ordem, nível de blindagem conforme a sua necessidade.',
  'SUVs, sedãs e vans blindados','Níveis de blindagem B4 a B7',
  'Motoristas com treinamento de segurança','Por dia, por semana ou por mês','Solicitar um blindado'],
@@ -557,6 +559,7 @@
     'lp.phil.sign': 'Concierge privado — MONTERO',
     'lp.svc.label': 'Servicios',
     'lp.svc0': 'Autos blindados',
+    'lp.tag0': 'Con chofer · Cómodo',
     'lp.tag1': 'Con tripulación · Aprovisionado',
     'lp.tag2': 'Rotor · Helipuerto',
     'lp.tag4': 'Portugués · Inglés',
@@ -645,7 +648,7 @@
     'form.loc.undecided': 'Aún no lo he decidido',
 
     svc: [
-['Vehículos blindados','Blindado · Con chofer · Discreto',
+['Vehículos blindados','Con chofer · Cómodo · Seguro',
  'Un SUV blindado en la puerta del hotel a las cuatro de la mañana, motor caliente, chofer ya informado. Con matrícula nacional, papeles en regla, nivel de blindaje según su necesidad.',
  'SUV, sedanes y vans blindados','Niveles de blindaje B4 a B7',
  'Choferes con formación en seguridad','Por día, por semana o por mes','Solicitar un blindado'],
@@ -795,6 +798,7 @@
     'lp.phil.sign': 'Concierge privato — MONTERO',
     'lp.svc.label': 'Servizi',
     'lp.svc0': 'Auto blindate',
+    'lp.tag0': 'Con autista · Confortevole',
     'lp.tag1': 'Con equipaggio · Rifornito',
     'lp.tag2': 'Rotore · Elisuperficie',
     'lp.tag4': 'Portoghese · Inglese',
@@ -883,7 +887,7 @@
     'form.loc.undecided': 'Non ho ancora deciso',
 
     svc: [
-['Auto blindate','Blindata · Con autista · Discreta',
+['Auto blindate','Con autista · Confortevole · Sicura',
  'Un SUV blindato davanti all’hotel alle quattro del mattino, motore caldo, autista già istruito. Con targhe nazionali, documenti in regola, livello di blindatura secondo la sua esigenza.',
  'SUV, berline e van blindati','Livelli di blindatura da B4 a B7',
  'Autisti con formazione di sicurezza','A giornata, a settimana o a mese','Richiedere un’auto blindata'],
