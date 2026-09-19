@@ -1,0 +1,37 @@
+# ══════════ КЭШ ══════════
+#
+# Страницу правим по многу раз в день, и DDoS-Guard перед сайтом
+# держал её копию у себя: владелец открывал monterooffice.com и видел
+# вчерашнее, пока к адресу не приписать «?1». Здесь мы говорим прямо:
+# страницу не запоминать, спрашивать сервер каждый раз.
+#
+# Со статикой наоборот — её можно держать хоть год: в ссылках на неё
+# стоит отпечаток файла (?v=a1b2c3d4), и при любой правке адрес
+# меняется сам. Старое просто перестаёт запрашиваться.
+#
+# Кладётся в корень /public_html, действует и на телефонную версию,
+# и на /v3/.
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|avif|gif|svg|ico|woff|woff2|ttf|mp4|webm)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

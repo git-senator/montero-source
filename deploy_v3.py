@@ -44,6 +44,12 @@ def main():
 
     # ── 1. Копируем исходники ────────────────────────────────────────
     shutil.copy2(os.path.join(SRC, "index.html"), os.path.join(DST, "index.html"))
+
+    # Настройка кэша хостинга живёт в корне проекта и едет в сборку:
+    # без неё DDoS-Guard отдаёт посетителю вчерашнюю страницу.
+    ht = os.path.join(ROOT, ".htaccess")
+    if os.path.isfile(ht):
+        shutil.copy2(ht, os.path.join(ROOT, "_publish", ".htaccess"))
     dst_assets = os.path.join(DST, "assets")
     if os.path.isdir(dst_assets):
         shutil.rmtree(dst_assets)
