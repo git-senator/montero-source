@@ -27,6 +27,40 @@
   } catch (e) {}
 })();
 </script>
+<!-- ── Свежесть страницы ─────────────────────────────────────────────
+     Перед сайтом стоит щит DDoS-Guard, и он держит копию страницы у
+     себя, не слушая ни Cache-Control, ни must-revalidate: проверено на
+     пробном файле — изменённый на сервере, он отдавался старым больше
+     трёх минут. Поэтому страница спрашивает сама.
+
+     Запрос к version.txt идёт с уникальной меткой времени: такого
+     адреса у щита в запасе нет, и он вынужден сходить на сервер. Если
+     номер сборки разошёлся с тем, что вшит в страницу, — уходим на
+     адрес с этим номером. Он тоже уникален, значит тоже мимо щита, и
+     человек видит свежее. Одной перезагрузки хватает.
+
+     Всё обёрнуто так, чтобы отказ сети или старый браузер ничего не
+     ломали: не вышло — страница просто остаётся как есть.        -->
+<meta name="mc-build" content="__СБОРКА__">
+<script>
+(function () {
+  try {
+    var m = document.querySelector('meta[name="mc-build"]');
+    if (!m || !window.fetch) return;
+    var свой = (m.getAttribute('content') || '').trim();
+    if (!свой || свой.charAt(0) === '_') return;   /* не собрано — не мешаем */
+    fetch('version.txt?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.text() : ''; })
+      .then(function (t) {
+        var нов = (t || '').trim();
+        if (!нов || нов === свой) return;
+        if (location.search.indexOf('v=' + нов) !== -1) return;   /* уже на свежем */
+        location.replace(location.pathname + '?v=' + encodeURIComponent(нов) + location.hash);
+      })
+      .catch(function () {});
+  } catch (e) {}
+})();
+</script>
 <title data-i18n="meta.title">MONTERO — Concierge Service</title>
 <link rel="icon" href="assets/img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">

@@ -88,6 +88,15 @@ def main():
         return 'srcset="%s"' % ", ".join(parts)
 
     html = re.sub(r'srcset="([^"]+)"', mark_srcset, html)
+
+    # ── Номер сборки ─────────────────────────────────────────────────
+    # Щит DDoS-Guard держит копию страницы у себя и не слушает
+    # Cache-Control. Страница сама сверяется с version.txt и, если
+    # разошлось, уходит на свежий адрес. Номер вшивается сюда и туда.
+    сборка = hashlib.sha1(html.encode("utf-8")).hexdigest()[:10]
+    html = html.replace("__СБОРКА__", сборка)
+    io.open(os.path.join(DST, "version.txt"), "w", encoding="utf-8").write(сборка)
+
     io.open(page, "w", encoding="utf-8").write(html)
 
     # Картинки, на которые ссылаются стили (url(...)), тоже надо штамповать.
