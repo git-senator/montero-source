@@ -38,3 +38,7 @@
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
+
+# Страницу отдаёт index.php — щит не кэширует динамику, и правка видна
+# посетителю сразу. Содержимое по-прежнему лежит в index.html.
+DirectoryIndex index.php index.html

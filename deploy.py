@@ -99,6 +99,17 @@ def main():
 
     io.open(page, "w", encoding="utf-8").write(html)
 
+    # Страницу посетителю отдаёт index.php: щит DDoS-Guard кэширует
+    # статику и не слушает Cache-Control, а динамику не кэширует вовсе.
+    php = os.path.join(ROOT, "index.php")
+    if os.path.isfile(php):
+        shutil.copy2(php, os.path.join(DST, "index.php"))
+
+    # Настройка кэша хостинга — в корень публикации, одна на обе версии.
+    ht = os.path.join(ROOT, ".htaccess")
+    if os.path.isfile(ht):
+        shutil.copy2(ht, os.path.join(ROOT, "_publish", ".htaccess"))
+
     # Картинки, на которые ссылаются стили (url(...)), тоже надо штамповать.
     # Иначе один и тот же файл едет по двум адресам — со штампом из srcset и
     # без штампа из CSS — и телефон качает его дважды.
