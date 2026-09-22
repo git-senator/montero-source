@@ -125,7 +125,117 @@
         sel.dispatchEvent(new Event('change'));
       }
     }
+    /* Кубик витрины на широком экране везёт к своей услуге сам: у
+       него ниже отдельный обработчик с ровным разгоном и
+       торможением. Здесь его трогать нельзя, иначе поедут оба
+       сразу. На узком экране прокрутка остаётся за этим общим
+       обработчиком, как была.                                    */
+    if (link.hasAttribute('data-open') && wide && wide.matches) return;
     scrollToId(id);
+  });
+
+  /* ── Кубик витрины везёт к своей услуге ───────────────────────────
+     Владелец попросил, чтобы нажатие отзывалось сразу и переносило к
+     услуге одним неспешным движением — «интересная динамика», а не
+     рывок с двумя поправками следом.
+
+     Поэтому на широком экране всё решается в момент нажатия: услуга
+     раскрывается тут же (реестр рисует карточку со снимком), сразу
+     считается конечная точка — и страница едет туда одним проездом.
+     Реестр к этому не подключаем: его собственная подводка дёргала
+     бы страницу навстречу нашей.
+
+     Номер услуги написан в data-open — это ключ из реестра переводов
+     (svc.N.name), а не порядок строки: строки за лето переставляли и
+     две услуги удалили, порядок сместился бы. Ищем строку по ключу.
+
+     На узком экране всё как было: там гармошка раскрывается прямо в
+     описи и сама ставит строку под шапку — своё поведение у телефона
+     не трогаем.                                                   */
+
+  /* Куда встать, чтобы услуга читалась целиком: строка под шапкой, но
+     не дальше конца раздела. Карточка со снимком прилипшая, и у
+     последних услуг «строка под шапкой» означала бы проезд за край
+     раздела — карточка уехала бы вверх, а от неё остался бы хвост
+     описания.                                                     */
+  function кудаЕхать(строка) {
+    var кнопка = строка.querySelector('.svc-head');
+    var сдвиг = кнопка.getBoundingClientRect().top - (nav.offsetHeight + 12);
+    var раздел = строка.closest('section');
+    if (раздел) {
+      var конец = раздел.getBoundingClientRect().bottom - (window.innerHeight - 16);
+      if (сдвиг > конец) сдвиг = конец;
+    }
+    var предел = document.documentElement.scrollHeight - window.innerHeight;
+    return Math.max(0, Math.min(window.pageYOffset + сдвиг, предел));
+  }
+
+  /* Свой проезд вместо behavior:'smooth'. Нативная прокрутка на таком
+     расстоянии проскакивает за доли секунды и скоростью не
+     управляет. Здесь кривая с разгоном и торможением, а длительность
+     растёт с расстоянием — от секунды до двух с половиной, чтобы и
+     ближняя услуга не тащилась, и дальняя не мелькала.
+
+     Любое движение человека — колесо, палец, клавиша — отменяет
+     проезд: отнимать страницу у того, кто уже листает сам, нельзя. */
+  var проезд = null;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (событие) {
+    window.addEventListener(событие, function () { проезд = null; }, { passive: true });
+  });
+
+  function плавно(цель, готово) {
+    var старт = window.pageYOffset, путь = цель - старт;
+    if (reduced || Math.abs(путь) < 4) {
+      window.scrollTo(0, цель);
+      if (готово) готово();
+      return;
+    }
+    var мс = Math.min(2400, Math.max(1000, Math.abs(путь) * 0.55));
+    var мой = {}, нуль = 0;
+    проезд = мой;
+    function шаг(время) {
+      if (проезд !== мой) return;              // человек взялся листать сам
+      if (!нуль) нуль = время;
+      var доля = Math.min(1, (время - нуль) / мс);
+      var кривая = доля < 0.5
+        ? 4 * доля * доля * доля
+        : 1 - Math.pow(-2 * доля + 2, 3) / 2;
+      window.scrollTo(0, Math.round(старт + путь * кривая));
+      if (доля < 1) { requestAnimationFrame(шаг); return; }
+      проезд = null;
+      if (готово) готово();
+    }
+    requestAnimationFrame(шаг);
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('a[data-open]');
+    if (!t) return;
+    var ключ = 'svc.' + t.getAttribute('data-open') + '.name';
+    var имя = document.querySelector('.svc-list [data-i18n="' + ключ + '"]');
+    var строка = имя && имя.closest('[data-svc]');
+    if (!строка) return;
+    var кнопка = строка.querySelector('.svc-head');
+    if (!кнопка) return;
+
+    if (wide && wide.matches) {
+      e.preventDefault();
+      activate(строка);            // карточка готова ещё до начала проезда
+      плавно(кудаЕхать(строка), function () {
+        /* Снимок карточки мог дорисоваться уже в пути и чуть сдвинуть
+           конец раздела. Если разошлось больше чем на восемь точек —
+           коротко доводим.                                        */
+        var точно = кудаЕхать(строка);
+        if (Math.abs(точно - window.pageYOffset) > 8) плавно(точно);
+      });
+      return;
+    }
+
+    // Узкий экран: прокрутку делает общий обработчик, гармошка сама
+    // ставит строку под шапку — ждём, пока прокрутка дойдёт.
+    setTimeout(function () {
+      if (кнопка.getAttribute('aria-expanded') !== 'true') кнопка.click();
+    }, 620);
   });
 
   document.addEventListener('click', function (e) {
@@ -755,6 +865,19 @@
         if (q.bottom > b) b = q.bottom;
       }
     }
+    /* Кубики услуг — не текст. Их рамка шире набора внутри, и панель,
+       посчитанная по одним чернилам, срезала бы им углы. Берём
+       собственные границы плиток наравне со строками.             */
+    var tiles = root.querySelectorAll('.lp-tile');
+    for (var k = 0; k < tiles.length; k++) {
+      var tb = tiles[k].getBoundingClientRect();
+      if (!tb.width || !tb.height) continue;
+      if (tb.left   < l) l = tb.left;
+      if (tb.top    < t) t = tb.top;
+      if (tb.right  > r) r = tb.right;
+      if (tb.bottom > b) b = tb.bottom;
+    }
+
     return (l === Infinity) ? null : { l:l, t:t, r:r, b:b };
   }
 
@@ -1086,6 +1209,13 @@
        как он её принял.                                            */
     var LIFT = (document.documentElement.lang === 'ru') ? 0 : 5;
 
+    /* Владелец попросил поднять черту на миллиметр ближе к тексту.
+       Миллиметр в вебе — величина не условная: 96 точек на дюйм, то
+       есть 3,78 точки. Прибавляем их к подъёму, а не к просвету GAP:
+       просвет задан долей кегля и на разных размерах дал бы разный
+       сдвиг, а просили именно миллиметр.                          */
+    LIFT += 3.78;
+
     rows.forEach(function (r) {
       /* Линия — низ фигуры высотой .70em, поэтому верх слоя это
          «низ букв + просвет» минус её высота. */
@@ -1346,69 +1476,122 @@
 })();
 
 /* ── Слоган витрины под рамкой заявления ─────────────────────────
-   Знак с рамкой сдвинут вниз на два сантиметра, и величина захода
-   рамки в полосу слогана меняется с высотой окна. Считаем зазор
-   здесь: ставим полосу в ноль, меряем, и сдвигаем ровно настолько,
-   чтобы от нижней грани рамки до первой строки слогана осталось
-   тридцать четыре пикселя.                                        */
+   Скрипт, который двигал полосу со слоганом и часами, снят.
+
+   Он мерил рамку заявления и верх стеклянных панелей и ставил полосу
+   ровно посередине через transform. Считать это он мог только после
+   первой отрисовки, поэтому при каждом обновлении страницы блок
+   сначала стоял на своём месте по потоку, а через долю секунды
+   подпрыгивал — владелец это и видел. Панелей витрины больше нет,
+   середину между ними считать не от чего, и полоса теперь стоит там,
+   где её ставит вёрстка: неподвижно с первого кадра.
+
+   Часы идут как шли — их обновляет отдельный таймер ниже.        */
+
+/* ── Полоса со слоганом — ровно между рамкой и кубиками ──────────
+   Владелец попросил поставить её точно посередине: сверху до нижней
+   грани рамки заявления столько же, сколько снизу до первого ряда
+   кубиков.
+
+   В CSS этого не выразить. Верх отсчитывается от знака, который
+   центрируется в остатке экрана, низ — от сетки кубиков; обе
+   величины зависят от высоты окна по-разному, и перекос гуляет от
+   двух до сорока точек. Поэтому снова считаем скриптом.
+
+   Прыжка при обновлении, на который жаловался владелец, тут нет, и
+   вот почему. Пока середина не посчитана, полоса скрыта — а её
+   содержимое и так проявляется плавно, это .reveal. Считаем дважды:
+   сразу и после загрузки шрифтов (подменённый шрифт меняет высоту
+   набора, от неё зависит и середина). Оба раза блок невидим, и на
+   экране он появляется уже на своём месте. Если шрифты почему-то не
+   доехали, через 500 мс полосу показывает сторож.
+
+   Двигаем transform'ом: разметка не меняется, сетка кубиков от
+   пересчёта не съезжает, и накопления сдвига быть не может.     */
 (function () {
   var band  = document.querySelector('.lp-band-in');
   var claim = document.querySelector('.hero-in .lk-claim');
-  var slog  = document.querySelector('.lp-slogan');
-  if (!band || !claim || !slog) return;
+  var grid  = document.querySelector('.lp-grid');
+  if (!band || !claim || !grid) return;
 
-  var last = null;
+  var показан = false;
 
-  /* Верх стеклянных панелей витрины. Панели нарисованы
-     псевдоэлементами, и своих узлов у них нет — спрашиваем
-     вычисленный отступ прямо у ::before: он уже в пикселях. */
-  function panelTop() {
-    var best = null;
-    ['.lp-philosophy', '.lp-dest', '.lp-services .lp-list'].forEach(function (sel) {
-      var el = document.querySelector(sel);
-      if (!el) return;
-      var cs = getComputedStyle(el, '::before');
-      var off = parseFloat(cs.top);
-      if (!isFinite(off)) return;
-      var t = el.getBoundingClientRect().top + off;
-      if (best === null || t < best) best = t;
-    });
-    if (best === null) {
-      var g = document.querySelector('.lp-grid');
-      if (g) best = g.getBoundingClientRect().top;
+  /* Появление блоков идёт через transform (.reveal), и пока оно не
+     доиграло, рамка заявления и кубики стоят на два десятка точек
+     ниже своего настоящего места. Меряли бы как есть — середина
+     вышла бы кривой. Поэтому у каждой грани вычитаем сдвиги всех
+     родителей: получается положение, на котором набор остановится.
+
+     Собственный сдвиг знака задан свойством translate, а не
+     transform, и в этот счёт не попадает — он и должен остаться. */
+  function грань(el, край) {
+    var r = el.getBoundingClientRect()[край];
+    var узел = el;
+    while (узел && узел !== document.body) {
+      var t = getComputedStyle(узел).transform;
+      if (t && t !== 'none' && window.DOMMatrixReadOnly) {
+        try { r -= new DOMMatrixReadOnly(t).f; } catch (e) {}
+      }
+      узел = узел.parentElement;
     }
-    return best;
+    return r;
   }
 
-  function place() {
-    if (window.innerWidth < 981) {
-      if (last !== null) { band.style.removeProperty('--band-y'); last = null; }
-      return;
-    }
+  function показать() {
+    if (показан) return;
+    показан = true;
+    band.classList.add('готова');
+  }
+
+  function ровно(и_показать) {
+    if (window.innerWidth < 981) { band.style.removeProperty('--band-y'); показать(); return null; }
+
+
+    /* Свой сдвиг снимаем, меряем чистое положение, ставим новый. */
     band.style.setProperty('--band-y', '0px');
-    var top = panelTop();
-    if (top == null) return;
-    /* Ровно посередине между нижней гранью рамки заявления и верхом
-       стеклянных панелей: считаем по самой стеклянной коробке
-       слогана, а не по строке текста — у коробки есть свои поля. */
-    var free = (claim.getBoundingClientRect().bottom + top) / 2;
-    var box  = band.getBoundingClientRect();
-    var y = Math.round(free - box.height / 2 - box.top);
-    if (y === last) { band.style.setProperty('--band-y', y + 'px'); return; }
-    last = y;
+    var b = band.getBoundingClientRect();
+    var первая = grid.querySelector('.lp-tile') || grid;
+    var верх = грань(claim, 'bottom');
+    var низ  = грань(первая, 'top');
+    var y = Math.round((верх + низ) / 2 - (b.top + b.height / 2));
     band.style.setProperty('--band-y', y + 'px');
+    if (и_показать) показать();
+    return y;
   }
 
-  place();
-  window.addEventListener('resize', place, { passive:true });
-  window.addEventListener('load', place);
-  document.addEventListener('langchange', place);   /* другой язык — другая длина строк */
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(place);
-  [400, 1200, 2500].forEach(function (ms) { setTimeout(place, ms); });
-  if (window.ResizeObserver) {
-    var ro = new ResizeObserver(place);
-    ro.observe(band); ro.observe(claim);
+  /* Показываем не по таймеру, а когда два счёта подряд дали одно и
+     то же: значит вёрстка устоялась — шрифты доехали, сетка кубиков
+     встала. Сторож на 900 мс показывает блок в любом случае, чтобы
+     он не остался скрытым, если что-то пойдёт не так.            */
+  var прошлый = null;
+
+  /* document.fonts.ready отвечает «готово» ещё до того, как начата
+     загрузка наших гарнитур — таблица Google Fonts в этот момент
+     сама ещё едет. Поэтому спрашиваем прямо про тот шрифт, которым
+     набран слоган: пока его нет, набор стоит запасной гарнитурой,
+     высоты другие, и середина посчиталась бы не туда.            */
+  function шрифтПришёл() {
+    try {
+      var slog = document.querySelector('.lp-slogan');
+      if (!slog || !document.fonts || !document.fonts.check) return true;
+      var c = getComputedStyle(slog);
+      return document.fonts.check(c.fontWeight + ' ' + c.fontSize + ' ' +
+                                  c.fontFamily.split(',')[0]);
+    } catch (e) { return true; }
   }
+
+  function проверить() {
+    var y = ровно(false);
+    if (y !== null && y === прошлый && шрифтПришёл()) показать();
+    прошлый = y;
+  }
+
+  проверить();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(проверить);
+  [80, 180, 320, 480, 680, 900].forEach(function (мс) { setTimeout(проверить, мс); });
+  setTimeout(показать, 1200);                              /* сторож */
+  window.addEventListener('resize', function () { ровно(false); }, { passive:true });
+  document.addEventListener('langchange', function () { ровно(false); });
 })();
 
 /* ── Номера шагов — вплотную к первому слову ──────────────────────

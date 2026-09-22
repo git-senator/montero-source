@@ -50,9 +50,18 @@
    ролях. Латинский логотип из этого исключён: MONTERO и Concierge
    Service одинаковы на всех языках и остаются на Cinzel.        */
 html[lang="ru"]{
-  --display:"Libertinus Serif","Cormorant Garamond",Georgia,serif;
-  --caps:"Libertinus Serif","Cormorant Garamond",Georgia,serif;
-  --sans:"Libertinus Serif",Georgia,"Times New Roman",serif;
+  /* Русская версия набрана Playfair Display — владелец выбрал его
+     из проб (до него смотрели Libertinus Serif и Golos Text).
+
+     Два исключения живут в rossa.css, чтобы не размазывать выбор
+     по файлу: заголовки разделов идут на Lora, а подписи под
+     названиями услуг остались на Libertinus Serif — как на проде.
+
+     Libertinus стоит следом в запасной цепочке: пока он нужен
+     подписям, он всё равно загружается.                          */
+  --display:"Playfair Display","Libertinus Serif","Cormorant Garamond",Georgia,serif;
+  --caps:"Playfair Display","Libertinus Serif","Cormorant Garamond",Georgia,serif;
+  --sans:"Playfair Display","Libertinus Serif",Georgia,"Times New Roman",serif;
 }
 html[lang="ru"] .lk-name,
 html[lang="ru"] .lk-sub{ font-family:"Cinzel","Cormorant Garamond",Georgia,serif; }
@@ -3393,14 +3402,6 @@ html[lang="ru"] .rf-submit{ font-weight:700; }
    «страна + столица», и города в ней тоже прописными, чтобы карточка
    читалась как перечень, а не как ещё одно направление.            */
 .band-num{ text-transform:uppercase; }
-.band-col-two h3{ text-transform:uppercase; }
-.band-col-two .band-num-2{ margin-top:clamp(30px,2.6vw,34px); }
-
-/* Кадр Аргентина + Парагвай — вертикальный диптих: два города,
-   разделённые золотой диагональю из угла в угол. Снимок снят под
-   рамку направлений, 4:5, поэтому карточка встаёт вровень с
-   соседними и на широком экране, и на телефоне.                 */
-#destinations .band-plate-arpy{ aspect-ratio:4/5; max-height:none; }
 
 /* Подпись в подвале — «Время — высшая форма роскоши…» — на телефоне
    тоже золотом: это последняя строка страницы и она держит ту же ноту,
@@ -3409,13 +3410,7 @@ html[lang="ru"] .rf-submit{ font-weight:700; }
   .foot-brand{ color:#F0E3B4; }
 }
 
-/* На телефоне карточка Аргентина + Парагвай встаёт в тот же размер,
-   что и три бразильских: 16:10. Вертикальный кадр режется по высоте
-   вдвое, и доли стран в окне задаёт единственная величина — где
-   диагональ пересекает среднюю строку окна. Диагональ идёт из угла
-   в угол, поэтому ровно пополам делит только окно, выставленное по
-   центру снимка: 50%. Любой сдвиг вверх отдаёт площадь Аргентине. */
-@media (max-width:720px){
-  #destinations .band-plate-arpy{ aspect-ratio:16/10; }
-  #destinations .band-plate-arpy .media{ object-position:center 50%; }
-}
+/* Диптих Аргентина + Парагвай снят: владелец оставил в карточке одну
+   Аргентину со своим снимком Буэнос-Айреса. Он такой же квадратный,
+   как три бразильских, и правила ему нужны те же, общие — поэтому
+   отдельный набор для диптиха убран целиком.                     */
