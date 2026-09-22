@@ -113,7 +113,7 @@
     'sec.conc.label': 'The Concierge',
     'sec.conc.h': '<span class="ln">One request is yours</span><span class="ln"><span class="h-cap">The rest is our business</span></span>',
 
-    'conc.pull': 'One contact for anything you need in Latin America.',
+    'conc.pull': '<span class="pl">One contact for anything you need in Latin America.</span>',
     'conc.p1': 'From a simple everyday errand to a complex matter involving lawyers, brokers, drivers or other specialists — you never have to find the people or coordinate them yourself.',
     'conc.p2': 'You simply hand the task to your concierge. We arrange everything else and carry it through to the result.',
     'conc.p3': 'Confidential. Personal. No extra calls, no message threads, no wasted time.',
@@ -353,7 +353,7 @@
     'sec.conc.label': 'O Concierge',
     'sec.conc.h': '<span class="ln">Um pedido é seu</span><span class="ln"><span class="h-cap">O restante é conosco</span></span>',
 
-    'conc.pull': 'Um único contato para qualquer necessidade na América Latina.',
+    'conc.pull': '<span class="pl">Um único contato para qualquer necessidade na América Latina.</span>',
     'conc.p1': 'De um pedido simples do dia a dia a uma questão complexa que envolve advogados, corretores, motoristas ou outros especialistas — você não precisa procurar os executores nem coordená-los sozinho.',
     'conc.p2': 'Você apenas passa a tarefa ao seu concierge. Nós organizamos todo o resto e levamos a questão até o resultado.',
     'conc.p3': 'Confidencial. Pessoal. Sem ligações extras, sem trocas de mensagens, sem perda de tempo.',
@@ -593,7 +593,7 @@
     'sec.conc.label': 'El Conserje',
     'sec.conc.h': '<span class="ln">Una petición es suya</span><span class="ln"><span class="h-cap">El resto es cosa nuestra</span></span>',
 
-    'conc.pull': 'Un solo contacto para cualquier asunto en América Latina.',
+    'conc.pull': '<span class="pl">Un solo contacto para cualquier asunto en América Latina.</span>',
     'conc.p1': 'Desde una petición cotidiana hasta un asunto complejo que requiere abogados, corredores, choferes u otros especialistas — usted no tiene que buscar a los ejecutores ni coordinarlos.',
     'conc.p2': 'Usted simplemente le da la tarea a su conserje. Nosotros organizamos todo lo demás y llevamos el asunto hasta el resultado.',
     'conc.p3': 'Confidencial. Personal. Sin llamadas de más, sin cadenas de mensajes, sin pérdida de tiempo.',
@@ -833,7 +833,7 @@
     'sec.conc.label': 'Il Concierge',
     'sec.conc.h': '<span class="ln">Una richiesta è vostra</span><span class="ln"><span class="h-cap">Il resto è affar nostro</span></span>',
 
-    'conc.pull': 'Un solo contatto per qualsiasi esigenza in America Latina.',
+    'conc.pull': '<span class="pl">Un solo contatto per qualsiasi esigenza in America Latina.</span>',
     'conc.p1': 'Da una richiesta quotidiana a una questione complessa che richiede avvocati, broker, autisti o altri specialisti — non deve cercare gli esecutori né coordinarli da solo.',
     'conc.p2': 'Lei affida semplicemente il compito al suo concierge. Noi organizziamo tutto il resto e portiamo la questione al risultato.',
     'conc.p3': 'Riservato. Personale. Senza telefonate in più, senza scambi di messaggi, senza perdite di tempo.',

@@ -46,13 +46,15 @@
   --shell:1300px;
   --navh:80px;
 }
-/* Русская версия набирается Libertinus Serif — одной гарнитурой во всех
-   ролях. Латинский логотип из этого исключён: MONTERO и Concierge
-   Service одинаковы на всех языках и остаются на Cinzel.        */
+/* Русская версия набирается Playfair Display — той же гарнитурой, что
+   на компьютере, и во всех ролях. Libertinus Serif остаётся вторым
+   номером: он подхватывает то, чего у Playfair нет. Латинский логотип
+   из этого исключён: MONTERO и Concierge Service одинаковы на всех
+   языках и остаются на Cinzel.                                   */
 html[lang="ru"]{
-  --display:"Libertinus Serif","Cormorant Garamond",Georgia,serif;
-  --caps:"Libertinus Serif","Cormorant Garamond",Georgia,serif;
-  --sans:"Libertinus Serif",Georgia,"Times New Roman",serif;
+  --display:"Playfair Display","Libertinus Serif","Cormorant Garamond",Georgia,serif;
+  --caps:"Playfair Display","Libertinus Serif","Cormorant Garamond",Georgia,serif;
+  --sans:"Playfair Display","Libertinus Serif",Georgia,"Times New Roman",serif;
 }
 html[lang="ru"] .lk-name,
 html[lang="ru"] .lk-sub{ font-family:"Cinzel","Cormorant Garamond",Georgia,serif; }
@@ -3538,8 +3540,8 @@ html[lang="ru"] .rf-submit{ font-weight:700; }
      Замер по краске: поднять на .11 своего кегля — тогда просвет
      сверху и снизу одинаковый. Кегль поднят с 3.3 до 3.6: знак
      должен охватывать обе строки, а не стоять вровень с ними. */
-  translate:0 calc(-50% - .11em);
-  font-family:"Libertinus Serif","Cormorant Garamond",Georgia,serif;
+  translate:0 calc(-50% - .087em);
+  font-family:"Playfair Display","Libertinus Serif",Georgia,serif;
   font-size:3.6em; font-weight:400; line-height:1;
   letter-spacing:normal; text-transform:none; color:#F0E3B4;
   pointer-events:none;
@@ -3619,4 +3621,40 @@ html[lang="ru"] .rf-submit{ font-weight:700; }
     border:clamp(18px, 6vw, 34px) solid transparent;
     border-image:url(../img/frame-ornate.png) 200 stretch;
   }
+}
+
+/* ══════════ ФРАЗА НАД ТЕКСТОМ — РОВНО В ДВЕ СТРОКИ ══════════
+
+   Владелец попросил разбить её так: «Один контакт для любых задач» /
+   «в Латинской Америке». Сама по себе строка ломалась на три — её
+   держал предел в 24 знака.
+
+   Переносы теперь заданы разметкой, каждая половина — отдельный блок.
+   Предел ширины снимаем только для русского: у остальных языков фраза
+   лежит одним куском и ломается по месту, как раньше.             */
+.conc-say > p.pull .pl{ display:block; }
+html[lang="ru"] .conc-say > p.pull{ max-width:none; }
+
+/* ══════════ ДВА ИСКЛЮЧЕНИЯ ИЗ PLAYFAIR ══════════
+
+   Те же два, что на компьютере — владелец выбрал их там и попросил
+   повторить здесь.
+
+   1. Заголовок раздела — «Что мы реализуем», «География нашей
+      деятельности», «Одна ваша просьба · Остальное наше дело» — на
+      Lora. Она мягче Playfair в прописных: те же засечки, но
+      контраст штрихов ниже, и крупная строка не рябит.
+
+   2. Подпись под названием услуги — «С водителем · комфортно ·
+      безопасно» — остаётся на Libertinus Serif. Строка набрана
+      вразрядку в двенадцать пунктов, и высокий контраст Playfair
+      на таком кегле осыпается.
+
+   Только русский: у остальных языков свои гарнитуры.             */
+html[lang="ru"] .sec-head h2,
+html[lang="ru"] .req-head h2{
+  font-family:"Lora","Libertinus Serif",Georgia,serif;
+}
+html[lang="ru"] .svc-tag{
+  font-family:"Libertinus Serif","Cormorant Garamond",Georgia,serif;
 }
