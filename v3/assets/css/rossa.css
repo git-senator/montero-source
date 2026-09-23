@@ -2120,10 +2120,15 @@ html[lang="ru"] .svc-tag{
    Размеры и межстрочник не трогаем — они рассчитаны по высоте окна и
    держат карточку в экране.
 
+   Тем же набором идут описания под фотографиями направлений —
+   Флорианополис, Рио, Сан-Паулу, Буэнос-Айрес: владелец попросил
+   и их.
+
    Пока только русский: остальные языки владелец не смотрел.      */
 @media (min-width:981px){
   html[lang="ru"] .svc-stage .svc-detail .svc-text,
-  html[lang="ru"] .svc-stage .svc-detail .svc-items li{
+  html[lang="ru"] .svc-stage .svc-detail .svc-items li,
+  html[lang="ru"] #destinations .band-txt{
     font-family:"Inter","Manrope",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
     font-weight:400;
   }
