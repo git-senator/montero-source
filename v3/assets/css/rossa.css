@@ -2298,13 +2298,22 @@ html[lang="ru"] .svc-tag{
      уходил в муть по верхней кромке витрины.                      */
   .home-canvas{ position:relative; }
   .home-canvas::before{
-    content:''; position:absolute; left:0; right:0; top:0;
-    height:min(58svh, 600px); z-index:0; pointer-events:none;
-    -webkit-backdrop-filter:blur(9px); backdrop-filter:blur(9px);
+    /* Муть идёт по всему первому экрану, а не полосой сверху:
+       владелец попросил, чтобы фон было еле видно от шапки до низа
+       витрины. Поэтому слой растянут от верхней кромки до нижней.
+
+       Сила убавлена на двадцатую часть — с 9 точек до 8,55: прежняя
+       была чуть сильнее, чем нужно.
+
+       Маска гасит слой только у самого низа, на последней десятой
+       доле высоты. Без неё на стыке с «Услугами» шла бы резкая
+       граница между мутью и чистым камнем.                       */
+    content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+    -webkit-backdrop-filter:blur(8.55px); backdrop-filter:blur(8.55px);
     -webkit-mask-image:linear-gradient(180deg,
-      #000 0%, #000 34%, rgba(0,0,0,.72) 62%, rgba(0,0,0,.3) 84%, transparent 100%);
+      #000 0%, #000 90%, rgba(0,0,0,.55) 96%, transparent 100%);
             mask-image:linear-gradient(180deg,
-      #000 0%, #000 34%, rgba(0,0,0,.72) 62%, rgba(0,0,0,.3) 84%, transparent 100%);
+      #000 0%, #000 90%, rgba(0,0,0,.55) 96%, transparent 100%);
   }
   /* Знак и витрина подняты над слоем — иначе размылись бы вместе с
      фоном.                                                        */
