@@ -926,16 +926,16 @@ h2 .em{ background-image:linear-gradient(96deg,
        кнопки связи встают вровень с нею, сразу под «Без
        предпочтений», а не ниже через пустую клетку. */
     grid-column:1; grid-row:4; align-self:start;
-    display:flex; gap:13px; margin:0;
+    display:flex; gap:15px; margin:0;
   }
   .final-in .rf > .direct .direct-btn{
-    flex:1 1 0; max-width:none; height:32px; border-radius:999px;
+    flex:1 1 0; max-width:none; height:37px; border-radius:999px;
     border-width:var(--hair, 1px);
     box-shadow:inset 0 0 0 2px #0C0C0D,
                inset 0 0 0 3px rgba(240,227,180,.55),
                0 6px 16px rgba(0,0,0,.4);
   }
-  .final-in .rf > .direct .direct-btn svg{ width:15px; height:15px; }
+  .final-in .rf > .direct .direct-btn svg{ width:17px; height:17px; }
 
   /* Метка «IV · Заявка» — над знаком, по центру */
   .final-in > .label{
@@ -961,17 +961,17 @@ h2 .em{ background-image:linear-gradient(96deg,
     border:0; background:none; border-radius:0;
     /* Владелец попросил уменьшить блок в полтора раза: 1180 → 787,
        и вместе с шириной ужались высоты, отступы и набор.       */
-    width:min(787px, 100%);
+    width:min(905px, 100%);
     margin-inline:auto;
   }
   .final-in .rf{
     padding:0;
     grid-template-columns:1fr 1fr;
-    column-gap:clamp(14px, 1.4vw, 23px);
-    row-gap:13px;
+    column-gap:clamp(16px, 1.61vw, 26px);
+    row-gap:15px;
     align-items:start;
   }
-  .final-in .rf > .rf-row{ grid-column:1; grid-template-columns:1fr; gap:13px 0; }
+  .final-in .rf > .rf-row{ grid-column:1; grid-template-columns:1fr; gap:15px 0; }
   .final-in .rf > .rf-field{ grid-column:2; grid-row:1 / span 3; align-self:stretch; }
   .final-in .rf-foot{ grid-column:2; border:0; padding:0; margin:0; }
 
@@ -985,9 +985,9 @@ h2 .em{ background-image:linear-gradient(96deg,
   .final-in .rf-field input,
   .final-in .rf-field select,
   .final-in .rf-field textarea{
-    font-family:var(--r-sans); font-size:12px; font-weight:400;
+    font-family:var(--r-sans); font-size:13.8px; font-weight:400;
     color:var(--r-white);
-    height:32px; padding:0 15px;
+    height:37px; padding:0 17px;
     border:0; border-radius:999px;
     /* Стекло — то же, что под слоганом на первом экране и под
        панелями витрины: холодный градиент, размытие фона, светлый
@@ -1004,8 +1004,8 @@ h2 .em{ background-image:linear-gradient(96deg,
      текст в нём идёт строками, и дуга съедала бы первую и
      последнюю. У эталона здесь тоже мягкий угол, а не капсула. */
   .final-in .rf-field textarea{
-    height:auto; min-height:133px; padding:10px 15px;
-    border-radius:6px; line-height:1.5; resize:none; flex:1 1 auto;
+    height:auto; min-height:153px; padding:11px 17px;
+    border-radius:7px; line-height:1.5; resize:none; flex:1 1 auto;
   }
   .final-in .rf-field input::placeholder,
   .final-in .rf-field textarea::placeholder{
@@ -1035,11 +1035,11 @@ h2 .em{ background-image:linear-gradient(96deg,
     box-shadow:inset 0 1px 0 rgba(214,226,238,.10),
                0 0 0 var(--hair, 1px) var(--ember);
   }
-  .final-in .rf-error{ margin:4px 0 0 15px; font-size:10px; }
+  .final-in .rf-error{ margin:5px 0 0 17px; font-size:11.5px; }
 
   .final-in .rf-submit{
-    width:100%; height:32px; padding:0 16px; border-radius:999px;
-    font-size:10px;
+    width:100%; height:37px; padding:0 18px; border-radius:999px;
+    font-size:11.5px;
     background:linear-gradient(90deg, #D9C88F 0%, #F0E3B4 52%, #FBF4DC 100%);
     color:#0C0C0D;
   }
@@ -1903,9 +1903,9 @@ h2 .em{ background-image:linear-gradient(96deg,
    стоит в разделе «Заявка» и её здесь не касаемся.              */
 @media (min-width:981px){
   .final-in .req-form{
-    width:min(1015px, 100%);
-    padding:clamp(34px, 3.7vw, 52px);
-    border-radius:30px;
+    width:min(1167px, 100%);
+    padding:clamp(39px, 4.26vw, 60px);
+    border-radius:34px;
     background:linear-gradient(180deg,
       rgba(126,146,166,.17) 0%, rgba(110,130,150,.10) 55%,
       rgba(96,114,132,.07) 100%);
@@ -1920,7 +1920,7 @@ h2 .em{ background-image:linear-gradient(96deg,
   }
   /* Ширину набора держит уже не сам блок — он стал подложкой, —
      а сетка формы внутри него. Значение прежнее, 787.          */
-  .final-in .rf{ width:min(787px, 100%); margin-inline:auto; }
+  .final-in .rf{ width:min(905px, 100%); margin-inline:auto; }
 }
 
 /* ── Направления: графитовая подложка под описанием ──────────────
@@ -2240,10 +2240,12 @@ html[lang="ru"] .svc-tag{
       rgba(11,13,16,.28) 420px);
     background-color:transparent;
   }
-  #concierge{
-    background-image:radial-gradient(60% 44% at 84% 8%,
-      rgba(126,146,166,.10), rgba(0,0,0,0) 64%);
-  }
+  /* Холодная подсветка в правом верхнем углу «Консьержа» начиналась
+     ровно от верхней кромки раздела и обрывалась на ней же — справа
+     это читалось полосой поперёк стыка, слева, куда она не доставала,
+     ничего не было. Снимаем: теперь камень идёт через стык ровно по
+     всей ширине.                                                   */
+  #concierge{ background-image:none; }
   #request{ background-image:none; }
 
   /* Волосяная черта на стыке разделов. Раньше она разделяла глухие
@@ -2363,8 +2365,8 @@ html[lang="ru"] .svc-tag{
     margin-top:calc(clamp(18px, 2.2vh, 30px) + 5mm);
   }
   .final-in .req-form::before{
-    content:''; position:absolute; inset:-24px; z-index:0; pointer-events:none;
-    border-radius:54px;
+    content:''; position:absolute; inset:-28px; z-index:0; pointer-events:none;
+    border-radius:62px;
     background:
       linear-gradient(180deg,
         rgba(126,146,166,.23) 0%, rgba(110,130,150,.15) 55%,
@@ -2374,72 +2376,72 @@ html[lang="ru"] .svc-tag{
     -webkit-mask-image:
       linear-gradient(90deg,
         rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 27px,
-        rgba(0,0,0,0.14) 51px,
-        rgba(0,0,0,0.33) 75px,
-        rgba(0,0,0,0.56) 96px,
-        rgba(0,0,0,0.77) 117px,
-        rgba(0,0,0,0.93) 135px,
-        rgba(0,0,0,1.00) 150px,
-        #000 calc(100% - 150px),
-        rgba(0,0,0,0.93) calc(100% - 135px),
-        rgba(0,0,0,0.77) calc(100% - 117px),
-        rgba(0,0,0,0.56) calc(100% - 96px),
-        rgba(0,0,0,0.33) calc(100% - 75px),
-        rgba(0,0,0,0.14) calc(100% - 51px),
-        rgba(0,0,0,0.04) calc(100% - 27px),
+        rgba(0,0,0,0.04) 31px,
+        rgba(0,0,0,0.14) 58px,
+        rgba(0,0,0,0.33) 86px,
+        rgba(0,0,0,0.56) 110px,
+        rgba(0,0,0,0.77) 134px,
+        rgba(0,0,0,0.93) 155px,
+        rgba(0,0,0,1.00) 172px,
+        #000 calc(100% - 172px),
+        rgba(0,0,0,0.93) calc(100% - 155px),
+        rgba(0,0,0,0.77) calc(100% - 134px),
+        rgba(0,0,0,0.56) calc(100% - 110px),
+        rgba(0,0,0,0.33) calc(100% - 86px),
+        rgba(0,0,0,0.14) calc(100% - 58px),
+        rgba(0,0,0,0.04) calc(100% - 31px),
         rgba(0,0,0,0.00) calc(100% - 0px)),
       linear-gradient(180deg,
         rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 18px,
-        rgba(0,0,0,0.14) 34px,
-        rgba(0,0,0,0.33) 50px,
-        rgba(0,0,0,0.56) 64px,
-        rgba(0,0,0,0.77) 78px,
-        rgba(0,0,0,0.93) 90px,
-        rgba(0,0,0,1.00) 100px,
-        #000 calc(100% - 100px),
-        rgba(0,0,0,0.93) calc(100% - 90px),
-        rgba(0,0,0,0.77) calc(100% - 78px),
-        rgba(0,0,0,0.56) calc(100% - 64px),
-        rgba(0,0,0,0.33) calc(100% - 50px),
-        rgba(0,0,0,0.14) calc(100% - 34px),
-        rgba(0,0,0,0.04) calc(100% - 18px),
+        rgba(0,0,0,0.04) 21px,
+        rgba(0,0,0,0.14) 39px,
+        rgba(0,0,0,0.33) 58px,
+        rgba(0,0,0,0.56) 74px,
+        rgba(0,0,0,0.77) 90px,
+        rgba(0,0,0,0.93) 104px,
+        rgba(0,0,0,1.00) 115px,
+        #000 calc(100% - 115px),
+        rgba(0,0,0,0.93) calc(100% - 104px),
+        rgba(0,0,0,0.77) calc(100% - 90px),
+        rgba(0,0,0,0.56) calc(100% - 74px),
+        rgba(0,0,0,0.33) calc(100% - 58px),
+        rgba(0,0,0,0.14) calc(100% - 39px),
+        rgba(0,0,0,0.04) calc(100% - 21px),
         rgba(0,0,0,0.00) calc(100% - 0px));
             mask-image:
       linear-gradient(90deg,
         rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 27px,
-        rgba(0,0,0,0.14) 51px,
-        rgba(0,0,0,0.33) 75px,
-        rgba(0,0,0,0.56) 96px,
-        rgba(0,0,0,0.77) 117px,
-        rgba(0,0,0,0.93) 135px,
-        rgba(0,0,0,1.00) 150px,
-        #000 calc(100% - 150px),
-        rgba(0,0,0,0.93) calc(100% - 135px),
-        rgba(0,0,0,0.77) calc(100% - 117px),
-        rgba(0,0,0,0.56) calc(100% - 96px),
-        rgba(0,0,0,0.33) calc(100% - 75px),
-        rgba(0,0,0,0.14) calc(100% - 51px),
-        rgba(0,0,0,0.04) calc(100% - 27px),
+        rgba(0,0,0,0.04) 31px,
+        rgba(0,0,0,0.14) 58px,
+        rgba(0,0,0,0.33) 86px,
+        rgba(0,0,0,0.56) 110px,
+        rgba(0,0,0,0.77) 134px,
+        rgba(0,0,0,0.93) 155px,
+        rgba(0,0,0,1.00) 172px,
+        #000 calc(100% - 172px),
+        rgba(0,0,0,0.93) calc(100% - 155px),
+        rgba(0,0,0,0.77) calc(100% - 134px),
+        rgba(0,0,0,0.56) calc(100% - 110px),
+        rgba(0,0,0,0.33) calc(100% - 86px),
+        rgba(0,0,0,0.14) calc(100% - 58px),
+        rgba(0,0,0,0.04) calc(100% - 31px),
         rgba(0,0,0,0.00) calc(100% - 0px)),
       linear-gradient(180deg,
         rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 18px,
-        rgba(0,0,0,0.14) 34px,
-        rgba(0,0,0,0.33) 50px,
-        rgba(0,0,0,0.56) 64px,
-        rgba(0,0,0,0.77) 78px,
-        rgba(0,0,0,0.93) 90px,
-        rgba(0,0,0,1.00) 100px,
-        #000 calc(100% - 100px),
-        rgba(0,0,0,0.93) calc(100% - 90px),
-        rgba(0,0,0,0.77) calc(100% - 78px),
-        rgba(0,0,0,0.56) calc(100% - 64px),
-        rgba(0,0,0,0.33) calc(100% - 50px),
-        rgba(0,0,0,0.14) calc(100% - 34px),
-        rgba(0,0,0,0.04) calc(100% - 18px),
+        rgba(0,0,0,0.04) 21px,
+        rgba(0,0,0,0.14) 39px,
+        rgba(0,0,0,0.33) 58px,
+        rgba(0,0,0,0.56) 74px,
+        rgba(0,0,0,0.77) 90px,
+        rgba(0,0,0,0.93) 104px,
+        rgba(0,0,0,1.00) 115px,
+        #000 calc(100% - 115px),
+        rgba(0,0,0,0.93) calc(100% - 104px),
+        rgba(0,0,0,0.77) calc(100% - 90px),
+        rgba(0,0,0,0.56) calc(100% - 74px),
+        rgba(0,0,0,0.33) calc(100% - 58px),
+        rgba(0,0,0,0.14) calc(100% - 39px),
+        rgba(0,0,0,0.04) calc(100% - 21px),
         rgba(0,0,0,0.00) calc(100% - 0px));
     -webkit-mask-composite:source-in;
             mask-composite:intersect;
