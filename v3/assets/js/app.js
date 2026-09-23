@@ -51,6 +51,28 @@
     if (!services || reduced) return;
     var busy = 0;
 
+    /* Куда именно уедем — считаем той же меркой, что и переход по
+       ссылке. Порог и цель обязаны совпадать, иначе страница запирается.
+
+       Так и было: порогом служил верх «Услуг», а приземлялись мы выше
+       него на высоту шапки — она прячется только тогда, когда первый
+       экран длиннее 640 точек, а на невысоком окне он короче, и под
+       шапку оставляется место. Замер при окне 1366 на 620: верх
+       «Услуг» 637, приземление 558, порог 597. Колесо вниз снова
+       видело 558 < 597 и снова уводило в ту же точку — страница не
+       ехала вниз вовсе.
+
+       «Прячется» здесь считаем не от текущего положения, а от длины
+       первого экрана: прыжок всегда начинается сверху, и значение
+       должно быть одно и то же до прыжка и после него. Иначе цель
+       скакала бы вслед за прокруткой, и возврат наверх переставал
+       работать на длинных окнах.                                   */
+    function цельУслуг() {
+      var abs = services.getBoundingClientRect().top + window.pageYOffset;
+      var прячется = abs > NAV_HIDES_AFTER;
+      return Math.max(0, прячется ? abs : abs - nav.offsetHeight + 1);
+    }
+
     window.addEventListener('wheel', function (e) {
       if (e.ctrlKey) return;                       // масштабирование не трогаем
       if (window.innerWidth < 721) return;         // телефон листает сам
@@ -58,15 +80,15 @@
       if (Math.abs(e.deltaY) < 4) return;
 
       var y = window.pageYOffset;
-      var svcTop = services.getBoundingClientRect().top + y;
+      var цель = цельУслуг();
 
-      if (e.deltaY > 0 && y < svcTop - 40) {       // вниз с первого экрана
+      if (e.deltaY > 0 && y < цель - 40) {         // вниз с первого экрана
         e.preventDefault();
         busy = Date.now() + 900;                   // пока едем — колесо молчит
         scrollToId('services');
         return;
       }
-      if (e.deltaY < 0 && y > 0 && y <= svcTop + 40) {  // вверх из услуг
+      if (e.deltaY < 0 && y > 0 && y <= цель + 40) {  // вверх из услуг
         e.preventDefault();
         busy = Date.now() + 900;
         window.scrollTo({ top: 0, behavior: 'smooth' });
