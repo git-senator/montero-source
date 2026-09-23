@@ -2357,20 +2357,84 @@ html[lang="ru"] .svc-tag{
     margin-top:calc(clamp(18px, 2.2vh, 30px) + 5mm);
   }
   .final-in .req-form::before{
-    content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
-    border-radius:inherit;
+    content:''; position:absolute; inset:-24px; z-index:0; pointer-events:none;
+    border-radius:54px;
     background:
       linear-gradient(180deg,
-        rgba(126,146,166,.17) 0%, rgba(110,130,150,.10) 55%,
-        rgba(96,114,132,.07) 100%),
+        rgba(126,146,166,.23) 0%, rgba(110,130,150,.15) 55%,
+        rgba(96,114,132,.10) 100%),
       rgba(12,15,19,.93);
     box-shadow:inset 0 1px 0 rgba(214,226,238,.10);
     -webkit-mask-image:
-      linear-gradient(90deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%),
-      linear-gradient(180deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%);
+      linear-gradient(90deg,
+        rgba(0,0,0,0.00) 0px,
+        rgba(0,0,0,0.04) 27px,
+        rgba(0,0,0,0.14) 51px,
+        rgba(0,0,0,0.33) 75px,
+        rgba(0,0,0,0.56) 96px,
+        rgba(0,0,0,0.77) 117px,
+        rgba(0,0,0,0.93) 135px,
+        rgba(0,0,0,1.00) 150px,
+        #000 calc(100% - 150px),
+        rgba(0,0,0,0.93) calc(100% - 135px),
+        rgba(0,0,0,0.77) calc(100% - 117px),
+        rgba(0,0,0,0.56) calc(100% - 96px),
+        rgba(0,0,0,0.33) calc(100% - 75px),
+        rgba(0,0,0,0.14) calc(100% - 51px),
+        rgba(0,0,0,0.04) calc(100% - 27px),
+        rgba(0,0,0,0.00) calc(100% - 0px)),
+      linear-gradient(180deg,
+        rgba(0,0,0,0.00) 0px,
+        rgba(0,0,0,0.04) 18px,
+        rgba(0,0,0,0.14) 34px,
+        rgba(0,0,0,0.33) 50px,
+        rgba(0,0,0,0.56) 64px,
+        rgba(0,0,0,0.77) 78px,
+        rgba(0,0,0,0.93) 90px,
+        rgba(0,0,0,1.00) 100px,
+        #000 calc(100% - 100px),
+        rgba(0,0,0,0.93) calc(100% - 90px),
+        rgba(0,0,0,0.77) calc(100% - 78px),
+        rgba(0,0,0,0.56) calc(100% - 64px),
+        rgba(0,0,0,0.33) calc(100% - 50px),
+        rgba(0,0,0,0.14) calc(100% - 34px),
+        rgba(0,0,0,0.04) calc(100% - 18px),
+        rgba(0,0,0,0.00) calc(100% - 0px));
             mask-image:
-      linear-gradient(90deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%),
-      linear-gradient(180deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%);
+      linear-gradient(90deg,
+        rgba(0,0,0,0.00) 0px,
+        rgba(0,0,0,0.04) 27px,
+        rgba(0,0,0,0.14) 51px,
+        rgba(0,0,0,0.33) 75px,
+        rgba(0,0,0,0.56) 96px,
+        rgba(0,0,0,0.77) 117px,
+        rgba(0,0,0,0.93) 135px,
+        rgba(0,0,0,1.00) 150px,
+        #000 calc(100% - 150px),
+        rgba(0,0,0,0.93) calc(100% - 135px),
+        rgba(0,0,0,0.77) calc(100% - 117px),
+        rgba(0,0,0,0.56) calc(100% - 96px),
+        rgba(0,0,0,0.33) calc(100% - 75px),
+        rgba(0,0,0,0.14) calc(100% - 51px),
+        rgba(0,0,0,0.04) calc(100% - 27px),
+        rgba(0,0,0,0.00) calc(100% - 0px)),
+      linear-gradient(180deg,
+        rgba(0,0,0,0.00) 0px,
+        rgba(0,0,0,0.04) 18px,
+        rgba(0,0,0,0.14) 34px,
+        rgba(0,0,0,0.33) 50px,
+        rgba(0,0,0,0.56) 64px,
+        rgba(0,0,0,0.77) 78px,
+        rgba(0,0,0,0.93) 90px,
+        rgba(0,0,0,1.00) 100px,
+        #000 calc(100% - 100px),
+        rgba(0,0,0,0.93) calc(100% - 90px),
+        rgba(0,0,0,0.77) calc(100% - 78px),
+        rgba(0,0,0,0.56) calc(100% - 64px),
+        rgba(0,0,0,0.33) calc(100% - 50px),
+        rgba(0,0,0,0.14) calc(100% - 34px),
+        rgba(0,0,0,0.04) calc(100% - 18px),
+        rgba(0,0,0,0.00) calc(100% - 0px));
     -webkit-mask-composite:source-in;
             mask-composite:intersect;
   }
