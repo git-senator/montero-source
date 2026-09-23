@@ -2222,9 +2222,16 @@ html[lang="ru"] .svc-tag{
      засветка — владелец попросил подчистить. Снимаем все три разом:
      поодиночке остались бы пятна на соседних стыках. Холодную у
      «Консьержа» оставляем, она не бликует.                       */
+  /* Низ «Услуг» гасим до той же прозрачности, что у «Направлений»
+     (.28): раздел выше был глухим, ниже — камень в четверть силы, и
+     на стыке шла чёткая полоса. Теперь глухая заливка сходит на нет
+     за 560 точек до конца раздела, и граница пропадает. */
   #services{
     background-image:linear-gradient(180deg,
-      rgb(11,13,16) 0px, rgb(14,17,21) 420px, rgb(13,16,19) 900px, rgb(11,13,16) 1400px);
+      rgb(11,13,16) 0px, rgb(14,17,21) 420px, rgb(13,16,19) 900px,
+      rgb(11,13,16) 1400px,
+      rgba(11,13,16,1) calc(100% - 560px),
+      rgba(11,13,16,.28) 100%);
     background-color:transparent;
   }
   #concierge{
@@ -2318,4 +2325,54 @@ html[lang="ru"] .svc-tag{
   /* Знак и витрина подняты над слоем — иначе размылись бы вместе с
      фоном.                                                        */
   .home-canvas > *{ position:relative; z-index:1; }
+}
+/* ── Заявка на последнем экране: ниже на 5 мм и с растворённым краем ──
+   Владелец: «опусти на 5 мм весь этот блок заполнения заявки вместе
+   с подложкой. после этого сделай так чтоб края этой подложки как
+   то плавно растворялись».
+
+   Опускаем отступом сверху — форма едет вниз вместе с подложкой, а
+   знак «Montero» над нею остаётся на месте.
+
+   Край. Раньше подложка была глухим прямоугольником с кантом, и на
+   каменных обоях её грань читалась как вырезанная ножницами. Теперь
+   заливку держит не сам блок, а слой под содержимым: у него маска из
+   двух градиентов крест-накрест, и к самому краю он сходит на нет.
+   Поля и кнопки маска не трогает — они лежат отдельным слоем выше,
+   поэтому остаются во всю силу. Кант снимаем: чёткая линия по
+   растворённому краю выдала бы границу, которую мы прячем.
+
+   Только компьютер и только последний экран.                      */
+@media (min-width:981px){
+  .final-in .req-form{
+    position:relative;
+    margin-top:calc(clamp(34px, 4.4vh, 64px) + 5mm);
+    background:none;
+    border-color:transparent;
+    box-shadow:none;
+  }
+  /* Когда над формой стоит строка «Оставьте заявку…», отступ задаёт
+     соседнее правило — оно весомее. Прибавляем те же 5 мм и там. */
+  .final-in .sec-lede + .req-form{
+    margin-top:calc(clamp(18px, 2.2vh, 30px) + 5mm);
+  }
+  .final-in .req-form::before{
+    content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+    border-radius:inherit;
+    background:
+      linear-gradient(180deg,
+        rgba(126,146,166,.17) 0%, rgba(110,130,150,.10) 55%,
+        rgba(96,114,132,.07) 100%),
+      rgba(12,15,19,.93);
+    box-shadow:inset 0 1px 0 rgba(214,226,238,.10);
+    -webkit-mask-image:
+      linear-gradient(90deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%),
+      linear-gradient(180deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%);
+            mask-image:
+      linear-gradient(90deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%),
+      linear-gradient(180deg, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%);
+    -webkit-mask-composite:source-in;
+            mask-composite:intersect;
+  }
+  .final-in .req-form > *{ position:relative; z-index:1; }
 }
