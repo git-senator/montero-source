@@ -130,7 +130,7 @@
 
 
     'final.claim1': 'Everything you need in Brazil, Argentina',
-    'final.claim2': 'on a single phone no.: +5548999869084',
+    'final.claim2': 'on a single phone no.: +55-48-99648-1563',
 
     'foot.brand': 'Time <em>—</em> the highest form of luxury, and we look after it',
     'foot.privacy': 'Privacy',
@@ -378,7 +378,7 @@
 
 
     'final.claim1': 'Tudo o que você precisa no Brasil, na Argentina',
-    'final.claim2': 'em um único telefone: +5548999869084',
+    'final.claim2': 'em um único telefone: +55-48-99648-1563',
 
     'foot.brand': 'O tempo <em>—</em> a forma mais alta de luxo, e nós cuidamos dele',
     'foot.privacy': 'Privacidade',
@@ -626,7 +626,7 @@
 
 
     'final.claim1': 'Todo lo que necesita en Brasil, Argentina',
-    'final.claim2': 'en un solo teléfono: +5548999869084',
+    'final.claim2': 'en un solo teléfono: +55-48-99648-1563',
 
     'foot.brand': 'El tiempo <em>—</em> la forma más alta de lujo, y nosotros lo cuidamos',
     'foot.privacy': 'Privacidad',
@@ -874,7 +874,7 @@
 
 
     'final.claim1': 'Tutto ciò che le serve in Brasile, Argentina',
-    'final.claim2': 'con un solo numero: +5548999869084',
+    'final.claim2': 'con un solo numero: +55-48-99648-1563',
 
     'foot.brand': 'Il tempo <em>—</em> la forma più alta di lusso, e noi ce ne occupiamo',
     'foot.privacy': 'Privacy',
