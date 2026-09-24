@@ -129,7 +129,7 @@
     'direct.tel': 'Telephone',
 
 
-    'final.claim1': 'Everything you need in Brazil | Argentina',
+    'final.claim1': 'Everything you need in Brazil, Argentina',
     'final.care': 'Let us take care of everything',
     'final.claim2': 'on a single phone no.: +5548999869084',
     'v3.eyebrow': 'Brazil · South America',
@@ -374,7 +374,7 @@
     'direct.tel': 'Telefone',
 
 
-    'final.claim1': 'Tudo o que você precisa no Brasil | Argentina',
+    'final.claim1': 'Tudo o que você precisa no Brasil, na Argentina',
     'final.care': 'Deixe que cuidemos de tudo',
     'final.claim2': 'em um único telefone: +5548999869084',
     'v3.eyebrow': 'Brasil · América do Sul',
@@ -619,7 +619,7 @@
     'direct.tel': 'Teléfono',
 
 
-    'final.claim1': 'Todo lo que necesita en Brasil | Argentina',
+    'final.claim1': 'Todo lo que necesita en Brasil, Argentina',
     'final.care': 'Permítanos ocuparnos de todo',
     'final.claim2': 'en un solo teléfono: +5548999869084',
     'v3.eyebrow': 'Brasil · América del Sur',
@@ -864,7 +864,7 @@
     'direct.tel': 'Telefono',
 
 
-    'final.claim1': 'Tutto ciò che le serve in Brasile | Argentina',
+    'final.claim1': 'Tutto ciò che le serve in Brasile, Argentina',
     'final.care': 'Ci lasci pensare a tutto',
     'final.claim2': 'con un solo numero: +5548999869084',
     'v3.eyebrow': 'Brasile · America del Sud',
