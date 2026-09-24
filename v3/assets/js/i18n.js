@@ -129,9 +129,9 @@
     'direct.tel': 'Telephone',
 
 
-    'final.claim1': 'Everything you need in Brazil, Argentina and Paraguay',
+    'final.claim1': 'Everything you need in Brazil | Argentina',
     'final.care': 'Let us take care of everything',
-    'final.claim2': 'on a single phone number',
+    'final.claim2': 'on a single phone no.: +55 48 99986-9084',
     'v3.eyebrow': 'Brazil · South America',
     'v3.lede': 'A private concierge for people whose time is the scarce part. Transport, aviation, yachts, residences, papers and protection — one request, and it is arranged.',
     'v3.claim1': 'Everything you need in Brazil —',
@@ -374,9 +374,9 @@
     'direct.tel': 'Telefone',
 
 
-    'final.claim1': 'Tudo o que você precisa no Brasil, na Argentina e no Paraguai',
+    'final.claim1': 'Tudo o que você precisa no Brasil | Argentina',
     'final.care': 'Deixe que cuidemos de tudo',
-    'final.claim2': 'em um único número de telefone',
+    'final.claim2': 'em um único telefone: +55 48 99986-9084',
     'v3.eyebrow': 'Brasil · América do Sul',
     'v3.lede': 'Um concierge privado para quem valoriza o próprio tempo. Transporte, aviação, iates, residências, documentos e segurança — um pedido, e tudo fica resolvido.',
     'v3.claim1': 'Tudo o que você precisa no Brasil —',
@@ -619,9 +619,9 @@
     'direct.tel': 'Teléfono',
 
 
-    'final.claim1': 'Todo lo que necesita en Brasil, Argentina y Paraguay',
+    'final.claim1': 'Todo lo que necesita en Brasil | Argentina',
     'final.care': 'Permítanos ocuparnos de todo',
-    'final.claim2': 'en un solo número de teléfono',
+    'final.claim2': 'en un solo teléfono: +55 48 99986-9084',
     'v3.eyebrow': 'Brasil · América del Sur',
     'v3.lede': 'Un conserje privado para quien valora su tiempo. Transporte, aviación, yates, residencias, documentos y seguridad: una petición y todo queda resuelto.',
     'v3.claim1': 'Todo lo que necesita en Brasil —',
@@ -864,9 +864,9 @@
     'direct.tel': 'Telefono',
 
 
-    'final.claim1': 'Tutto ciò che le serve in Brasile, Argentina e Paraguay',
+    'final.claim1': 'Tutto ciò che le serve in Brasile | Argentina',
     'final.care': 'Ci lasci pensare a tutto',
-    'final.claim2': 'su un unico numero di telefono',
+    'final.claim2': 'con un solo numero: +55 48 99986-9084',
     'v3.eyebrow': 'Brasile · America del Sud',
     'v3.lede': 'Un concierge privato per chi tiene al proprio tempo. Trasporti, aviazione, yacht, residenze, documenti e sicurezza: una richiesta, e tutto è organizzato.',
     'v3.claim1': 'Tutto ciò che le serve in Brasile —',
