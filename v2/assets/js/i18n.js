@@ -129,8 +129,8 @@
     'direct.tel': 'Telephone',
 
 
-    'final.claim1': 'Everything you need in Brazil, Argentina and Paraguay',
-    'final.claim2': 'on a single phone number',
+    'final.claim1': 'Everything you need in Brazil, Argentina',
+    'final.claim2': 'on a single phone no.: +5548999869084',
 
     'foot.brand': 'Time <em>—</em> the highest form of luxury, and we look after it',
     'foot.privacy': 'Privacy',
@@ -369,8 +369,8 @@
     'direct.tel': 'Telefone',
 
 
-    'final.claim1': 'Tudo o que você precisa no Brasil, na Argentina e no Paraguai',
-    'final.claim2': 'em um único número de telefone',
+    'final.claim1': 'Tudo o que você precisa no Brasil, na Argentina',
+    'final.claim2': 'em um único telefone: +5548999869084',
 
     'foot.brand': 'O tempo <em>—</em> a forma mais alta de luxo, e nós cuidamos dele',
     'foot.privacy': 'Privacidade',
@@ -609,8 +609,8 @@
     'direct.tel': 'Teléfono',
 
 
-    'final.claim1': 'Todo lo que necesita en Brasil, Argentina y Paraguay',
-    'final.claim2': 'en un solo número de teléfono',
+    'final.claim1': 'Todo lo que necesita en Brasil, Argentina',
+    'final.claim2': 'en un solo teléfono: +5548999869084',
 
     'foot.brand': 'El tiempo <em>—</em> la forma más alta de lujo, y nosotros lo cuidamos',
     'foot.privacy': 'Privacidad',
@@ -849,8 +849,8 @@
     'direct.tel': 'Telefono',
 
 
-    'final.claim1': 'Tutto ciò che le serve in Brasile, Argentina e Paraguay',
-    'final.claim2': 'su un unico numero di telefono',
+    'final.claim1': 'Tutto ciò che le serve in Brasile, Argentina',
+    'final.claim2': 'con un solo numero: +5548999869084',
 
     'foot.brand': 'Il tempo <em>—</em> la forma più alta di lusso, e noi ce ne occupiamo',
     'foot.privacy': 'Privacy',
