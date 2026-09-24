@@ -2233,3 +2233,13 @@ html[lang="ru"] .svc-tag{
   }
   .lp-quad .lp-tile{ grid-area:1 / 1; aspect-ratio:auto; }
 }
+
+/* Карточка без перечня: описанию отдана вся ширина, строки по центру.
+   Правая половина пустовала, и рассказ жался в узкую колонку. */
+@media (min-width:981px){
+  .svc-stage .svc-detail:not(:has(.svc-items)) .svc-text{
+    grid-column:1 / -1;
+    max-width:none;
+    text-align:center;
+  }
+}
