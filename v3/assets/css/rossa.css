@@ -926,16 +926,16 @@ h2 .em{ background-image:linear-gradient(96deg,
        кнопки связи встают вровень с нею, сразу под «Без
        предпочтений», а не ниже через пустую клетку. */
     grid-column:1; grid-row:4; align-self:start;
-    display:flex; gap:15px; margin:0;
+    display:flex; gap:13px; margin:0;
   }
   .final-in .rf > .direct .direct-btn{
-    flex:1 1 0; max-width:none; height:37px; border-radius:999px;
+    flex:1 1 0; max-width:none; height:32px; border-radius:999px;
     border-width:var(--hair, 1px);
     box-shadow:inset 0 0 0 2px #0C0C0D,
                inset 0 0 0 3px rgba(240,227,180,.55),
                0 6px 16px rgba(0,0,0,.4);
   }
-  .final-in .rf > .direct .direct-btn svg{ width:17px; height:17px; }
+  .final-in .rf > .direct .direct-btn svg{ width:15px; height:15px; }
 
   /* Метка «IV · Заявка» — над знаком, по центру */
   .final-in > .label{
@@ -961,17 +961,17 @@ h2 .em{ background-image:linear-gradient(96deg,
     border:0; background:none; border-radius:0;
     /* Владелец попросил уменьшить блок в полтора раза: 1180 → 787,
        и вместе с шириной ужались высоты, отступы и набор.       */
-    width:min(905px, 100%);
+    width:min(787px, 100%);
     margin-inline:auto;
   }
   .final-in .rf{
     padding:0;
     grid-template-columns:1fr 1fr;
-    column-gap:clamp(16px, 1.61vw, 26px);
-    row-gap:15px;
+    column-gap:clamp(14px, 1.4vw, 23px);
+    row-gap:13px;
     align-items:start;
   }
-  .final-in .rf > .rf-row{ grid-column:1; grid-template-columns:1fr; gap:15px 0; }
+  .final-in .rf > .rf-row{ grid-column:1; grid-template-columns:1fr; gap:13px 0; }
   .final-in .rf > .rf-field{ grid-column:2; grid-row:1 / span 3; align-self:stretch; }
   .final-in .rf-foot{ grid-column:2; border:0; padding:0; margin:0; }
 
@@ -985,9 +985,9 @@ h2 .em{ background-image:linear-gradient(96deg,
   .final-in .rf-field input,
   .final-in .rf-field select,
   .final-in .rf-field textarea{
-    font-family:var(--r-sans); font-size:13.8px; font-weight:400;
+    font-family:var(--r-sans); font-size:12px; font-weight:400;
     color:var(--r-white);
-    height:37px; padding:0 17px;
+    height:32px; padding:0 15px;
     border:0; border-radius:999px;
     /* Стекло — то же, что под слоганом на первом экране и под
        панелями витрины: холодный градиент, размытие фона, светлый
@@ -1004,8 +1004,8 @@ h2 .em{ background-image:linear-gradient(96deg,
      текст в нём идёт строками, и дуга съедала бы первую и
      последнюю. У эталона здесь тоже мягкий угол, а не капсула. */
   .final-in .rf-field textarea{
-    height:auto; min-height:153px; padding:11px 17px;
-    border-radius:7px; line-height:1.5; resize:none; flex:1 1 auto;
+    height:auto; min-height:133px; padding:10px 15px;
+    border-radius:6px; line-height:1.5; resize:none; flex:1 1 auto;
   }
   .final-in .rf-field input::placeholder,
   .final-in .rf-field textarea::placeholder{
@@ -1035,11 +1035,11 @@ h2 .em{ background-image:linear-gradient(96deg,
     box-shadow:inset 0 1px 0 rgba(214,226,238,.10),
                0 0 0 var(--hair, 1px) var(--ember);
   }
-  .final-in .rf-error{ margin:5px 0 0 17px; font-size:11.5px; }
+  .final-in .rf-error{ margin:4px 0 0 15px; font-size:10px; }
 
   .final-in .rf-submit{
-    width:100%; height:37px; padding:0 18px; border-radius:999px;
-    font-size:11.5px;
+    width:100%; height:32px; padding:0 16px; border-radius:999px;
+    font-size:10px;
     background:linear-gradient(90deg, #D9C88F 0%, #F0E3B4 52%, #FBF4DC 100%);
     color:#0C0C0D;
   }
@@ -1903,9 +1903,9 @@ h2 .em{ background-image:linear-gradient(96deg,
    стоит в разделе «Заявка» и её здесь не касаемся.              */
 @media (min-width:981px){
   .final-in .req-form{
-    width:min(1167px, 100%);
-    padding:clamp(39px, 4.26vw, 60px);
-    border-radius:34px;
+    width:min(1015px, 100%);
+    padding:clamp(34px, 3.7vw, 52px);
+    border-radius:30px;
     background:linear-gradient(180deg,
       rgba(126,146,166,.17) 0%, rgba(110,130,150,.10) 55%,
       rgba(96,114,132,.07) 100%);
@@ -1920,7 +1920,7 @@ h2 .em{ background-image:linear-gradient(96deg,
   }
   /* Ширину набора держит уже не сам блок — он стал подложкой, —
      а сетка формы внутри него. Значение прежнее, 787.          */
-  .final-in .rf{ width:min(905px, 100%); margin-inline:auto; }
+  .final-in .rf{ width:min(787px, 100%); margin-inline:auto; }
 }
 
 /* ── Направления: графитовая подложка под описанием ──────────────
@@ -2149,302 +2149,4 @@ html[lang="ru"] .svc-tag{
    не о расстояниях.                                              */
 @media (min-width:981px){
   #concierge .conc-say > p.pull{ font-style:normal; font-weight:600; }
-}
-
-
-/* ══════════ КАМЕНЬ ПОД ВСЕМИ ЭКРАНАМИ ══════════
-
-   Владелец примеряет фоны по очереди; сейчас на пробе тёмный сланец
-   с мелким зерном. Пока пробно, на предпросмотре.
-
-   Рисунок лежит неподвижным слоем во всю ширину окна: при прокрутке
-   он стоит, страница едет поверх. Слой отдельным элементом, а не
-   фоном страницы с background-attachment: fixed — от последнего
-   браузер перерисовывает картинку на каждый кадр и прокрутка
-   начинает дёргаться.
-
-   Исходник 881 на 543 — заметно меньше экрана, поэтому он сильно
-   растягивается и зерно смягчается до ровного налёта. Для камня это
-   кстати, рисунка как такового здесь нет.
-
-   Внимание: на снимке по правому краю стоят водяные знаки фотобанка.
-   На пробе их почти не видно, но для прода нужен чистый файл.
-
-   Заливки разделов были глухие, камня под ними не было видно вовсе —
-   оставляем 28 сотых: столько нужно, чтобы буквы держались на тёмном,
-   а рисунок проступал.
-
-   Верхний градиент страницы тоже переведён в полупрозрачный: глухим
-   он перекрывал фон там, где тот заметнее всего.                */
-@media (min-width:981px){
-  html{ background:#050505; }
-  body{
-    background:
-      linear-gradient(180deg,
-        rgba(24,27,29,.70) 0px, rgba(21,23,26,.64) 100px, rgba(18,20,22,.56) 200px,
-        rgba(14,15,17,.48) 300px, rgba(11,11,12,.42) 400px, rgba(5,5,5,.36) 520px) no-repeat;
-  }
-  body::before{
-    content:''; position:fixed; inset:0; z-index:-100; pointer-events:none;
-    background:url(../img/stone.jpg) center center / cover no-repeat;
-  }
-  #services, #destinations, #concierge, #request, .foot{
-    background-color:rgba(11,13,16,.28);
-  }
-
-  /* Последний экран — со знаком MONTERO и формой — закрыт собственной
-     заливкой: косой градиент от #141920 к #0B0D10 и виньетка, гаснущая
-     в тот же цвет по краям. Оба глухие, фона под ними не было видно
-     вовсе. Цветные подсветки в них оставляем как есть — они и так
-     прозрачные, — а основу и виньетку переводим в ту же плотность,
-     что у остальных разделов.                                     */
-  .final-bg.sc-night{
-    /* Золотое пятно в левом верхнем углу владелец попросил убрать:
-       на камне оно читалось как засветка, а не как подсветка.
-       Холодное справа внизу оставлено — оно держит объём.        */
-    /* Своей основы у экрана больше нет: раздел «Заявка» и так залит
-       теми же 28 сотыми, что и остальные, и любая добавка делала этот
-       экран темнее соседнего — на стыке шла заметная ступень. Осталась
-       одна холодная подсветка справа внизу.                       */
-    background:
-      radial-gradient(ellipse 60% 55% at 84% 88%, rgba(126,146,166,.12), transparent 66%);
-  }
-  .final-vig{
-    /* Виньетка убавлена и отодвинута к краям по той же причине: у
-       верхней кромки она давала тень ровно на стыке.              */
-    background:radial-gradient(ellipse 74% 70% at 50% 50%,
-      transparent 52%, rgba(6,8,11,.14) 82%, rgba(11,13,16,.22) 100%);
-  }
-
-  /* Тёплые подсветки разделов. Их три: над «Услугами» по центру,
-     у «Консьержа» в левом нижнем углу и у «Заявки» в левом верхнем.
-     На прежнем глухом фоне они давали объём, на камне читаются как
-     засветка — владелец попросил подчистить. Снимаем все три разом:
-     поодиночке остались бы пятна на соседних стыках. Холодную у
-     «Консьержа» оставляем, она не бликует.                       */
-  /* «Услуги» больше не глухая плита. Владелец попросил сделать весь
-     раздел таким, каким он стал у нижнего края, — то есть камнем в
-     те же 28 сотых, что и все прочие разделы. Тогда и стыка сверху,
-     и стыка снизу просто нет: фактура идёт насквозь.             */
-  #services{
-    /* Наверху раздела приглушка входит не сразу: первый экран камня
-       не притемняет вовсе, и резкий переход на 28 сотых давал ровно
-       такую же полосу, какую мы убрали снизу. За 420 точек тень
-       набирает силу по плавной кривой — стыка не видно.          */
-    background-image:linear-gradient(180deg,
-      rgba(11,13,16,0)    0px,
-      rgba(11,13,16,.03)  60px,
-      rgba(11,13,16,.09) 140px,
-      rgba(11,13,16,.18) 240px,
-      rgba(11,13,16,.25) 340px,
-      rgba(11,13,16,.28) 420px);
-    background-color:transparent;
-  }
-  /* Холодная подсветка в правом верхнем углу «Консьержа» начиналась
-     ровно от верхней кромки раздела и обрывалась на ней же — справа
-     это читалось полосой поперёк стыка, слева, куда она не доставала,
-     ничего не было. Снимаем: теперь камень идёт через стык ровно по
-     всей ширине.                                                   */
-  #concierge{ background-image:none; }
-  #request{ background-image:none; }
-
-  /* Волосяная черта на стыке разделов. Раньше она разделяла глухие
-     заливки и читалась как переплёт; на сплошном фоне это просто шов
-     поперёк камня. Убираем — разделы и так разделены воздухом.   */
-  .sec::before{ display:none; }
-
-  /* Форма заявки остаётся стеклом, а не окном в камень. Владелец
-     просил не делать её полупрозрачной: под стеклянным градиентом
-     возвращаем глухую тёмную основу — ровно ту, что была под ним до
-     обоев. Поля и кнопки внутри стоят уже на ней, поэтому фактура
-     сквозь них не проступает.                                    */
-  .final-in .req-form{
-    background:
-      linear-gradient(180deg,
-        rgba(126,146,166,.17) 0%, rgba(110,130,150,.10) 55%,
-        rgba(96,114,132,.07) 100%),
-      rgba(12,15,19,.93);
-  }
-
-  /* Окна поверх страницы — выбор языка, «Условия», «Политика». Они
-     глухие и лежат выше общего слоя, поэтому фон им кладём свой:
-     последним слоем под их же подсветками. Прозрачными их делать
-     нельзя — сквозь них читался бы текст сайта.                   */
-  .lang-gate{
-    background:
-      radial-gradient(ellipse 70% 44% at 50% -6%, rgba(224,193,121,.20), transparent 62%),
-      radial-gradient(ellipse 52% 46% at 88% 92%, rgba(168,30,34,.30), transparent 66%),
-      radial-gradient(ellipse 60% 55% at 6% 74%, rgba(52,16,14,.6), transparent 70%),
-      linear-gradient(0deg, rgba(7,4,5,.62), rgba(7,4,5,.62)),
-      url(../img/stone.jpg) center center / cover no-repeat,
-      #070405;
-  }
-  .legal-gate{
-    background:
-      radial-gradient(ellipse 70% 40% at 50% -4%, rgba(224,193,121,.14), transparent 62%),
-      radial-gradient(ellipse 60% 50% at 92% 96%, rgba(126,21,24,.26), transparent 68%),
-      linear-gradient(0deg, rgba(7,4,5,.68), rgba(7,4,5,.68)),
-      url(../img/stone.jpg) center center / cover no-repeat,
-      #070405;
-  }
-}
-
-/* ══════════ ВЕРХ ПЕРВОГО ЭКРАНА — ПРИМУТНЁН ══════════
-
-   Владелец попросил подмутить фон в самом верху главной. Размываем
-   не картинку, а то, что за слоем: backdrop-filter берёт ровно ту
-   часть фона, которая под ним, поэтому размытое и резкое совпадают
-   до точки — подгонять ничего не нужно.
-
-   Маска сводит размытие на нет к низу полосы: резкой границы, где
-   муть обрывается, не видно.
-
-   Слой лежит под содержимым: z-index у него 0, у колонок витрины —
-   1. Иначе размылись бы и буквы.                                 */
-@media (min-width:981px){
-  /* isolation здесь ставить нельзя. Слой берёт «подложку» из своего
-     корня наложения, а камень лежит снаружи первого экрана: с
-     изоляцией размытие доставалось не фону, а содержимому самого
-     экрана — строка в рамке расплывалась. Без изоляции корнем служит
-     страница, и в размытие попадает именно камень.               */
-  /* Слой вешаем на всё полотно первого экрана, а не на витрину.
-     Витрина начинается ниже знака MONTERO, и слой, привязанный к ней,
-     резал строку в рамке пополам: верх строки оставался резким, низ
-     уходил в муть по верхней кромке витрины.                      */
-  .home-canvas{ position:relative; }
-  .home-canvas::before{
-    /* Муть идёт по всему первому экрану, а не полосой сверху:
-       владелец попросил, чтобы фон было еле видно от шапки до низа
-       витрины. Поэтому слой растянут от верхней кромки до нижней.
-
-       Сила убавлена на двадцатую часть — с 9 точек до 8,55: прежняя
-       была чуть сильнее, чем нужно.
-
-       Маска гасит слой только у самого низа, на последней десятой
-       доле высоты. Без неё на стыке с «Услугами» шла бы резкая
-       граница между мутью и чистым камнем.                       */
-    content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
-    -webkit-backdrop-filter:blur(7.7px); backdrop-filter:blur(7.7px);
-    -webkit-mask-image:linear-gradient(180deg,
-      #000 0%, #000 90%, rgba(0,0,0,.55) 96%, transparent 100%);
-            mask-image:linear-gradient(180deg,
-      #000 0%, #000 90%, rgba(0,0,0,.55) 96%, transparent 100%);
-  }
-  /* Знак и витрина подняты над слоем — иначе размылись бы вместе с
-     фоном.                                                        */
-  .home-canvas > *{ position:relative; z-index:1; }
-}
-/* ── Заявка на последнем экране: ниже на 5 мм и с растворённым краем ──
-   Владелец: «опусти на 5 мм весь этот блок заполнения заявки вместе
-   с подложкой. после этого сделай так чтоб края этой подложки как
-   то плавно растворялись».
-
-   Опускаем отступом сверху — форма едет вниз вместе с подложкой, а
-   знак «Montero» над нею остаётся на месте.
-
-   Край. Раньше подложка была глухим прямоугольником с кантом, и на
-   каменных обоях её грань читалась как вырезанная ножницами. Теперь
-   заливку держит не сам блок, а слой под содержимым: у него маска из
-   двух градиентов крест-накрест, и к самому краю он сходит на нет.
-   Поля и кнопки маска не трогает — они лежат отдельным слоем выше,
-   поэтому остаются во всю силу. Кант снимаем: чёткая линия по
-   растворённому краю выдала бы границу, которую мы прячем.
-
-   Только компьютер и только последний экран.                      */
-@media (min-width:981px){
-  .final-in .req-form{
-    position:relative;
-    margin-top:calc(clamp(34px, 4.4vh, 64px) + 5mm);
-    background:none;
-    border-color:transparent;
-    box-shadow:none;
-  }
-  /* Когда над формой стоит строка «Оставьте заявку…», отступ задаёт
-     соседнее правило — оно весомее. Прибавляем те же 5 мм и там. */
-  .final-in .sec-lede + .req-form{
-    margin-top:calc(clamp(18px, 2.2vh, 30px) + 5mm);
-  }
-  .final-in .req-form::before{
-    content:''; position:absolute; inset:-28px; z-index:0; pointer-events:none;
-    border-radius:62px;
-    background:
-      linear-gradient(180deg,
-        rgba(126,146,166,.23) 0%, rgba(110,130,150,.15) 55%,
-        rgba(96,114,132,.10) 100%),
-      rgba(12,15,19,.93);
-    box-shadow:inset 0 1px 0 rgba(214,226,238,.10);
-    -webkit-mask-image:
-      linear-gradient(90deg,
-        rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 31px,
-        rgba(0,0,0,0.14) 58px,
-        rgba(0,0,0,0.33) 86px,
-        rgba(0,0,0,0.56) 110px,
-        rgba(0,0,0,0.77) 134px,
-        rgba(0,0,0,0.93) 155px,
-        rgba(0,0,0,1.00) 172px,
-        #000 calc(100% - 172px),
-        rgba(0,0,0,0.93) calc(100% - 155px),
-        rgba(0,0,0,0.77) calc(100% - 134px),
-        rgba(0,0,0,0.56) calc(100% - 110px),
-        rgba(0,0,0,0.33) calc(100% - 86px),
-        rgba(0,0,0,0.14) calc(100% - 58px),
-        rgba(0,0,0,0.04) calc(100% - 31px),
-        rgba(0,0,0,0.00) calc(100% - 0px)),
-      linear-gradient(180deg,
-        rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 21px,
-        rgba(0,0,0,0.14) 39px,
-        rgba(0,0,0,0.33) 58px,
-        rgba(0,0,0,0.56) 74px,
-        rgba(0,0,0,0.77) 90px,
-        rgba(0,0,0,0.93) 104px,
-        rgba(0,0,0,1.00) 115px,
-        #000 calc(100% - 115px),
-        rgba(0,0,0,0.93) calc(100% - 104px),
-        rgba(0,0,0,0.77) calc(100% - 90px),
-        rgba(0,0,0,0.56) calc(100% - 74px),
-        rgba(0,0,0,0.33) calc(100% - 58px),
-        rgba(0,0,0,0.14) calc(100% - 39px),
-        rgba(0,0,0,0.04) calc(100% - 21px),
-        rgba(0,0,0,0.00) calc(100% - 0px));
-            mask-image:
-      linear-gradient(90deg,
-        rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 31px,
-        rgba(0,0,0,0.14) 58px,
-        rgba(0,0,0,0.33) 86px,
-        rgba(0,0,0,0.56) 110px,
-        rgba(0,0,0,0.77) 134px,
-        rgba(0,0,0,0.93) 155px,
-        rgba(0,0,0,1.00) 172px,
-        #000 calc(100% - 172px),
-        rgba(0,0,0,0.93) calc(100% - 155px),
-        rgba(0,0,0,0.77) calc(100% - 134px),
-        rgba(0,0,0,0.56) calc(100% - 110px),
-        rgba(0,0,0,0.33) calc(100% - 86px),
-        rgba(0,0,0,0.14) calc(100% - 58px),
-        rgba(0,0,0,0.04) calc(100% - 31px),
-        rgba(0,0,0,0.00) calc(100% - 0px)),
-      linear-gradient(180deg,
-        rgba(0,0,0,0.00) 0px,
-        rgba(0,0,0,0.04) 21px,
-        rgba(0,0,0,0.14) 39px,
-        rgba(0,0,0,0.33) 58px,
-        rgba(0,0,0,0.56) 74px,
-        rgba(0,0,0,0.77) 90px,
-        rgba(0,0,0,0.93) 104px,
-        rgba(0,0,0,1.00) 115px,
-        #000 calc(100% - 115px),
-        rgba(0,0,0,0.93) calc(100% - 104px),
-        rgba(0,0,0,0.77) calc(100% - 90px),
-        rgba(0,0,0,0.56) calc(100% - 74px),
-        rgba(0,0,0,0.33) calc(100% - 58px),
-        rgba(0,0,0,0.14) calc(100% - 39px),
-        rgba(0,0,0,0.04) calc(100% - 21px),
-        rgba(0,0,0,0.00) calc(100% - 0px));
-    -webkit-mask-composite:source-in;
-            mask-composite:intersect;
-  }
-  .final-in .req-form > *{ position:relative; z-index:1; }
 }
