@@ -1029,6 +1029,7 @@
   var lastClaim = last && last.querySelector('.lk-claim');
 
   var SHIFT = 76;            /* два сантиметра, приведённые к целому */
+  var UP    = 38;            /* подъём знака на сантиметр, по слову владельца */
   var rules = [].slice.call(lock.querySelectorAll('.lk-sub i'));
   var lastRules = lastLock ? [].slice.call(lastLock.querySelectorAll('.lk-sub i')) : [];
   var on = false;
@@ -1092,7 +1093,7 @@
 
     /* Сдвиг знака: та же формула, что в CSS, но по сетке.
        Внизу сдвига нет — там знак стоит у верхнего края экрана. */
-    var shift = Math.min(SHIFT, Math.max(0, (window.innerHeight - 700) / 2));
+    var shift = Math.min(SHIFT, Math.max(0, (window.innerHeight - 700) / 2)) - UP;
     lock.style.translate = '0 ' + q(shift) + 'px';
 
     fit(claim, rules, q, hair);
