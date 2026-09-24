@@ -262,8 +262,12 @@
 ['Family & Maternity','Care · Schooling · Papers',
  'Obstetricians and private maternity suites in São Paulo, bilingual nannies who have stayed with the same families for years, school placement, and every document that follows a birth in South America.',
  'Maternity and obstetric care','Vetted nannies and household staff',
- 'International school placement','Registry, documentation and citizenship','Request family assistance']
-    ],
+ 'International school placement','Registry, documentation and citizenship','Request family assistance'],
+['Private Events'],
+['Personal Support Across Brazil'],
+['Turnkey Tourism × Remanso Travel'],
+['Transport & Logistics']
+],
     dest: [
 ['Florianópolis','Jurerê Internacional, forty-two beaches and the summer address of São Paulo money. Villas, beach clubs and a season that runs December to March.'],
 ['Rio de Janeiro','Leblon and Ipanema, helicopter transfers across the bay, and a city that has never once negotiated its own beauty. Carnival is booked a year ahead.'],
@@ -502,8 +506,12 @@
 ['Família e maternidade','Cuidado · Escolas · Documentos',
  'Obstetras e suítes de maternidade privadas em São Paulo, babás bilíngues que ficam anos com as mesmas famílias, vaga em escola internacional e cada documento que segue um nascimento na América do Sul.',
  'Pré-natal e parto','Babás e equipe doméstica verificadas',
- 'Vaga em escolas internacionais','Cartório, documentação e cidadania','Solicitar apoio à família']
-    ],
+ 'Vaga em escolas internacionais','Cartório, documentação e cidadania','Solicitar apoio à família'],
+['Eventos fechados'],
+['Acompanhamento pessoal em todo o Brasil'],
+['Turismo chave na mão × Remanso Travel'],
+['Transporte e logística']
+],
     dest: [
 ['Florianópolis','Jurerê Internacional, quarenta e duas praias e o endereço de verão do dinheiro paulista. Casas, beach clubs e uma temporada que vai de dezembro a março.'],
 ['Rio de Janeiro','Leblon e Ipanema, transferências de helicóptero sobre a baía e uma cidade que nunca negociou a própria beleza. O Carnaval se reserva com um ano de antecedência.'],
@@ -742,8 +750,12 @@
 ['Familia y maternidad','Cuidado · Colegios · Papeles',
  'Obstetras y suites de maternidad privadas en São Paulo, niñeras bilingües que llevan años con las mismas familias, plaza en colegio internacional y cada documento que sigue a un nacimiento en América del Sur.',
  'Seguimiento del embarazo y parto','Niñeras y personal doméstico verificados',
- 'Plaza en colegios internacionales','Registro civil, documentos y ciudadanía','Solicitar apoyo familiar']
-    ],
+ 'Plaza en colegios internacionales','Registro civil, documentos y ciudadanía','Solicitar apoyo familiar'],
+['Eventos privados'],
+['Acompañamiento personal en todo Brasil'],
+['Turismo llave en mano × Remanso Travel'],
+['Transporte y logística']
+],
     dest: [
 ['Florianópolis','Jurerê Internacional, cuarenta y dos playas y la dirección de verano del dinero paulista. Villas, beach clubs y una temporada que va de diciembre a marzo.'],
 ['Río de Janeiro','Leblon e Ipanema, traslados en helicóptero sobre la bahía y una ciudad que jamás ha negociado su propia belleza. El Carnaval se reserva con un año de antelación.'],
@@ -982,8 +994,12 @@
 ['Famiglia e maternità','Cure · Scuole · Documenti',
  'Ostetrici e suite di maternità private a San Paolo, tate bilingui che restano anni nelle stesse famiglie, inserimento in scuole internazionali e ogni documento che segue una nascita in Sud America.',
  'Gravidanza e parto','Tate e personale domestico verificati',
- 'Inserimento in scuole internazionali','Anagrafe, documenti e cittadinanza','Richiedere assistenza alla famiglia']
-    ],
+ 'Inserimento in scuole internazionali','Anagrafe, documenti e cittadinanza','Richiedere assistenza alla famiglia'],
+['Eventi privati'],
+['Accompagnamento personale in tutto il Brasile'],
+['Turismo chiavi in mano × Remanso Travel'],
+['Trasporti e logistica']
+],
     dest: [
 ['Florianópolis','Jurerê Internacional, quarantadue spiagge e l’indirizzo estivo del denaro di San Paolo. Ville, beach club e una stagione che va da dicembre a marzo.'],
 ['Rio de Janeiro','Leblon e Ipanema, transfer in elicottero sopra la baia e una città che non ha mai trattato sulla propria bellezza. Il Carnevale si prenota con un anno di anticipo.'],
