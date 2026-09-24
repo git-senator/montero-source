@@ -269,8 +269,8 @@
  'Maternity and obstetric care','Vetted nannies and household staff',
  'International school placement','Registry, documentation and citizenship','Request family assistance'],
 ['Private Events'],
-['Personal Support Across Brazil'],
-['Turnkey Tourism × Remanso Travel'],
+['Support Across Brazil'],
+['Turnkey Tourism Remanso Travel'],
 ['Transport & Logistics']
 ],
     dest: [
@@ -518,8 +518,8 @@
  'Pré-natal e parto','Babás e equipe doméstica verificadas',
  'Vaga em escolas internacionais','Cartório, documentação e cidadania','Solicitar apoio à família'],
 ['Eventos fechados'],
-['Acompanhamento pessoal em todo o Brasil'],
-['Turismo chave na mão × Remanso Travel'],
+['Acompanhamento em todo o Brasil'],
+['Turismo chave na mão Remanso Travel'],
 ['Transporte e logística']
 ],
     dest: [
@@ -767,8 +767,8 @@
  'Seguimiento del embarazo y parto','Niñeras y personal doméstico verificados',
  'Plaza en colegios internacionales','Registro civil, documentos y ciudadanía','Solicitar apoyo familiar'],
 ['Eventos privados'],
-['Acompañamiento personal en todo Brasil'],
-['Turismo llave en mano × Remanso Travel'],
+['Acompañamiento en todo Brasil'],
+['Turismo llave en mano Remanso Travel'],
 ['Transporte y logística']
 ],
     dest: [
@@ -1016,8 +1016,8 @@
  'Gravidanza e parto','Tate e personale domestico verificati',
  'Inserimento in scuole internazionali','Anagrafe, documenti e cittadinanza','Richiedere assistenza alla famiglia'],
 ['Eventi privati'],
-['Accompagnamento personale in tutto il Brasile'],
-['Turismo chiavi in mano × Remanso Travel'],
+['Accompagnamento in tutto il Brasile'],
+['Turismo chiavi in mano Remanso Travel'],
 ['Trasporti e logistica']
 ],
     dest: [
