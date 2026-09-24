@@ -1029,7 +1029,7 @@
   var lastClaim = last && last.querySelector('.lk-claim');
 
   var SHIFT = 76;            /* два сантиметра, приведённые к целому */
-  var UP    = 38;            /* подъём знака на сантиметр, по слову владельца */
+  var UP    = 76;            /* подъём знака: два сантиметра, по слову владельца */
   var rules = [].slice.call(lock.querySelectorAll('.lk-sub i'));
   var lastRules = lastLock ? [].slice.call(lastLock.querySelectorAll('.lk-sub i')) : [];
   var on = false;
