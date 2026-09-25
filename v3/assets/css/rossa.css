@@ -2262,6 +2262,8 @@ html[lang="ru"] .svc-tag{
   .lp-quad{
     --квад-пад:min(.78vw, 1.55svh, 12px);
     --квад-зазор:min(.42vw, .84svh, 7px);
+    --квад-бок:min(.33vw, .66svh, 5px);
+    --квад-низ:min(.39vw, .78svh, 6px);
   }
 
   /* Высоту держит сама ячейка, распорка больше не нужна: ширину
@@ -2270,9 +2272,13 @@ html[lang="ru"] .svc-tag{
   .lp-quad .lp-cell{ height:var(--квад-в, 104px); }
   .lp-quad .lp-cell::before{ display:none; }
 
+  /* Поля по бокам и снизу владелец просил ужать: описание должно
+     доходить почти до стенок. Сверху поле прежнее — название от
+     верхней грани отступает как раньше. */
   .lp-quad .lp-tile{
     height:100%; min-height:0;
-    justify-content:flex-start; padding:var(--квад-пад);
+    justify-content:flex-start;
+    padding:var(--квад-пад) var(--квад-бок, 5px) var(--квад-низ, 6px);
   }
   .lp-quad .lp-tile-txt{
     align-self:stretch; flex:1 1 auto; min-height:0;
