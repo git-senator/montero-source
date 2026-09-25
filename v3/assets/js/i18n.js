@@ -269,13 +269,13 @@
  'Maternity and obstetric care','Vetted nannies and household staff',
  'International school placement','Registry, documentation and citizenship','Request family assistance'],
 ['Private Events','By invitation · Built from scratch',
- 'Access to places where a ticket simply cannot be bought. Private parties, members-only clubs, premieres and invitation-only VIP events. And if the event you want does not exist, we create it for you from scratch: a yacht, a private island, a villa or any other location. Full turnkey production to your own scenario — from the idea to the last detail.'],
+ 'Access to members-only clubs, private parties, premieres and VIP events. If the event you want does not exist, we build it from scratch: a yacht, an island, a villa or any other location. Turnkey throughout — from the idea to the details.'],
 ['Support Across Brazil','A personal representative for the whole trip',
- 'Your personal representative beside you for the whole trip. Our own member of staff physically accompanies you, your family or your delegation anywhere in Brazil, acting at once as interpreter, guide and personal concierge. They handle the itinerary, your safety and any question that arises on the spot — one person always at your side who takes every concern off your hands.'],
+ 'Your personal representative beside you for the whole trip. Interpreting, accompaniment, help with the itinerary and any question on the spot — one person always with you who takes every concern off your hands.'],
 ['Turnkey Tourism Remanso Travel','Signature routes · Hotels · Expeditions',
- 'Together with Remanso Travel — an official tour operator in Brazil, founded by a Russian-speaking team — we arrange travel across the country entirely turnkey. Signature routes, expeditions, hotels and villas, transfers, yachts, guides and bespoke programmes — the whole of Brazil with one team that speaks your language.'],
+ 'Together with Remanso Travel we arrange turnkey travel across Brazil. Routes, hotels and villas, transfers, guides and bespoke programmes — all with a single Russian-speaking team.'],
 ['Transport & Logistics','From a car to a private jet',
- 'We arrange any movement across Brazil — from a car to a private jet. Car rental with or without a driver, premium vehicles, transfers, minibuses for groups and delegations, private aviation, helicopters, boats and yachts. We match the transport to the task, build the logistics and organise the entire route from the point of departure to the destination.']
+ 'We arrange travel across Brazil: cars with or without a driver, transfers, minibuses, yachts, boats, helicopters and private jets. We match the transport and organise your whole route.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, forty-two beaches and the summer address of São Paulo money. Villas, beach clubs and a season that runs December to March.'],
@@ -522,13 +522,13 @@
  'Pré-natal e parto','Babás e equipe doméstica verificadas',
  'Vaga em escolas internacionais','Cartório, documentação e cidadania','Solicitar apoio à família'],
 ['Eventos fechados','Somente com convite · Criado do zero',
- 'Acesso onde não basta comprar um ingresso. Festas privadas, clubes fechados, estreias e eventos VIP apenas por convite. E se o evento desejado não existe, nós o criamos do zero para você: um iate, uma ilha privada, uma villa ou qualquer outro local. Organização completa, chave na mão, conforme o seu roteiro — da ideia ao último detalhe.'],
+ 'Acesso a clubes fechados, festas privadas, estreias e eventos VIP. Se o evento que você quer não existe, criamos do zero: iate, ilha, villa ou outra locação. Tudo chave na mão — da ideia aos detalhes.'],
 ['Acompanhamento em todo o Brasil','Um representante pessoal em toda a viagem',
- 'Seu representante pessoal ao seu lado durante toda a viagem. Nosso profissional acompanha fisicamente você, sua família ou sua delegação em qualquer ponto do Brasil, atuando ao mesmo tempo como intérprete, guia e concierge pessoal. Ele cuida do roteiro, da sua segurança e da solução de qualquer questão no local — uma única pessoa sempre ao seu lado, que assume todas as preocupações.'],
+ 'Seu representante pessoal ao seu lado durante toda a viagem. Tradução, acompanhamento, apoio com o roteiro e qualquer questão no local — uma pessoa sempre com você, que assume todas as suas preocupações.'],
 ['Turismo chave na mão Remanso Travel','Roteiros autorais · Hotéis · Expedições',
- 'Junto com a Remanso Travel — operadora de turismo oficial no Brasil, criada por uma equipe de língua russa — organizamos viagens pelo país totalmente chave na mão. Roteiros autorais, expedições, hotéis e villas, transfers, iates, guias e programas individuais — todo o Brasil com uma equipe que fala a sua língua.'],
+ 'Junto com a Remanso Travel organizamos viagens pelo Brasil chave na mão. Roteiros, hotéis e villas, transfers, guias e programas individuais — tudo com uma única equipe de língua russa.'],
 ['Transporte e logística','Do automóvel ao jato privado',
- 'Organizamos qualquer deslocamento pelo Brasil — do automóvel ao jato privado. Aluguel de carros com e sem motorista, veículos premium, transfers, micro-ônibus para grupos e delegações, aviação privada, helicópteros, lanchas e iates. Escolhemos o transporte para cada necessidade, montamos a logística e organizamos todo o trajeto do ponto de partida até o destino.']
+ 'Organizamos viagens pelo Brasil: carros com e sem motorista, transfers, vans, iates, lanchas, helicópteros e jatos privados. Escolhemos o transporte e organizamos todo o seu roteiro.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, quarenta e duas praias e o endereço de verão do dinheiro paulista. Casas, beach clubs e uma temporada que vai de dezembro a março.'],
@@ -775,13 +775,13 @@
  'Seguimiento del embarazo y parto','Niñeras y personal doméstico verificados',
  'Plaza en colegios internacionales','Registro civil, documentos y ciudadanía','Solicitar apoyo familiar'],
 ['Eventos privados','Solo con invitación · Creado desde cero',
- 'Acceso allí donde no basta con comprar una entrada. Fiestas privadas, clubes cerrados, estrenos y eventos VIP solo por invitación. Y si el evento que busca no existe, lo creamos para usted desde cero: un yate, una isla privada, una villa o cualquier otra localización. Organización integral llave en mano según su guion — de la idea al último detalle.'],
+ 'Acceso a clubes privados, fiestas privadas, estrenos y eventos VIP. Si el evento que desea no existe, lo organizamos desde cero: un yate, una isla, una villa u otra localización. Todo llave en mano — de la idea a los detalles.'],
 ['Acompañamiento en todo Brasil','Un representante personal durante todo el viaje',
- 'Su representante personal a su lado durante todo el viaje. Nuestro profesional le acompaña físicamente a usted, a su familia o a su delegación en cualquier punto de Brasil, actuando a la vez como intérprete, guía y conserje personal. Se encarga del itinerario, de su seguridad y de resolver cualquier asunto sobre el terreno — una sola persona siempre a su lado que asume todas las preocupaciones.'],
+ 'Su representante personal a su lado durante todo el viaje. Traducción, acompañamiento, ayuda con la ruta y cualquier gestión sobre el terreno — una sola persona siempre con usted que asume todas sus preocupaciones.'],
 ['Turismo llave en mano Remanso Travel','Rutas de autor · Hoteles · Expediciones',
- 'Junto con Remanso Travel — operador turístico oficial en Brasil, creado por un equipo de habla rusa — organizamos viajes por el país completamente llave en mano. Rutas de autor, expediciones, hoteles y villas, traslados, yates, guías y programas individuales — todo Brasil con un único equipo que habla su idioma.'],
+ 'Junto con Remanso Travel organizamos viajes por Brasil llave en mano. Rutas, hoteles y villas, traslados, guías y programas individuales — todo con un único equipo de habla rusa.'],
 ['Transporte y logística','Desde un automóvil hasta un jet privado',
- 'Organizamos cualquier desplazamiento por Brasil — desde un automóvil hasta un jet privado. Alquiler de coches con y sin conductor, vehículos premium, traslados, microbuses para grupos y delegaciones, aviación privada, helicópteros, lanchas y yates. Elegimos el transporte para cada necesidad, diseñamos la logística y organizamos toda la ruta desde el punto de partida hasta el destino.']
+ 'Organizamos viajes por Brasil: coches con y sin conductor, traslados, microbuses, yates, lanchas, helicópteros y aviones privados. Elegimos el transporte y organizamos toda su ruta.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, cuarenta y dos playas y la dirección de verano del dinero paulista. Villas, beach clubs y una temporada que va de diciembre a marzo.'],
@@ -1028,13 +1028,13 @@
  'Gravidanza e parto','Tate e personale domestico verificati',
  'Inserimento in scuole internazionali','Anagrafe, documenti e cittadinanza','Richiedere assistenza alla famiglia'],
 ['Eventi privati','Solo su invito · Creato da zero',
- 'Accesso dove un biglietto non si può semplicemente comprare. Feste private, club chiusi, prime ed eventi VIP solo su invito. E se l’evento desiderato non esiste, lo creiamo per lei da zero: uno yacht, un’isola privata, una villa o qualsiasi altra location. Organizzazione completa chiavi in mano secondo il suo copione — dall’idea all’ultimo dettaglio.'],
+ 'Accesso a club privati, feste private, premiere ed eventi VIP. Se l’evento che desidera non esiste, lo creiamo da zero: uno yacht, un’isola, una villa o qualsiasi altra location. Tutto chiavi in mano — dall’idea ai dettagli.'],
 ['Accompagnamento in tutto il Brasile','Un rappresentante personale per tutto il viaggio',
- 'Il suo rappresentante personale accanto a lei per tutto il viaggio. Un nostro collaboratore accompagna fisicamente lei, la sua famiglia o la sua delegazione in ogni punto del Brasile, come interprete, guida e concierge personale allo stesso tempo. Si occupa dell’itinerario, della sua sicurezza e della soluzione di qualsiasi questione sul posto — una sola persona sempre accanto a lei, che si assume ogni pensiero.'],
+ 'Il suo rappresentante personale accanto a lei per tutto il viaggio. Traduzione, accompagnamento, supporto con l’itinerario e qualsiasi questione sul posto — una sola persona sempre con lei, che si prende ogni pensiero.'],
 ['Turismo chiavi in mano Remanso Travel','Itinerari d’autore · Hotel · Spedizioni',
- 'Insieme a Remanso Travel — tour operator ufficiale in Brasile, nato da un team di lingua russa — organizziamo viaggi nel paese completamente chiavi in mano. Itinerari d’autore, spedizioni, hotel e ville, transfer, yacht, guide e programmi personalizzati — tutto il Brasile con un unico team che parla la sua lingua.'],
+ 'Insieme a Remanso Travel organizziamo viaggi in Brasile chiavi in mano. Itinerari, hotel e ville, transfer, guide e programmi personalizzati — tutto con un unico team di lingua russa.'],
 ['Trasporti e logistica','Dall’automobile al jet privato',
- 'Organizziamo qualsiasi spostamento in Brasile — dall’automobile al jet privato. Noleggio auto con e senza autista, vetture premium, transfer, minibus per gruppi e delegazioni, aviazione privata, elicotteri, motoscafi e yacht. Scegliamo il mezzo per ogni esigenza, costruiamo la logistica e organizziamo l’intero percorso dal punto di partenza alla destinazione.']
+ 'Organizziamo gli spostamenti in Brasile: auto con e senza autista, transfer, minibus, yacht, motoscafi, elicotteri e jet privati. Scegliamo il mezzo e organizziamo l’intero itinerario.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, quarantadue spiagge e l’indirizzo estivo del denaro di San Paolo. Ville, beach club e una stagione che va da dicembre a marzo.'],
