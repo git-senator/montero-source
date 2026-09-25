@@ -1057,6 +1057,7 @@
       [].forEach.call(ряд0.querySelectorAll('.lp-tile-desc'), function (эл) {
         эл.style.removeProperty('font-size');
       });
+      ряд0.style.removeProperty('--квад-глубина');
       [].forEach.call(ряд0.querySelectorAll('.lp-tile'), function (эл) {
         эл.style.removeProperty('--квад-свет');
       });
@@ -1221,16 +1222,15 @@
         });
       }
 
-      /* Свечение начинается от низа названия: владелец попросил
-         поднять его под самое слово. Верх снимаем по месту —
-         названия в одну, две и три строки дают разную высоту. */
-      [].forEach.call(ряд.querySelectorAll('.lp-tile'), function (плитка) {
-        var имяЭл = плитка.querySelector('.lp-tile-name');
-        if (!имяЭл) return;
-        var верхСвета = имяЭл.getBoundingClientRect().bottom
-                      - плитка.getBoundingClientRect().top;
-        плитка.style.setProperty('--квад-свет', q(верхСвета) + 'px');
-      });
+      /* Глубина свечения: владелец попросил ровно такую же, как в
+         нижних плитках. В процентах она бы растянулась — верхние
+         кубики вчетверо выше, — поэтому меряем нижнюю плитку по
+         месту и отдаём её высоту в точках. */
+      var нижняя = document.querySelector('.lp-col .lp-tile');
+      if (нижняя) {
+        ряд.style.setProperty('--квад-глубина',
+          q(нижняя.getBoundingClientRect().height) + 'px');
+      }
     }
 
     fit(claim, rules, q, hair);
