@@ -75,7 +75,6 @@
                { v:'Transfers Across South America', k:'svc.17.name' },
                { v:'Travel Guide', k:'svc.18.name' },
                { v:'Full Travel Services', k:'svc.19.name' },
-               { v:'Personal Companion', k:'svc.20.name' },
                { v:'Executive Protection', k:'svc.21.name' },
                { v:'Something else', k:'form.other', ru:'Другое' }] },
     { name:'location', label:'Предпочтительное место', i18n:'form.location', type:'select', required:false, row:3,
