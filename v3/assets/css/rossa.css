@@ -2243,3 +2243,63 @@ html[lang="ru"] .svc-tag{
     text-align:center;
   }
 }
+
+/* ══════════ ВЕРХНИЙ РЯД: ВЫСОКИЕ КУБИКИ С ОПИСАНИЕМ ══════════
+
+   Владелец прислал образец: знак поднят под самую шапку, а ряд из
+   четырёх кубиков вытянут вниз на всё освободившееся поле, и внутрь
+   каждого убрано описание услуги.
+
+   Высоту ряда задаёт app.js: она равна полю между подписью знака и
+   нижними двумя рядами. Здесь только приёмник — переменная, и
+   запасное значение на случай, если скрипт не отработал.
+
+   Подсветка у этих кубиков начинается не от нижней грани, а от низа
+   названия: владелец попросил поднять её под самое слово. Поэтому
+   она снята с плитки и повешена на блок описания, растянутый до
+   граней кубика отрицательными полями.                            */
+@media (min-width:981px){
+  .lp-quad{
+    --квад-пад:min(.78vw, 1.55svh, 12px);
+    --квад-зазор:min(.42vw, .84svh, 7px);
+  }
+
+  /* Высоту держит сама ячейка, распорка больше не нужна: ширину
+     кубику задаёт колонка сетки, а не она. Кубик обязан ячейку
+     заполнить и не перерасти — иначе сетка поедет вниз. */
+  .lp-quad .lp-cell{ height:var(--квад-в, 104px); }
+  .lp-quad .lp-cell::before{ display:none; }
+
+  .lp-quad .lp-tile{
+    height:100%; min-height:0;
+    justify-content:flex-start; padding:var(--квад-пад);
+  }
+  .lp-quad .lp-tile-txt{
+    align-self:stretch; flex:1 1 auto; min-height:0;
+    display:flex; flex-direction:column;
+  }
+  .lp-quad .lp-tile-name{ flex:none; text-align:center; }
+
+  .lp-quad .lp-tile-desc{
+    position:relative; flex:1 1 auto; min-height:0; overflow:hidden;
+    margin-top:var(--квад-зазор);
+    font-family:"Inter","Manrope",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    font-weight:400; text-align:center; color:var(--parch-dim);
+    font-size:min(.6vw, 1.2svh, 11px); line-height:1.4;
+    letter-spacing:0; text-transform:none;
+  }
+
+  /* Верх свечения задаёт app.js переменной --квад-свет: это низ
+     названия, снятый по месту. Слой остаётся на самой плитке —
+     внутри описания он портил бы замер высоты текста. */
+  .lp-quad .lp-tile::before{
+    top:var(--квад-свет, 0px); bottom:0; left:0; right:0;
+    background:
+      radial-gradient(118% 80% at 50% 116%,
+        rgba(196,34,42,.62) 0%, rgba(158,30,40,.34) 38%,
+        rgba(96,24,36,.12) 64%, transparent 82%),
+      linear-gradient(0deg,
+        rgba(140,28,36,.38) 0%, rgba(102,25,35,.15) 34%, transparent 62%);
+    box-shadow:inset 0 -10px 20px -12px rgba(205,40,52,.38);
+  }
+}

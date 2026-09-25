@@ -1048,6 +1048,21 @@
 
   function clear() {
     lock.style.removeProperty('translate');
+    var ряд0 = document.querySelector('.lp-quad');
+    if (ряд0) {
+      ряд0.style.removeProperty('--квад-в');
+      [].forEach.call(ряд0.querySelectorAll('.lp-tile-desc'), function (эл) {
+        эл.style.removeProperty('font-size');
+      });
+      [].forEach.call(ряд0.querySelectorAll('.lp-tile'), function (эл) {
+        эл.style.removeProperty('--квад-свет');
+      });
+    }
+    var hero0 = lock.closest('.hero');
+    if (hero0) {
+      hero0.style.removeProperty('padding-top');
+      hero0.style.removeProperty('height');
+    }
     document.documentElement.style.removeProperty('--hair');
     reset(claim, rules);
     reset(lastClaim, lastRules);
@@ -1091,22 +1106,94 @@
     var hair = Math.max(1, Math.round(dpr)) / dpr;
     document.documentElement.style.setProperty('--hair', hair + 'px');
 
-    /* Сдвиг знака: та же формула, что в CSS, но по сетке.
-       Внизу сдвига нет — там знак стоит у верхнего края экрана. */
-    var shift = Math.min(SHIFT, Math.max(0, (window.innerHeight - 700) / 2)) - UP;
+    /* Знак поднят под самую шапку: владелец попросил, чтобы верх
+       букв MONTERO не доходил до нижней грани капсулы ровно двух
+       точек. Коробка строки выше самих букв — у Cinzel пустое поле
+       сверху составляет 0.079 кегля, это измерено по снимку на трёх
+       размерах окна. Меряем положение по месту и правим сдвиг: так
+       правило переживёт и смену кегля, и другой масштаб.
 
-    /* Верхний ряд кубиков отнял у первого экрана свою высоту вместе
-       с просветом, и знак, стоящий в оставшемся поле по центру,
-       уехал вверх ровно на половину этой убыли. Возвращаем его на
-       прежнее место: меряем ряд по месту и прибавляем половину.
-       Сами кубики при этом не двигаются — витрина прижата к низу. */
-    var ряд = document.querySelector('.lp-quad');
-    if (ряд) {
-      var сетка = ряд.parentElement;
-      var просвет = parseFloat(getComputedStyle(сетка).rowGap) || 0;
-      shift += (ряд.getBoundingClientRect().height + просвет) / 2;
+       Освободившееся поле забирает верхний ряд кубиков: его высота
+       равна расстоянию от подписи знака до нижних двух рядов. Ряды
+       снизу при этом не двигаются — витрина прижата к низу экрана,
+       и, когда ряд растёт, ужимается первый блок, а не они.
+
+       Оба шага влияют друг на друга: выше ряд — короче поле под
+       знаком. Поэтому проходим трижды, каждый раз меряя заново. */
+    var hero  = lock.closest('.hero');
+    var шапка = document.querySelector('header.nav');
+    var линия = (шапка ? шапка.getBoundingClientRect().bottom : 0) + 2;
+    var имя   = lock.querySelector('.lk-name');
+    var ряд   = document.querySelector('.lp-quad');
+    var сетка = ряд && ряд.parentElement;
+    var столб = document.querySelector('.lp-philosophy');
+
+    lock.style.translate = '0px';
+
+    if (hero && имя && ряд && сетка && столб) {
+      /* Поле сверху: знак стоит не по центру первого блока, а под
+         шапкой — верх букв в двух точках от её нижней грани. Коробка
+         строки выше самих букв: у Cinzel пустое поле сверху равно
+         0.079 кегля (мерено по снимку на трёх размерах окна).      */
+      var кегль = parseFloat(getComputedStyle(имя).fontSize) || 0;
+      var поле  = Math.max(0, линия - кегль * 0.079);
+
+      /* Первому блоку задаём ровно ту высоту, которую занимает знак:
+         поле сверху плюс сам набор. Тогда выравнивание по центру
+         ничего не сдвигает, и подпись кончается точно внизу блока. */
+      hero.style.paddingTop = q(поле) + 'px';
+      var набор = lock.getBoundingClientRect().height;
+      var высотаБлока = поле + набор;
+      hero.style.height = q(высотаБлока) + 'px';
+
+      /* Остаток экрана отдаём верхнему ряду. Нижняя часть витрины —
+         от верха боковой колонки до нижней грани сетки — своей высоты
+         не меняет, поэтому её замер годится и до, и после правки.  */
+      var сс      = getComputedStyle(сетка);
+      var сверху  = parseFloat(сс.paddingTop) || 0;
+      var просвет = parseFloat(сс.rowGap) || 0;
+      var низ     = сетка.getBoundingClientRect().bottom
+                  - столб.getBoundingClientRect().top;
+      var H = window.innerHeight - высотаБлока - сверху - просвет - низ - 2;
+
+      /* Ниже прежней высоты не опускаемся, выше половины окна не
+         поднимаемся: на низком ноутбуке ряд иначе съел бы витрину. */
+      H = Math.max(104, Math.min(H, window.innerHeight * 0.5));
+      ряд.style.setProperty('--квад-в', q(H) + 'px');
+
+      /* Описание внутри кубика: владелец попросил уместить его
+         целиком. Подбираем кегль половинным делением — берём
+         наибольший, при котором текст ещё не обрезается, и ставим
+         один на все четыре: разнобой в кегле рядом стоящих кубиков
+         виден сразу. Пересчёт идёт и при смене языка: итальянский
+         набор длиннее русского на четверть.                       */
+      var тексты = [].slice.call(ряд.querySelectorAll('.lp-tile-desc'));
+      if (тексты.length) {
+        var низК = 5, верхК = 14, лучший = низК;
+        for (var шаг = 0; шаг < 7; шаг++) {
+          var проба = (низК + верхК) / 2;
+          тексты.forEach(function (эл) { эл.style.fontSize = проба + 'px'; });
+          var влез = тексты.every(function (эл) {
+            return эл.scrollHeight <= эл.clientHeight + 0.5;
+          });
+          if (влез) { лучший = проба; низК = проба; } else { верхК = проба; }
+        }
+        тексты.forEach(function (эл) {
+          эл.style.fontSize = (Math.floor(лучший * 10) / 10) + 'px';
+        });
+      }
+
+      /* Свечение начинается от низа названия: владелец попросил
+         поднять его под самое слово. Верх снимаем по месту —
+         названия в одну, две и три строки дают разную высоту. */
+      [].forEach.call(ряд.querySelectorAll('.lp-tile'), function (плитка) {
+        var имяЭл = плитка.querySelector('.lp-tile-name');
+        if (!имяЭл) return;
+        var верхСвета = имяЭл.getBoundingClientRect().bottom
+                      - плитка.getBoundingClientRect().top;
+        плитка.style.setProperty('--квад-свет', q(верхСвета) + 'px');
+      });
     }
-    lock.style.translate = '0 ' + q(shift) + 'px';
 
     fit(claim, rules, q, hair);
     fit(lastClaim, lastRules, q, hair);
@@ -1115,6 +1202,7 @@
   snap();
   window.addEventListener('resize', snap, { passive:true });
   window.addEventListener('load', snap);
+  document.addEventListener('langchange', function () { setTimeout(snap, 60); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(snap);
   [400, 1200, 2500].forEach(function (ms) { setTimeout(snap, ms); });
   if (window.ResizeObserver) {
