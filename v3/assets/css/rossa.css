@@ -2317,7 +2317,7 @@ html[lang="ru"] .svc-tag{
 
    Только первый экран: у последнего своя такая же рамка, её
    владелец не просил трогать.                                    */
-:root{ --подтяжка:15px; }
+:root{ --подтяжка:10px; }
 @media (min-width:981px){
   .hero .lk-claim b.hard{ margin-top:calc(-1 * var(--подтяжка)); }
 }
