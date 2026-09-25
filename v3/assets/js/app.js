@@ -1251,7 +1251,28 @@
   window.addEventListener('resize', snap, { passive:true });
   window.addEventListener('load', snap);
   document.addEventListener('langchange', function () { setTimeout(snap, 60); });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(snap);
+  /* Заслонку с первого экрана снимаем, когда он уже собран: шрифты
+     подгружены и замер прошёл поверх них. Будильник в разметке
+     подстрахует, если сюда почему-то не дойдёт.
+
+     Ждём не все шрифты страницы, а только те четыре, которыми набран
+     первый экран, — иначе показ откладывается на секунду из-за начертаний,
+     нужных где-то внизу. Замер гоняем дважды: первый проход меняет
+     набор подписи, второй уже ничего не двигает. */
+  var открыть = function () {
+    document.documentElement.classList.remove('экран-ждёт');
+  };
+  var собрать = function () { snap(); snap(); открыть(); };
+  if (document.fonts && document.fonts.load) {
+    Promise.all([
+      document.fonts.load('600 64px Cinzel'),
+      document.fonts.load('400 16px Inter'),
+      document.fonts.load('600 22px "Playfair Display"'),
+      document.fonts.load('400 13px Commissioner')
+    ]).then(собрать, собрать);
+  } else {
+    собрать();
+  }
   [400, 1200, 2500].forEach(function (ms) { setTimeout(snap, ms); });
   if (window.ResizeObserver) {
     /* За высотой рамки следить нельзя — мы её сами задаём. Следим за

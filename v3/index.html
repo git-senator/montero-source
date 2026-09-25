@@ -74,6 +74,34 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/rossa.css">
+<!-- ── Первый экран показываем уже собранным ─────────────────────────
+     Высоту знака, высоту верхнего ряда и кегль описания считает
+     app.js по месту, а шрифты приходят с чужого сервера и до их
+     подмены строки набраны запасным начертанием. Поэтому без этой
+     заслонки видно, как первый экран пересобирается на глазах.
+
+     Держим его невидимым, пока не отработает первый замер поверх
+     уже подгруженных шрифтов, и только тогда показываем. Снимает
+     заслонку app.js; на случай отказа сети, старого браузера или
+     ошибки в скрипте здесь же стоит будильник на две секунды —
+     пустым экран не останется ни при каких бедах.
+
+     Телефонной раскладки это не касается: там ничего не считается
+     по месту, и прятать нечего.                                  -->
+<style>
+  html.экран-ждёт .home-canvas{ opacity:0; }
+  .home-canvas{ transition:opacity .2s ease-out; }
+</style>
+<script>
+(function () {
+  try {
+    if (!window.matchMedia('(min-width:981px)').matches) return;
+    var к = document.documentElement.classList;
+    к.add('экран-ждёт');
+    setTimeout(function () { к.remove('экран-ждёт'); }, 2000);
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 
@@ -196,18 +224,18 @@
          же пропорция, тот же значок и та же бордовая подсветка. -->
     <div class="lp-quad">
       <span class="lp-cell">
-        <a class="lp-tile" href="#services" data-scroll data-open="23">
-          <span class="lp-tile-txt">
-            <b class="lp-tile-name" data-i18n="svc.23.name">Закрытые мероприятия</b>
-            <span class="lp-tile-desc" data-i18n="svc.23.text">Доступ к закрытым клубам, частным вечеринкам, премьерам и VIP-событиям. Если нужного события нет — организуем его с нуля: яхта, остров, вилла или другая локация. Всё под ключ — от идеи до деталей.</span>
-          </span>
-        </a>
-      </span>
-      <span class="lp-cell">
         <a class="lp-tile" href="#services" data-scroll data-open="24">
           <span class="lp-tile-txt">
             <b class="lp-tile-name" data-i18n="svc.24.name">Сопровождение по всей Бразилии</b>
             <span class="lp-tile-desc" data-i18n="svc.24.text">Ваш личный представитель рядом на протяжении всей поездки. Перевод, сопровождение, помощь с маршрутом и любые вопросы на месте — один человек, который всегда с вами и берёт все ваши заботы на себя.</span>
+          </span>
+        </a>
+      </span>
+      <span class="lp-cell">
+        <a class="lp-tile" href="#services" data-scroll data-open="23">
+          <span class="lp-tile-txt">
+            <b class="lp-tile-name" data-i18n="svc.23.name">Закрытые мероприятия</b>
+            <span class="lp-tile-desc" data-i18n="svc.23.text">Доступ к закрытым клубам, частным вечеринкам, премьерам и VIP-событиям. Если нужного события нет — организуем его с нуля: яхта, остров, вилла или другая локация. Всё под ключ — от идеи до деталей.</span>
           </span>
         </a>
       </span>
