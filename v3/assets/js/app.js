@@ -1048,6 +1048,7 @@
 
   function clear() {
     lock.style.removeProperty('translate');
+    claim.style.removeProperty('padding-top');
     var имя0 = lock.querySelector('.lk-name');
     if (имя0) имя0.style.removeProperty('translate');
     var ряд0 = document.querySelector('.lp-quad');
@@ -1063,6 +1064,7 @@
     var hero0 = lock.closest('.hero');
     if (hero0) {
       hero0.style.removeProperty('padding-top');
+      hero0.style.removeProperty('padding-bottom');
       hero0.style.removeProperty('height');
     }
     document.documentElement.style.removeProperty('--hair');
@@ -1122,6 +1124,21 @@
 
        Оба шага влияют друг на друга: выше ряд — короче поле под
        знаком. Поэтому проходим трижды, каждый раз меряя заново. */
+    /* Внутри рамки заявления владелец попросил подтянуть строки на
+       пять точек вверх, и вместе с ними — нижнюю грань рамки. Верх
+       рамки при этом стоит: убавляем только верхнее поле, высота
+       сама выходит на пять точек меньше.
+
+       Значение снимаем с вычисленного стиля, предварительно сняв
+       своё: правил для этого поля несколько (они привязаны к высоте
+       окна), и без сброса вычитание накапливалось бы при каждом
+       пересчёте. */
+    var УБАВКА = 5;
+    claim.style.removeProperty('padding-top');
+    var полеРамки = parseFloat(getComputedStyle(claim).paddingTop) || 0;
+    var убрано = Math.min(УБАВКА, полеРамки);
+    claim.style.paddingTop = (полеРамки - убрано) + 'px';
+
     var hero  = lock.closest('.hero');
     var шапка = document.querySelector('header.nav');
     var линия = (шапка ? шапка.getBoundingClientRect().bottom : 0) + 2;
@@ -1153,8 +1170,14 @@
          поле сверху плюс сам набор. Тогда выравнивание по центру
          ничего не сдвигает, и подпись кончается точно внизу блока. */
       hero.style.paddingTop = q(поле) + 'px';
+      /* Рамка стала на эти пять точек ниже. Отдаём их первому блоку
+         нижним полем: высота блока прежняя, значит верхний ряд
+         кубиков не подрастёт и ничего на экране не сдвинется. Поле
+         снизу, а не прибавка к высоте: при выравнивании по центру
+         лишняя высота увела бы весь набор вниз на половину. */
       var набор = lock.getBoundingClientRect().height;
-      var высотаБлока = поле + набор;
+      hero.style.paddingBottom = q(убрано) + 'px';
+      var высотаБлока = поле + набор + убрано;
       hero.style.height = q(высотаБлока) + 'px';
 
       /* Остаток экрана отдаём верхнему ряду. Нижняя часть витрины —
