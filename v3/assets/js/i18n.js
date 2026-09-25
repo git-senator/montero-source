@@ -273,7 +273,7 @@
 ['Support Across Brazil','A personal representative for the whole trip',
  'Your personal representative beside you for the whole trip. Interpreting, accompaniment, help with the itinerary and any question on the spot — one person always with you who takes every concern off your hands.'],
 ['Turnkey Tourism Remanso Travel','Signature routes · Hotels · Expeditions',
- 'Together with Remanso Travel we arrange turnkey travel across Brazil. Routes, hotels and villas, transfers, guides and bespoke programmes — all with a single Russian-speaking team.'],
+ 'Together with Remanso Travel we arrange turnkey travel across Latin America. Tourist routes, hotels and villas, guides and bespoke programmes — all with a single professional team.'],
 ['Transport & Logistics','From a car to a private jet',
  'We arrange travel across Brazil: cars with or without a driver, transfers, minibuses, yachts, boats, helicopters and private jets. We match the transport and organise your whole route.']
 ],
@@ -526,7 +526,7 @@
 ['Acompanhamento em todo o Brasil','Um representante pessoal em toda a viagem',
  'Seu representante pessoal ao seu lado durante toda a viagem. Tradução, acompanhamento, apoio com o roteiro e qualquer questão no local — uma pessoa sempre com você, que assume todas as suas preocupações.'],
 ['Turismo chave na mão Remanso Travel','Roteiros autorais · Hotéis · Expedições',
- 'Junto com a Remanso Travel organizamos viagens pelo Brasil chave na mão. Roteiros, hotéis e villas, transfers, guias e programas individuais — tudo com uma única equipe de língua russa.'],
+ 'Junto com a Remanso Travel organizamos viagens pela América Latina chave na mão. Roteiros turísticos, hotéis e villas, guias e programas individuais — tudo com uma única equipe profissional.'],
 ['Transporte e logística','Do automóvel ao jato privado',
  'Organizamos viagens pelo Brasil: carros com e sem motorista, transfers, vans, iates, lanchas, helicópteros e jatos privados. Escolhemos o transporte e organizamos todo o seu roteiro.']
 ],
@@ -779,7 +779,7 @@
 ['Acompañamiento en todo Brasil','Un representante personal durante todo el viaje',
  'Su representante personal a su lado durante todo el viaje. Traducción, acompañamiento, ayuda con la ruta y cualquier gestión sobre el terreno — una sola persona siempre con usted que asume todas sus preocupaciones.'],
 ['Turismo llave en mano Remanso Travel','Rutas de autor · Hoteles · Expediciones',
- 'Junto con Remanso Travel organizamos viajes por Brasil llave en mano. Rutas, hoteles y villas, traslados, guías y programas individuales — todo con un único equipo de habla rusa.'],
+ 'Junto con Remanso Travel organizamos viajes por América Latina llave en mano. Rutas turísticas, hoteles y villas, guías y programas individuales — todo con un único equipo profesional.'],
 ['Transporte y logística','Desde un automóvil hasta un jet privado',
  'Organizamos viajes por Brasil: coches con y sin conductor, traslados, microbuses, yates, lanchas, helicópteros y aviones privados. Elegimos el transporte y organizamos toda su ruta.']
 ],
@@ -1032,7 +1032,7 @@
 ['Accompagnamento in tutto il Brasile','Un rappresentante personale per tutto il viaggio',
  'Il suo rappresentante personale accanto a lei per tutto il viaggio. Traduzione, accompagnamento, supporto con l’itinerario e qualsiasi questione sul posto — una sola persona sempre con lei, che si prende ogni pensiero.'],
 ['Turismo chiavi in mano Remanso Travel','Itinerari d’autore · Hotel · Spedizioni',
- 'Insieme a Remanso Travel organizziamo viaggi in Brasile chiavi in mano. Itinerari, hotel e ville, transfer, guide e programmi personalizzati — tutto con un unico team di lingua russa.'],
+ 'Insieme a Remanso Travel organizziamo viaggi in America Latina chiavi in mano. Itinerari turistici, hotel e ville, guide e programmi personalizzati — tutto con un unico team professionale.'],
 ['Trasporti e logistica','Dall’automobile al jet privato',
  'Organizziamo gli spostamenti in Brasile: auto con e senza autista, transfer, minibus, yacht, motoscafi, elicotteri e jet privati. Scegliamo il mezzo e organizziamo l’intero itinerario.']
 ],
