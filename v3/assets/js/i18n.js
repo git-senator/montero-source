@@ -280,7 +280,7 @@
 ['Turnkey Tourism Remanso Travel','Signature routes · Hotels · Expeditions',
  'Together with Remanso Travel we arrange turnkey travel across Latin America. Tourist routes, hotels and villas, guides and bespoke programmes — all with a single professional team.'],
 ['Transport & Logistics','From a car to a private jet',
- 'We arrange travel across Brazil: cars with or without a driver, transfers, minibuses, yachts, boats, helicopters and private jets. We match the transport and organise your whole route.']
+ 'We arrange travel across the whole of Latin America: cars with or without a driver, transfers, minibuses, yachts, boats, helicopters and private jets. We match the transport and organise your whole route.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, forty-two beaches and the summer address of São Paulo money. Villas, beach clubs and a season that runs December to March.'],
@@ -538,7 +538,7 @@
 ['Turismo chave na mão Remanso Travel','Roteiros autorais · Hotéis · Expedições',
  'Junto com a Remanso Travel organizamos viagens pela América Latina chave na mão. Roteiros turísticos, hotéis e villas, guias e programas individuais — tudo com uma única equipe profissional.'],
 ['Transporte e logística','Do automóvel ao jato privado',
- 'Organizamos viagens pelo Brasil: carros com e sem motorista, transfers, vans, iates, lanchas, helicópteros e jatos privados. Escolhemos o transporte e organizamos todo o seu roteiro.']
+ 'Organizamos viagens por todo o continente latino-americano: carros com e sem motorista, transfers, vans, iates, lanchas, helicópteros e jatos privados. Escolhemos o transporte e organizamos todo o seu roteiro.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, quarenta e duas praias e o endereço de verão do dinheiro paulista. Casas, beach clubs e uma temporada que vai de dezembro a março.'],
@@ -796,7 +796,7 @@
 ['Turismo llave en mano Remanso Travel','Rutas de autor · Hoteles · Expediciones',
  'Junto con Remanso Travel organizamos viajes por América Latina llave en mano. Rutas turísticas, hoteles y villas, guías y programas individuales — todo con un único equipo profesional.'],
 ['Transporte y logística','Desde un automóvil hasta un jet privado',
- 'Organizamos viajes por Brasil: coches con y sin conductor, traslados, microbuses, yates, lanchas, helicópteros y aviones privados. Elegimos el transporte y organizamos toda su ruta.']
+ 'Organizamos viajes por todo el continente latinoamericano: coches con y sin conductor, traslados, microbuses, yates, lanchas, helicópteros y aviones privados. Elegimos el transporte y organizamos toda su ruta.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, cuarenta y dos playas y la dirección de verano del dinero paulista. Villas, beach clubs y una temporada que va de diciembre a marzo.'],
@@ -1054,7 +1054,7 @@
 ['Turismo chiavi in mano Remanso Travel','Itinerari d’autore · Hotel · Spedizioni',
  'Insieme a Remanso Travel organizziamo viaggi in America Latina chiavi in mano. Itinerari turistici, hotel e ville, guide e programmi personalizzati — tutto con un unico team professionale.'],
 ['Trasporti e logistica','Dall’automobile al jet privato',
- 'Organizziamo gli spostamenti in Brasile: auto con e senza autista, transfer, minibus, yacht, motoscafi, elicotteri e jet privati. Scegliamo il mezzo e organizziamo l’intero itinerario.']
+ 'Organizziamo gli spostamenti in tutto il continente latinoamericano: auto con e senza autista, transfer, minibus, yacht, motoscafi, elicotteri e jet privati. Scegliamo il mezzo e organizziamo l’intero itinerario.']
 ],
     dest: [
 ['Florianópolis','Jurerê Internacional, quarantadue spiagge e l’indirizzo estivo del denaro di San Paolo. Ville, beach club e una stagione che va da dicembre a marzo.'],
