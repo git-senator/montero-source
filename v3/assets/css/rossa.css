@@ -2551,3 +2551,45 @@ html[lang="ru"] .svc-tag{
     color:var(--parch-dim);
   }
 }
+
+/* ══════════ ФОН ПЕРВОГО ЭКРАНА: ЯХТА ══════════
+
+   По новому макету первый экран стоит на снимке. Снимок сам по себе
+   светлый — под белым знаком и подписями он бы не читался, поэтому
+   поверх кладём затемнение: плотное сверху, где знак, прозрачнее в
+   середине, где горизонт, и снова плотное внизу, где панели.
+
+   Телефонной версии это не касается — у неё своя вёрстка.        */
+@media (min-width:981px){
+  .hero-bg .media{
+    display:block; width:100%; height:100%;
+    object-fit:cover; object-position:center 42%;
+    opacity:1;
+  }
+  .hero-bg::after{
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:
+      linear-gradient(180deg,
+        rgba(8,12,20,.42) 0%, rgba(8,12,20,.2) 20%,
+        rgba(8,12,20,.1) 44%, rgba(8,12,20,.42) 72%,
+        rgba(8,12,20,.72) 100%);
+  }
+}
+
+/* Снимок лежит под всем первым экраном, а не под одним знаком: в
+   макете палуба уходит за панели. Потому .hero-bg переехал в разметке
+   в саму канву, а здесь ему задан её размер. Гримировку снимка
+   (тёплый фильтр и наезд) снимаем — кадр должен читаться как на
+   макете, ровным и холодным.                                      */
+@media (min-width:981px){
+  .home-canvas{ position:relative; isolation:isolate; }
+  .home-canvas > .hero-bg{
+    position:absolute; inset:0; z-index:0;
+  }
+  .home-canvas > .hero,
+  .home-canvas > section{ position:relative; z-index:1; }
+  .hero-bg .media{
+    filter:none; animation:none; transform:none;
+    object-position:center 50%;
+  }
+}

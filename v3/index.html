@@ -155,17 +155,14 @@
      Обёртка ниже держит их вместе: остаток высоты уходит первому
      экрану, а нижняя строка витрины садится ровно на край окна. -->
 <div class="home-canvas">
-
-<section class="hero" id="home">
-  <div class="hero-bg" data-parallax="0.14">
-    <!-- Первый экран стоит на собственном цвете: чёрный с красным
-         смещением, золотое сияние сверху, алый отсвет справа внизу —
-         всё это заложено в фон .hero-bg. Снимок снят по просьбе
-         владельца. Чтобы вернуть его, раскройте блок ниже.
+<div class="hero-bg" data-parallax="0.14">
+    <!-- Снимок вернулся по новому макету: нос яхты и открытое море.
+         Кадр владелец сгенерировал сам, я обрезал его под 16:9 и
+         увеличил до 2400×1350. На телефоне снимок не показываем —
+         там своя вёрстка и свой фон.                              -->
     <picture>
-      <source media="(max-width:720px)" srcset="assets/img/hero-m.jpg">
-      <img class="media" src="assets/img/hero.jpg" alt="" fetchpriority="high">
-    </picture> -->
+      <img class="media" src="assets/img/hero-yacht.jpg" alt="" fetchpriority="high">
+    </picture>
     <!-- Видеофон ложится поверх снимка сам, когда сможет играть.
          Раскройте блок, когда вернём ролик.
     <video class="media vid" autoplay muted loop playsinline preload="auto"
@@ -173,6 +170,9 @@
       <source src="assets/img/hero.mp4" type="video/mp4">
     </video> -->
   </div>
+
+
+<section class="hero" id="home">
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="strings" aria-hidden="true">
     <span style="--x:9%;--h:44vh;--o:.10;--d:0s"></span>
