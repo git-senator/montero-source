@@ -2645,3 +2645,30 @@ html[lang="ru"] .svc-tag{
   .pnl-item:hover .pnl-name{ color:#FFFFFF; }
   .pnl-ico{ color:#F6EDCB; }
 }
+
+/* ══════════ НАБОР В ПАНЕЛЯХ — ЦВЕТ ОКЕАНА ══════════
+
+   Владелец попросил синий, как океан. Цвет снят с самого снимка:
+   глубокая вода у левого края даёт #023D65 — его и берём, он же
+   держит связь панели с кадром за ней.
+
+   Тёмно-синему нужен светлый низ, иначе на тёмных местах палубы он
+   пропадёт: белую плёнку стекла делаем плотнее, а блик по верхней
+   грани ярче. Значки оставляем сливочными — про них речи не было. */
+@media (min-width:981px){
+  .pnl{
+    background:linear-gradient(180deg,
+      rgba(255,255,255,.42) 0%, rgba(255,255,255,.3) 52%,
+      rgba(255,255,255,.24) 100%);
+    border:1px solid rgba(255,255,255,.44);
+    box-shadow:0 18px 44px rgba(0,0,0,.24),
+               inset 0 1px 0 rgba(255,255,255,.6);
+  }
+  .pnl-h{ color:#023D65; text-shadow:none; }
+  .pnl-h::after{
+    background:linear-gradient(90deg,
+      transparent 0%, rgba(2,61,101,.6) 50%, transparent 100%);
+  }
+  .pnl-name{ color:#023D65; }
+  .pnl-item:hover .pnl-name{ color:#01243C; }
+}
