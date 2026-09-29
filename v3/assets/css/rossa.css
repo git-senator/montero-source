@@ -2610,3 +2610,38 @@ html[lang="ru"] .svc-tag{
   .pnl-ico{ width:min(1.75vw, 29px); height:min(1.75vw, 29px); }
   .pnl-ico svg{ stroke-width:1.15; }
 }
+
+/* ══════════ ПАНЕЛИ — СВЕТЛОЕ СТЕКЛО ══════════
+
+   Владелец попросил не тёмные плиты, а светлое стекло: чтобы море и
+   палуба просвечивали, а панель читалась как матовая пластина.
+
+   Заливка — белая с малой непрозрачностью, сверху чуть плотнее, к
+   низу прозрачнее; по верхней грани светлый блик, как на стекле.
+   Размытие поднимаем — без него белая плёнка выглядит мутной, а не
+   стеклянной. Бордовый отсвет снизу убираем совсем: он и делал
+   панель тёмной.
+
+   Подписи подсветляем: на светлом стекле приглушённый пергамент
+   теряется.                                                       */
+@media (min-width:981px){
+  .pnl{
+    background:linear-gradient(180deg,
+      rgba(255,255,255,.17) 0%, rgba(255,255,255,.1) 52%,
+      rgba(255,255,255,.06) 100%);
+    border:1px solid rgba(255,255,255,.28);
+    box-shadow:0 18px 44px rgba(0,0,0,.26),
+               inset 0 1px 0 rgba(255,255,255,.38);
+    backdrop-filter:blur(16px) saturate(1.15);
+    -webkit-backdrop-filter:blur(16px) saturate(1.15);
+  }
+  .pnl::before{ display:none; }
+  .pnl-h{ color:#FFFFFF; text-shadow:0 1px 10px rgba(0,0,0,.35); }
+  .pnl-h::after{
+    background:linear-gradient(90deg,
+      transparent 0%, rgba(255,255,255,.85) 50%, transparent 100%);
+  }
+  .pnl-name{ color:rgba(255,255,255,.92); }
+  .pnl-item:hover .pnl-name{ color:#FFFFFF; }
+  .pnl-ico{ color:#F6EDCB; }
+}
